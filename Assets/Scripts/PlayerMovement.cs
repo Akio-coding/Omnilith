@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class PlayerJump : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [Header("Réglages du Saut")]
     [Tooltip("La force initiale du saut.")]
@@ -28,6 +28,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private float dashCooldown = 1f;
 
     [Header("Collision Dash")]
+    [SerializeField] private BoxCollider2D collider;
     [Tooltip("La taille du collider pendant le dash (x, y)")]
     [SerializeField] private Vector2 dashColliderSize;
     [Tooltip("Le décalage du centre pour que les pieds restent au sol")]
@@ -43,7 +44,7 @@ public class PlayerJump : MonoBehaviour
     // --- Collider ---
     private Vector2 initialSize;
     private Vector2 initialOffset;
-    private BoxCollider2D collider;
+    
     
     // --- End Dash ---
 
@@ -60,7 +61,6 @@ public class PlayerJump : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
-        collider = GetComponent<BoxCollider2D>();
 
         initialGravity = rb.gravityScale;
         initialSize = collider.size;
