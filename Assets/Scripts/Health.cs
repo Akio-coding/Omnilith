@@ -27,11 +27,25 @@ public class Health : MonoBehaviour
     public event Action OnDamageTaken; // Utile pour jouer un son ou une anim
 
     [SerializeField] private Color flashing;
+
+    [Header("Respawn")]
+    [SerializeField] private float deathDelay = 2f; // Temps de l'animation de mort
+    [SerializeField] private Behaviour[] componentsToDisable; // Scripts à couper (ex: PlayerJump)
+
+    private Animator anim;
+
+    private Rigidbody2D rb;
+
+    [SerializeField] private Collider2D playerCollider;
+
+
     void Awake()
     {
         CurrentHealth = _maxHealth;
         sr = GetComponent<SpriteRenderer>();
         
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(int damageAmount)
@@ -52,14 +66,85 @@ public class Health : MonoBehaviour
         if (CurrentHealth <= 0)
         {
             CurrentHealth = 0;
-            Die();
+            StartCoroutine(RespawnRoutine());
         }
         else
         {
             // 4. If we survive, launch the coroutine 
             StartCoroutine(InvincibilityRoutine());
         }
-        Debug.Log(CurrentHealth);
+    }
+
+    private IEnumerator RespawnRoutine()
+    {
+        // On désactive le script de mouvement (PlayerJump) et le Collider pour ne plus être touché
+        foreach (var component in componentsToDisable)
+        {
+            component.enabled = false;
+        }
+
+        // On joue l'animation et on coupe les contrôles
+        if (anim != null && anim.runtimeAnimatorController != null)
+        {
+            anim.SetTrigger("Die");
+        }
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero; // Stop net
+            rb.simulated = false;
+        }
+
+        if (playerCollider != null)
+        {
+            playerCollider.enabled = false; // Devient intouchable/fantomatique
+        }
+        
+
+        // 2. On attend la fin de l'animation
+        yield return new WaitForSeconds(deathDelay);
+
+        // 3. LE RESPAWN (Téléportation)
+        if (GameManager.instance != null)
+        {
+            transform.position = GameManager.instance.respawnPoint;
+        }
+        else
+        {
+            // Si tu as oublié de mettre le GameManager dans la scène, on le verra ici !
+            Debug.LogError("OUPS : Le GameManager est introuvable dans la scène ! Le respawn a échoué.");
+        }
+        // 4. On remet tout à neuf
+        Respawn();
+    }
+
+    private void Respawn()
+    {
+        // Remettre la vie au max
+        CurrentHealth = _maxHealth; // (Utilise ta variable maxHealth ou _maxHealth)
+        OnHealthChanged?.Invoke(CurrentHealth, _maxHealth);
+
+        // Réactiver les contrôles et la physique
+        foreach (var component in componentsToDisable)
+        {
+            component.enabled = true;
+        }
+
+        if (rb != null)
+        {
+            rb.simulated = true;
+        }
+
+        // On réactive le collider via la variable
+        if (playerCollider != null)
+        {
+            playerCollider.enabled = true;
+        }
+
+        // Reset Anim
+        if (anim != null && anim.runtimeAnimatorController != null)
+        {
+            anim.SetTrigger("Respawn");
+        }
     }
 
     public void Heal(int healAmount)
@@ -70,15 +155,6 @@ public class Health : MonoBehaviour
             CurrentHealth = maxHealth;
         }
         OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
-    }
-
-    private void Die()
-    {
-        OnDeath?.Invoke();
-        Debug.Log(gameObject.name + " est mort !");
-
-        // Pour le joueur, on relance le niveau ou on affiche Game Over
-        // Pour un ennemi : Destroy(gameObject);
     }
 
     // Coroutine to handle the flashing and the invicibility 

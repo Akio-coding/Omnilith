@@ -44,8 +44,7 @@ public class PlayerMovement : MonoBehaviour
     // --- Collider ---
     private Vector2 initialSize;
     private Vector2 initialOffset;
-    
-    
+
     // --- End Dash ---
 
     private bool isOnGround;
