@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         else if (!isDashing)
         {
             GravityHandler();
-            Movements(); 
+            MoveForward(); 
         }
     }
     void VerifyIfOnGround()
@@ -196,7 +196,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Movements()
+    void MoveForward()
     {
         float inputX = Input.GetAxis("Horizontal");
 
