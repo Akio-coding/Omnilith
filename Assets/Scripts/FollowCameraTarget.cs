@@ -8,7 +8,7 @@ public class FollowCameraTarget : MonoBehaviour
     [SerializeField] private float smoothTime = 0.2f; // Vitesse de transition
 
     private float currentXOffset;
-    private float velocity; // Pour le SmoothDamp
+    private float velocity; // For SmoothDamp
 
     void Update()
     {
@@ -17,6 +17,7 @@ public class FollowCameraTarget : MonoBehaviour
             return; 
         }
 
+        // Detect the player's direction via his scale 
         // On détecte la direction du joueur via son échelle (si tu flip le sprite) 
         // ou via ton script PlayerMovement (facingDirection).
         // Ici, on regarde simplement l'échelle locale X du joueur ou sa rotation Y.

@@ -2,13 +2,22 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
+    // ---- Variables ----
     [SerializeField] private int damageAmount = 1;
+
+    // ---- Functions ----
 
     // We use OnTriggerEnter2D because Hurtbox is a Trigger 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        // we need to search the Health component on the touched object
-        // If we touch the hurtbox, Health script is in parent 
+        // If the touched object is on the PlayerHitbox layer we stop the function
+        // Prevent the player being hurt because of his sword
+        if (collider.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
+        {
+            return;
+        }
+
+        // Search the Health script in the object if it don t find it, it will search in the parents
         Health targetHealth = collider.GetComponentInParent<Health>();
 
         // If the target has an Health component 
@@ -22,7 +31,13 @@ public class DamageDealer : MonoBehaviour
     // OnCollisionEnter2D is for physical contact (we can't pass through the object) (for non-trigger objects)
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Doesn't need to search for parent because the player collider is directly on him
+        // Same as above 
+        if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
+        {
+            return;
+        }
+
+        // Same as above, this will search the Health script 
         Health targetHealth = collision.gameObject.GetComponentInParent<Health>();
 
         if (targetHealth != null)
