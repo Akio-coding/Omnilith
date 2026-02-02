@@ -890,7 +890,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.665561, y: 5.65719, z: -10}
+  m_LocalPosition: {x: -0.019889131, y: 5.65719, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1414,17 +1414,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ea0165b9eb1194abc17c988aef3661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 12
-  shutJump: 0.4
-  fallMultiplier: 2.5
+  jumpForce: 10
+  shutJump: 0.25
+  fallMultiplier: 2
   groundCheck: {fileID: 1697936844}
   checkRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 4
-  dashDistance: 5
-  dashDuration: 0.3
+  speed: 5
+  dashDistance: 4.5
+  dashDuration: 0.4
   dashCooldown: 1
   collider: {fileID: 1283068187}
   dashColliderSize: {x: 0.7008879, y: 0.7273617}
@@ -1442,8 +1442,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.38399756
-      value: 0.64095545
+      time: 0.555781
+      value: 0.48144007
       inSlope: 1.499413
       outSlope: 1.499413
       tangentMode: 0
@@ -1451,7 +1451,7 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
+      time: 1.0002321
       value: 1
       inSlope: 0
       outSlope: 0
