@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ea0165b9eb1194abc17c988aef3661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3.75
   groundCheck: {fileID: 3782333281804450755}
   checkRadius: 0.2
   groundLayer:
@@ -244,10 +244,10 @@ MonoBehaviour:
     m_Bits: 64
   jumpForce: 10
   shutJump: 0.25
-  fallMultiplier: 2
-  dashDistance: 4.5
-  dashDuration: 0.4
-  dashCooldown: 1
+  fallMultiplier: 2.25
+  dashDistance: 3.5
+  dashDuration: 0.3
+  dashCooldown: 2
   dashCollider: {fileID: 6372909416703627289}
   dashColliderSize: {x: 0.7008879, y: 0.7273617}
   dashColliderOffset: {x: 0, y: 0.6741703}
@@ -265,7 +265,7 @@ MonoBehaviour:
       outWeight: 0
     - serializedVersion: 3
       time: 0.555781
-      value: 0.48144007
+      value: 0.481144
       inSlope: 1.499413
       outSlope: 1.499413
       tangentMode: 0
