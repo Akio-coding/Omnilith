@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance; // L'accès universel
+    public static GameManager instance; // Universal access
 
-    [HideInInspector] public Vector3 respawnPoint; // La position mémorisée
+    [HideInInspector] public Vector3 respawnPoint; // Memorized position
 
     void Awake()
     {
-        // Pattern Singleton classique : on s'assure qu'il n'y en a qu'un seul
+        // Classic Singleton patern : ensure that there is only one 
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Garde le GM quand on change de scène (optionnel mais utile)
+            DontDestroyOnLoad(gameObject); // Keep the gameManager when we load an other scene (optionnal but usefull)
         }
         else
         {
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // Au début du jeu, le point de respawn est la position de départ du joueur
+        // At the start of the game, the respawn point is player's starting position 
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
             respawnPoint = GameObject.FindGameObjectWithTag("Player").transform.position;

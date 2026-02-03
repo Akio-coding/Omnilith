@@ -3,32 +3,39 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Réglages du Saut")]
-    [Tooltip("La force initiale du saut.")]
-    [SerializeField] private float jumpForce = 15f;
-
-    [Tooltip("À quel point le saut est coupé si on relâche le bouton (0 à 1). 0.5 = coupe la vitesse de moitié.")]
-    [Range(0, 1)] [SerializeField] private float shutJump = 0.5f;
-
-    [Tooltip("Gravité augmentée en retombant.")]
-    [SerializeField] private float fallMultiplier = 2.5f;
+    [Header("Player Mouvements settings")]
+    [SerializeField] private float speed = 4;
 
     [Header("Vérification Sol")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float checkRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
+    // --- Jump ---
 
-    [Header("Player Mouvements settings")]
-    [SerializeField] private float speed = 4;
+    [Header("Réglages du Saut")]
+    [Tooltip("La force initiale du saut.")]
+    [SerializeField] private float jumpForce = 15f;
+    [Tooltip("À quel point le saut est coupé si on relâche le bouton (0 à 1). 0.5 = coupe la vitesse de moitié.")]
+    [Range(0, 1)] [SerializeField] private float shutJump = 0.5f;
+    [Tooltip("Gravité augmentée en retombant.")]
+    [SerializeField] private float fallMultiplier = 2.5f;
+    
+    // Variables
+    private bool isOnGround;
+    private float initialGravity;
+
+    // --- End of Jump ---
 
     // --- Dash ---
+
     [Header("Réglages du Dash")]
     [SerializeField] private float dashDistance = 5f;      
     [SerializeField] private float dashDuration = 0.4f;  
     [SerializeField] private float dashCooldown = 1f;
 
     [Header("Collision Dash")]
-    [SerializeField] private BoxCollider2D collider;
+    [Tooltip("Collider a changer pendant le dash")]
+    [SerializeField] private BoxCollider2D dashCollider;
     [Tooltip("La taille du collider pendant le dash (x, y)")]
     [SerializeField] private Vector2 dashColliderSize;
     [Tooltip("Le décalage du centre pour que les pieds restent au sol")]
@@ -39,21 +46,18 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private float actualTime;
     private float previousCurveValue;
-    private TrailRenderer tr;
     
-    // --- Collider ---
+    // Collider 
     private Vector2 initialSize;
     private Vector2 initialOffset;
 
-    // --- End Dash ---
-
-    private bool isOnGround;
-    private float initialGravity;
+    // --- End of Dash ---
 
     private int facingDirection = 1; // 1 = right -1 = left
 
     public AnimationCurve dashSpeedCurve;
     private Rigidbody2D rb;
+    private TrailRenderer tr;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -62,8 +66,8 @@ public class PlayerMovement : MonoBehaviour
         tr = GetComponent<TrailRenderer>();
 
         initialGravity = rb.gravityScale;
-        initialSize = collider.size;
-        initialOffset = collider.offset;
+        initialSize = dashCollider.size;
+        initialOffset = dashCollider.offset;
     }
 
     // Update is called once per frame
@@ -119,8 +123,8 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector2.zero;
 
         // change collider size
-        collider.size = dashColliderSize;
-        collider.offset = dashColliderOffset;
+        dashCollider.size = dashColliderSize;
+        dashCollider.offset = dashColliderOffset;
     }
     
     void Dash()
@@ -160,8 +164,8 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(speed,0);
 
         // return to initial collider
-        collider.size = initialSize;
-        collider.offset = initialOffset;
+        dashCollider.size = initialSize;
+        dashCollider.offset = initialOffset;
 
 
         // Wait for cooldown 
@@ -200,16 +204,18 @@ public class PlayerMovement : MonoBehaviour
     {
         float inputX = Input.GetAxis("Horizontal");
 
-        // Swap direction of sprite depending on walk direction
+        // Flip direction of sprite depending on walk direction
         if (inputX > 0)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            // Flip to the original side
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 0);
             facingDirection = 1;
         }
 
         else if (inputX < 0)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            // Flip the character to the opposite side
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, 0);
             facingDirection = -1;
         }
 

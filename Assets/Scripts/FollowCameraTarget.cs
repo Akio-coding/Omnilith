@@ -8,7 +8,7 @@ public class FollowCameraTarget : MonoBehaviour
     [SerializeField] private float smoothTime = 0.2f; // Vitesse de transition
 
     private float currentXOffset;
-    private float velocity; // Pour le SmoothDamp
+    private float velocity; // For SmoothDamp
 
     void Update()
     {
@@ -17,19 +17,21 @@ public class FollowCameraTarget : MonoBehaviour
             return; 
         }
 
-        // On détecte la direction du joueur via son échelle (si tu flip le sprite) 
-        // ou via ton script PlayerMovement (facingDirection).
-        // Ici, on regarde simplement l'échelle locale X du joueur ou sa rotation Y.
-        // Adapté à ton script PlayerMovement qui utilise SpriteRenderer.flipX :
-
         float targetXOffset = 0f;
 
-        // On récupère le SpriteRenderer du parent (Player) pour savoir si on regarde à gauche/droite
-        SpriteRenderer sr = playerTransform.GetComponent<SpriteRenderer>();
-        if (sr != null)
+        // On regarde la direction "droite" (Right) locale du joueur.
+        // Comme tu tournes le joueur de 180 degrés, son axe "Right" pointe vers la gauche du monde quand il se retourne.
+        if (playerTransform.right.x > 0)
         {
-            // Si flipX est true (gauche), on vise -lookAheadAmount, sinon +lookAheadAmount
-            targetXOffset = sr.flipX ? -lookAheadAmount : lookAheadAmount;
+            // L'axe rouge pointe vers la droite (Rotation Y = 0)
+            targetXOffset = lookAheadAmount;
+            Debug.Log("droooooooooooooooitttttteeeeeeeeeeee");
+        }
+        else
+        {
+            // L'axe rouge pointe vers la gauche (Rotation Y = 180)
+            targetXOffset = -lookAheadAmount;
+            Debug.Log("gauche");
         }
 
         // Transition fluide (Lerp/SmoothDamp)

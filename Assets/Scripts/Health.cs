@@ -5,39 +5,38 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [Header("Configuration")]
+    [Tooltip("Correspond a la hurtbox physique du joueur, qui se désactive quand on prends des dégats")]
+    [SerializeField] private Collider2D playerCollider;
     [SerializeField] private int _maxHealth = 5;
     public int maxHealth => _maxHealth;
-    [SerializeField] private float iFramesDuration = 1f; // Invincibility duration
-    [SerializeField] private int flashCount = 5; // How many flash ?
-
     // Public property to read private entry (usefull to other scripts to read the privates variables)
     public int CurrentHealth { get; private set; }
 
-    // State
-    private bool isInvincible = false;
-    private SpriteRenderer sr;
-    private Material originalMaterial;
-
-    // EVENTS : Pro section. 
-    // Other scripts can subscribe to these events without Health being aware of them
-    // It is similar to delegates in unreal 
-    // D'autres scripts peuvent s'abonner à ces événements sans que Health ne les connaisse.
-    public event Action<int, int> OnHealthChanged; // Envoie (VieActuelle, VieMax)
-    public event Action OnDeath;
-    public event Action OnDamageTaken; // Utile pour jouer un son ou une anim
-
+    [Header("Invincibility Settings")]
+    [Tooltip("Durée de l'invincibilité en secondes")]
+    [SerializeField] private float invincibilityDuration = 1f; // Invincibility duration
+    [Tooltip("Combien de fois le joueur clignotte pendant l'invincibilité")]
+    [SerializeField] private int flashCount = 5; // How many flash ?
+    [Tooltip("couleur dans laquelle il clignotte")]
     [SerializeField] private Color flashing;
+    private bool isInvincible = false; // The state of the player
 
     [Header("Respawn")]
-    [SerializeField] private float deathDelay = 2f; // Temps de l'animation de mort
-    [SerializeField] private Behaviour[] componentsToDisable; // Scripts à couper (ex: PlayerJump)
+    [Tooltip("Durée pendant laquelle on désactive tous les contrôles du joueur, doit être de la même durée que l'animation de mort en secondes")]
+    [SerializeField] private float deathDelay = 2f; // Duration of death animation
+    [SerializeField] private Behaviour[] componentsToDisable; 
+
+
+    // ---- Events ----
+    // Other scripts can subscribe to these events without Health being aware of them
+    // It is similar to delegates in unreal 
+    public event Action<int, int> OnHealthChanged; // Send (CurrentHealth, MaxHealth)
+    public event Action OnDeath;
+    public event Action OnDamageTaken; // Usefull to play a sound or an animation small key board 
 
     private Animator anim;
-
     private Rigidbody2D rb;
-
-    [SerializeField] private Collider2D playerCollider;
-
+    private SpriteRenderer sr;
 
     void Awake()
     {
@@ -50,80 +49,86 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        // 1. If we are invincible or dead, ignore 
+        // If we are invincible or dead, ignore 
         if (isInvincible || CurrentHealth <= 0) 
         {
             return;
         }
 
-        // 2. We apply damages
+        // We apply damages
         CurrentHealth -= damageAmount;
 
-        // 3. Notify everyone (UI, Audio, etc.)
+        // Notify everyone (UI, Audio, etc.)
         OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
         OnDamageTaken?.Invoke();
 
         if (CurrentHealth <= 0)
         {
-            CurrentHealth = 0;
-            StartCoroutine(RespawnRoutine());
+            if (CompareTag("Player") == true)
+            {
+                CurrentHealth = 0;
+                StartCoroutine(RespawnRoutine());
+            }
+            else if (CompareTag("Ennemy") == true)
+            {
+                die();
+            }
         }
         else
         {
-            // 4. If we survive, launch the coroutine 
+            // If we survive, launch the coroutine 
             StartCoroutine(InvincibilityRoutine());
         }
     }
 
     private IEnumerator RespawnRoutine()
     {
-        // On désactive le script de mouvement (PlayerJump) et le Collider pour ne plus être touché
+        // Disable the PlayerMovement script and the collider so that wa can no longer be hit
         foreach (var component in componentsToDisable)
         {
             component.enabled = false;
         }
 
-        // On joue l'animation et on coupe les contrôles
+        // Play the animation and cut off the controls
         if (anim != null && anim.runtimeAnimatorController != null)
         {
             anim.SetTrigger("Die");
         }
         if (rb != null)
         {
-            rb.velocity = Vector2.zero; // Stop net
+            rb.velocity = Vector2.zero; // Stop 
             rb.simulated = false;
         }
 
         if (playerCollider != null)
         {
-            playerCollider.enabled = false; // Devient intouchable/fantomatique
+            playerCollider.enabled = false; // Become untouchable/ghostly 
         }
         
 
-        // 2. On attend la fin de l'animation
+        // Waiting for the the animation to end 
         yield return new WaitForSeconds(deathDelay);
 
-        // 3. LE RESPAWN (Téléportation)
+        // Respawn (TP)
         if (GameManager.instance != null)
         {
             transform.position = GameManager.instance.respawnPoint;
         }
         else
         {
-            // Si tu as oublié de mettre le GameManager dans la scène, on le verra ici !
             Debug.LogError("OUPS : Le GameManager est introuvable dans la scène ! Le respawn a échoué.");
         }
-        // 4. On remet tout à neuf
+        // Reset all to normal
         Respawn();
     }
 
     private void Respawn()
     {
-        // Remettre la vie au max
-        CurrentHealth = _maxHealth; // (Utilise ta variable maxHealth ou _maxHealth)
+        // Set health back to maxHealth
+        CurrentHealth = _maxHealth;
         OnHealthChanged?.Invoke(CurrentHealth, _maxHealth);
 
-        // Réactiver les contrôles et la physique
+        // Reactivate controls and physics
         foreach (var component in componentsToDisable)
         {
             component.enabled = true;
@@ -134,13 +139,13 @@ public class Health : MonoBehaviour
             rb.simulated = true;
         }
 
-        // On réactive le collider via la variable
+        // Reactivate the collider 
         if (playerCollider != null)
         {
             playerCollider.enabled = true;
         }
 
-        // Reset Anim
+        // Reset the animation
         if (anim != null && anim.runtimeAnimatorController != null)
         {
             anim.SetTrigger("Respawn");
@@ -165,14 +170,19 @@ public class Health : MonoBehaviour
         // flashing effect
         for (int loopCount = 0; loopCount < flashCount; loopCount++)
         {
-            sr.color = flashing; // choosed color
-            yield return new WaitForSeconds(iFramesDuration / (flashCount * 2));
+            sr.color = flashing; // Choosed color
+            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
             sr.color = Color.white; // Normal
-            yield return new WaitForSeconds(iFramesDuration / (flashCount * 2));
+            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
         }
 
         sr.color = Color.white;
         isInvincible = false;
         
+    }
+
+    void die() 
+    {
+        Destroy(this.gameObject);
     }
 }
