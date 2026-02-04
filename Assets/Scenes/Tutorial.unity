@@ -979,7 +979,7 @@ Transform:
   m_GameObject: {fileID: 261009553}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.596129, y: -49.53001, z: -10}
+  m_LocalPosition: {x: 12.566592, y: -49.53001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1557,7 +1557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoundingShape2D: {fileID: 176896359}
   Damping: 0.5
-  SlowingDistance: 5
+  SlowingDistance: 20
   OversizeWindow:
     Enabled: 1
     MaxWindowSize: 0
@@ -94456,7 +94456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: speed
-      value: 3.85
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: shutJump
@@ -94487,12 +94487,96 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashSpeedCurve.m_Curve.Array.data[1].time
-      value: 0.555781
+      value: 0.121006764
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[2].time
+      value: 0.39950562
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[3].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[0].value
+      value: 0.0015258789
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashSpeedCurve.m_Curve.Array.data[1].value
-      value: 0.481144
+      value: 0.041107886
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[2].value
+      value: 0.60217285
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[3].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[0].inSlope
+      value: 0.66796523
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[1].inSlope
+      value: 1.2419767
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[2].inSlope
+      value: 1.2534169
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[3].inSlope
+      value: 0.11297674
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[0].outSlope
+      value: 0.66796523
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[1].outSlope
+      value: 1.2419767
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[2].inWeight
+      value: 0.1072325
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[2].outSlope
+      value: 1.2534169
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[3].inWeight
+      value: 0.1245364
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[3].outSlope
+      value: 0.11297674
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[0].outWeight
+      value: 0.15521629
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: dashSpeedCurve.m_Curve.Array.data[2].outWeight
+      value: 0.11450386
       objectReference: {fileID: 0}
     - target: {fileID: 5689288251926289612, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
