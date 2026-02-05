@@ -25,13 +25,11 @@ public class FollowCameraTarget : MonoBehaviour
         {
             // L'axe rouge pointe vers la droite (Rotation Y = 0)
             targetXOffset = lookAheadAmount;
-            Debug.Log("droooooooooooooooitttttteeeeeeeeeeee");
         }
         else
         {
             // L'axe rouge pointe vers la gauche (Rotation Y = 180)
             targetXOffset = -lookAheadAmount;
-            Debug.Log("gauche");
         }
 
         // Transition fluide (Lerp/SmoothDamp)

@@ -2530,6 +2530,11 @@ Transform:
   - {fileID: 1062053164}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1932455153 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 698730105349837944, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+  m_PrefabInstance: {fileID: 3890257807272528489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3890257807272528489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2541,6 +2546,26 @@ PrefabInstance:
     - target: {fileID: 2437076735979823706, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493396109613708147, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: attackRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493396109613708147, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: StabCollider
+      value: 
+      objectReference: {fileID: 1932455153}
+    - target: {fileID: 3493396109613708147, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: attackBuffer
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493396109613708147, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: SlashCollider
+      value: 
+      objectReference: {fileID: 1932455153}
+    - target: {fileID: 4354305805910585402, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: _maxHealth
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
