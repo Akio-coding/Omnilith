@@ -316,8 +316,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759df8e30440ca345ac9893439a0a566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCollider: {fileID: 698730105349837944}
+  SlashCollider: {fileID: 698730105349837944}
+  StabCollider: {fileID: 698730105349837944}
+  attackBuffer: 0.9
   attackRate: 1
+  maxHitInCombo: 3
 --- !u!1 &3007022099808792787
 GameObject:
   m_ObjectHideFlags: 0
