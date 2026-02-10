@@ -94,12 +94,19 @@ AnimationClip:
   - time: 0.14285715
     functionName: EnableHitbox
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11500000, guid: 759df8e30440ca345ac9893439a0a566, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.35714287
     functionName: DisableHitbox
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: FinishAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
