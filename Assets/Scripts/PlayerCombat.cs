@@ -2,12 +2,26 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    [Header("Réglages Attaque")]
-    [SerializeField] private Collider2D attackCollider;
-    [Tooltip("Combien d'attaques le joueur peut lancer par seconde")]
-    [SerializeField] private float attackRate = 2f; // How many attacks per seconds 
+    [Header("Colliders d'attaque")]
+    [SerializeField] private Collider2D SlashCollider;
+    [SerializeField] private Collider2D StabCollider;
 
-    private float nextAttackTime = 0f;
+    [Header("Gestion timing")]
+    [Tooltip("Nombre de coups maximum dans un combo")]
+    [SerializeField] private int maxHitInCombo = 3;
+    [Tooltip("Timing toléré après l'animation de l'attaque qui accepte le trigger Time allowed after an attack animation to still trigger the next combo step")]
+    [SerializeField] private float comboTolerance = 0.5f;
+
+    // --- Variables ---
+    // -- State --
+    public bool IsAttacking { get; private set; }
+    private bool inputBuffered = false;
+    private int comboCounter = 0;
+    private float lastAttackEndTime = 0f; // New: To track the tolerance window
+
+
+
+    // -- General --
     private Animator anim;
 
     void Start()
@@ -15,47 +29,113 @@ public class PlayerCombat : MonoBehaviour
         anim = GetComponent<Animator>();
 
         // Ensure that the sword collider is deactivated at the start
-        if (attackCollider != null)
-        {
-            attackCollider.enabled = false;
-        }
+        DisableHitbox();
     }
 
     void Update()
-    {
-        if (Time.time >= nextAttackTime)
+   {
+    // 1. Check for Timeout: Reset combo if user waited too long after the last attack
+        if (!IsAttacking && comboCounter > 0)
         {
-            if (Input.GetButtonDown("Fire1")) // Left clic or Ctrl
+            if (Time.time > lastAttackEndTime + comboTolerance)
             {
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
+                comboCounter = 0; // Combo dropped
+            }
+        }
+
+        // 2. Input Handling
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (IsAttacking)
+            {
+                // Case A: Player presses DURING animation -> Buffer the input
+                if (comboCounter < maxHitInCombo)
+                {
+                    inputBuffered = true;
+                }
+            }
+            else
+            {
+                // Case B: Player presses when NOT attacking (Start fresh OR Continue combo in tolerance window)
+                StartAttack();
             }
         }
     }
 
-    void Attack()
+    private void StartAttack()
     {
-        // Play the animation, the functions below will be called in it
+        // Reset logic
+        inputBuffered = false;
+        IsAttacking = true;
+
+        // Loop the combo if we exceeded max hits (Optional, depends on design)
+        if (comboCounter >= maxHitInCombo)
+        {
+            comboCounter = 0;
+        }
+
+        // Increment to next step
+        comboCounter++;
+
+        // Update Animator
         anim.SetTrigger("Attack");
+        anim.SetInteger("ComboStep", comboCounter);
     }
 
+
     // --- FUNCTIONS CALLED BY THE ANIMATOR ---
-    
+
     // 1. At the beginning of the movement (when the sword becomes dangerous)
-    public void EnableHitbox()
+    private void EnableHitbox()
     {
-        if (attackCollider != null)
+        if (comboCounter >= 3)
         {
-            attackCollider.enabled = true;
+            if(StabCollider != null)
+            {
+                StabCollider.enabled = true;
+            }
+        }
+        else
+        {
+            if (SlashCollider != null)
+            { 
+                SlashCollider.enabled = true;
+            }
+        }
+        
+    }
+
+    // At the end of the movement (when we want to stop the attack) 
+    private void DisableHitbox()
+    {
+        if (SlashCollider != null)
+        {
+            SlashCollider.enabled = false;
+        }
+
+        if (StabCollider!= null)
+        {
+            StabCollider.enabled = false;
         }
     }
 
-    // 2. At the end of the movement (when we want to stop the attack) 
-    public void DisableHitbox()
+    // --- IA ---
+    private void FinishAttack()
     {
-        if (attackCollider != null)
+        DisableHitbox();
+
+        if (inputBuffered)
         {
-            attackCollider.enabled = false;
+            // The player pressed early (Buffer), so we chain immediately
+            StartAttack();
+        }
+        else
+        {
+            // The player didn't press yet. 
+            // We stop the attack state, BUT we don't reset comboCounter yet.
+            // We record the time to allow the tolerance window in Update()
+            IsAttacking = false;
+            lastAttackEndTime = Time.time;
         }
     }
 }
