@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Collision Dash")]
     [Tooltip("Collider a changer pendant le dash")]
-    [SerializeField] private BoxCollider2D dashCollider;
+    [SerializeField] private CapsuleCollider2D dashCollider;
     [Tooltip("La taille du collider pendant le dash (x, y)")]
     [SerializeField] private Vector2 dashColliderSize;
     [Tooltip("Le décalage du centre pour que les pieds restent au sol")]
