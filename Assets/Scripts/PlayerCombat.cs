@@ -14,8 +14,7 @@ public class PlayerCombat : MonoBehaviour
 
     // --- Variables ---
     // -- State --
-
-    private bool isAttacking = false;
+    public bool IsAttacking { get; private set; }
     private bool inputBuffered = false;
     private int comboCounter = 0;
     private float lastAttackEndTime = 0f; // New: To track the tolerance window
@@ -36,7 +35,7 @@ public class PlayerCombat : MonoBehaviour
     void Update()
    {
     // 1. Check for Timeout: Reset combo if user waited too long after the last attack
-        if (!isAttacking && comboCounter > 0)
+        if (!IsAttacking && comboCounter > 0)
         {
             if (Time.time > lastAttackEndTime + comboTolerance)
             {
@@ -47,7 +46,7 @@ public class PlayerCombat : MonoBehaviour
         // 2. Input Handling
         if (Input.GetButtonDown("Fire1"))
         {
-            if (isAttacking)
+            if (IsAttacking)
             {
                 // Case A: Player presses DURING animation -> Buffer the input
                 if (comboCounter < maxHitInCombo)
@@ -67,7 +66,7 @@ public class PlayerCombat : MonoBehaviour
     {
         // Reset logic
         inputBuffered = false;
-        isAttacking = true;
+        IsAttacking = true;
 
         // Loop the combo if we exceeded max hits (Optional, depends on design)
         if (comboCounter >= maxHitInCombo)
@@ -135,7 +134,7 @@ public class PlayerCombat : MonoBehaviour
             // The player didn't press yet. 
             // We stop the attack state, BUT we don't reset comboCounter yet.
             // We record the time to allow the tolerance window in Update()
-            isAttacking = false;
+            IsAttacking = false;
             lastAttackEndTime = Time.time;
         }
     }
