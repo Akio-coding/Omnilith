@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Collision Dash")]
     [Tooltip("Collider a changer pendant le dash")]
-    [SerializeField] private BoxCollider2D dashCollider;
+    [SerializeField] private CapsuleCollider2D dashCollider;
     [Tooltip("La taille du collider pendant le dash (x, y)")]
     [SerializeField] private Vector2 dashColliderSize;
     [Tooltip("Le décalage du centre pour que les pieds restent au sol")]
@@ -58,12 +58,14 @@ public class PlayerMovement : MonoBehaviour
     public AnimationCurve dashSpeedCurve;
     private Rigidbody2D rb;
     private TrailRenderer tr;
-    
+    private PlayerCombat combat;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
+        combat = GetComponent<PlayerCombat>();
 
         initialGravity = rb.gravityScale;
         initialSize = dashCollider.size;
@@ -202,6 +204,20 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveForward()
     {
+        
+        // --- BLOCAGE PENDANT L'ATTAQUE ---
+        // Si le script de combat existe ET qu'on est en train d'attaquer
+        if (combat != null && combat.IsAttacking && isOnGround)
+        {
+            // 1. On empêche le mouvement (pour éviter le "moonwalk")
+            // On garde la vitesse Y (gravité) mais on met X à 0
+            rb.velocity = new Vector2(0, rb.velocity.y);
+
+            // 2. On arrête la fonction ici : le code de rotation ci-dessous ne sera pas lu
+            return;
+        }
+        // ---------------------------------
+
         float inputX = Input.GetAxis("Horizontal");
 
         // Flip direction of sprite depending on walk direction
@@ -223,4 +239,3 @@ public class PlayerMovement : MonoBehaviour
     }
 
 }
-
