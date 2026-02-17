@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
     void InputManager()
     {
-        if (Input.GetButtonDown("Jump") && isOnGround)
+        if (Input.GetButtonDown("Jump") && isOnGround && !isDashing)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }

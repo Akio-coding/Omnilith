@@ -979,7 +979,7 @@ Transform:
   m_GameObject: {fileID: 261009553}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -68.5, y: -52.260002, z: -10}
+  m_LocalPosition: {x: 12.596129, y: -52.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1646,7 +1646,7 @@ Transform:
   m_GameObject: {fileID: 343109652}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -68.5, y: -52.260002, z: -10}
+  m_LocalPosition: {x: 20.6, y: -52.260002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6507,11 +6507,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1079617226 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6372909416703627289, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-  m_PrefabInstance: {fileID: 1564714893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1094915781
 GameObject:
   m_ObjectHideFlags: 0
@@ -103822,7 +103817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390865335320607055, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 4354305805910585402, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: playerCollider
@@ -103834,7 +103829,7 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: b3cc2d6318753074583cd2d33537c243, type: 2}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -69.2
+      value: 19.9
       objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -103887,7 +103882,7 @@ PrefabInstance:
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashCollider
       value: 
-      objectReference: {fileID: 1079617226}
+      objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashCooldown
       value: 1.4

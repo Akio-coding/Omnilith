@@ -19,8 +19,6 @@ public class PlayerCombat : MonoBehaviour
     private int comboCounter = 0;
     private float lastAttackEndTime = 0f; // New: To track the tolerance window
 
-
-
     // -- General --
     private Animator anim;
 
@@ -46,8 +44,10 @@ public class PlayerCombat : MonoBehaviour
         // 2. Input Handling
         if (Input.GetButtonDown("Fire1"))
         {
+
             if (IsAttacking)
             {
+
                 // Case A: Player presses DURING animation -> Buffer the input
                 if (comboCounter < maxHitInCombo)
                 {

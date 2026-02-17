@@ -1204,11 +1204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f932aafeb595241984ab8e82b61888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1001665683 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6372909416703627289, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-  m_PrefabInstance: {fileID: 3890257807272528489}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1062053163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,6 +2761,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4507910864121749656, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_GravityScale
+      value: 2.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.496
@@ -2811,13 +2810,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-      propertyPath: dashCollider
-      value: 
-<<<<<<< Updated upstream
-      objectReference: {fileID: 1001665683}
-=======
-      objectReference: {fileID: 3890257807272528493}
->>>>>>> Stashed changes
+      propertyPath: speed
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: jumpForce
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: fallMultiplier
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5689288251926289612, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8
@@ -2831,14 +2834,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-<<<<<<< Updated upstream
-=======
---- !u!70 &3890257807272528493 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 4877593484285198402, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-  m_PrefabInstance: {fileID: 3890257807272528489}
-  m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
