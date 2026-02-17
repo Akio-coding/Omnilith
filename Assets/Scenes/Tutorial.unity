@@ -6507,11 +6507,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1079617226 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6372909416703627289, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-  m_PrefabInstance: {fileID: 1564714893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1094915781
 GameObject:
   m_ObjectHideFlags: 0
@@ -103812,6 +103807,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1551060455016233308, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2437076735979823706, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -103832,6 +103831,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: b3cc2d6318753074583cd2d33537c243, type: 2}
+    - target: {fileID: 4507910864121749656, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_GravityScale
+      value: 2.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -69.2
@@ -103872,9 +103875,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4877593484285198402, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877593484285198402, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.55
+      objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: speed
-      value: 3.85
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: shutJump
@@ -103882,15 +103893,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: jumpForce
-      value: 9
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashCollider
       value: 
-      objectReference: {fileID: 1079617226}
+      objectReference: {fileID: 1776640117}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashCooldown
-      value: 1.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashDistance
@@ -103902,7 +103913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: fallMultiplier
-      value: 3
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashSpeedCurve.m_Curve.Array.data[1].time
@@ -104607,6 +104618,11 @@ MonoBehaviour:
   playerHealth: {fileID: 2072004378}
   heartPrefab: {fileID: 9031006517196614066, guid: 3dde2946d41b7fa438586cc146e747eb, type: 3}
   heartsContainer: {fileID: 1724168340}
+--- !u!70 &1776640117 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4877593484285198402, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+  m_PrefabInstance: {fileID: 1564714893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1803868516
 GameObject:
   m_ObjectHideFlags: 0
