@@ -42,7 +42,6 @@ public class Health : MonoBehaviour
     {
         CurrentHealth = _maxHealth;
         sr = GetComponent<SpriteRenderer>();
-        
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
