@@ -5,6 +5,7 @@ public class PlayerCombat : MonoBehaviour
     [Header("Colliders d'attaque")]
     [SerializeField] private Collider2D SlashCollider;
     [SerializeField] private Collider2D StabCollider;
+    [SerializeField] private Collider2D UpAttackCollider;
 
     [Header("Gestion timing")]
     [Tooltip("Nombre de coups maximum dans un combo")]
@@ -12,19 +13,26 @@ public class PlayerCombat : MonoBehaviour
     [Tooltip("Timing toléré après l'animation de l'attaque qui accepte le trigger Time allowed after an attack animation to still trigger the next combo step")]
     [SerializeField] private float comboTolerance = 0.5f;
 
+    [Header("Movement")]
+    [Tooltip("Force du petit pas en avant lors de l'attaque")]
+    [SerializeField] private float attackStepForce = 10f;
+    
     // --- Variables ---
     // -- State --
     public bool IsAttacking { get; private set; }
+    private bool isAttackingUp = false;
     private bool inputBuffered = false;
     private int comboCounter = 0;
     private float lastAttackEndTime = 0f; // New: To track the tolerance window
 
     // -- General --
     private Animator anim;
+    private PlayerMovement movement;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        movement = GetComponent<PlayerMovement>();
 
         // Ensure that the sword collider is deactivated at the start
         DisableHitbox();
@@ -44,10 +52,11 @@ public class PlayerCombat : MonoBehaviour
         // 2. Input Handling
         if (Input.GetButtonDown("Fire1"))
         {
+            // Verify if we input in up direction
+            float yInput = Input.GetAxisRaw("Vertical");
 
             if (IsAttacking)
             {
-
                 // Case A: Player presses DURING animation -> Buffer the input
                 if (comboCounter < maxHitInCombo)
                 {
@@ -56,8 +65,17 @@ public class PlayerCombat : MonoBehaviour
             }
             else
             {
-                // Case B: Player presses when NOT attacking (Start fresh OR Continue combo in tolerance window)
-                StartAttack();
+                // If we input up => UpAttack
+                if(yInput > 0.1f)
+                {
+                    StartUpAttack();
+                }
+                else
+                {
+                    // Case B: Player presses when NOT attacking (Start fresh OR Continue combo in tolerance window)
+                    StartAttack();
+                }
+                    
             }
         }
     }
@@ -67,6 +85,7 @@ public class PlayerCombat : MonoBehaviour
         // Reset logic
         inputBuffered = false;
         IsAttacking = true;
+        isAttackingUp = false;
 
         // Loop the combo if we exceeded max hits (Optional, depends on design)
         if (comboCounter >= maxHitInCombo)
@@ -82,32 +101,60 @@ public class PlayerCombat : MonoBehaviour
         anim.SetInteger("ComboStep", comboCounter);
     }
 
+    private void StartUpAttack()
+    {
+        inputBuffered = false;
+        IsAttacking = true;
+        isAttackingUp = true;
+
+        // On ne touche pas au comboCounter pour l'attaque haute (souvent c'est un coup unique)
+        // Ou tu peux décider qu'elle casse le combo, à toi de voir.
+        anim.SetTrigger("AttackUp");
+    }
 
     // --- FUNCTIONS CALLED BY THE ANIMATOR ---
 
     // 1. At the beginning of the movement (when the sword becomes dangerous)
     private void EnableHitbox()
     {
-        if (comboCounter >= 3)
+        // Selection of the hitbox
+        if (isAttackingUp) 
         {
-            if(StabCollider != null)
+            // Attack up
+            if(UpAttackCollider != null)
             {
-                StabCollider.enabled = true;
+                UpAttackCollider.enabled = true;
             }
         }
         else
         {
-            if (SlashCollider != null)
-            { 
-                SlashCollider.enabled = true;
+            // Normal case (combo attack)
+            if (comboCounter >= 3)
+            {
+                if (StabCollider != null)
+                {
+                    StabCollider.enabled = true;
+                }
+            }
+            else
+            {
+                if (SlashCollider != null)
+                {
+                    SlashCollider.enabled = true;
+                }
             }
         }
         
     }
 
-    // At the end of the movement (when we want to stop the attack) 
+    // At the end of the attack (when we want to stop the attack) 
     private void DisableHitbox()
     {
+        if (UpAttackCollider != null)
+        {
+            UpAttackCollider.enabled = false;
+        }
+
         if (SlashCollider != null)
         {
             SlashCollider.enabled = false;
@@ -126,6 +173,10 @@ public class PlayerCombat : MonoBehaviour
 
         if (inputBuffered)
         {
+            // Si on a bufférisé, on relance. 
+            // Note: Ici tu pourrais ajouter une logique pour savoir si le prochain coup
+            // doit être haut ou bas selon l'input maintenu.
+            // Pour l'instant, on relance un combo standard par défaut.
             // The player pressed early (Buffer), so we chain immediately
             StartAttack();
         }
@@ -136,6 +187,15 @@ public class PlayerCombat : MonoBehaviour
             // We record the time to allow the tolerance window in Update()
             IsAttacking = false;
             lastAttackEndTime = Time.time;
+            isAttackingUp = false;
+        }
+    }
+    private void TriggerAttackStep()
+    {
+        // Permit a step when attacking, only on ground and only when doing normal combo
+        if (movement != null && !isAttackingUp)
+        {
+            movement.ApplyAttackStep(attackStepForce);
         }
     }
 }
