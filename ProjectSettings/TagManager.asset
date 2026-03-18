@@ -18,8 +18,8 @@ TagManager:
   - Enemy
   - PlayerHurtbox
   - PlayerHitbox
-  - 
-  - 
+  - Throwable
+  - Monkey
   - 
   - 
   - 

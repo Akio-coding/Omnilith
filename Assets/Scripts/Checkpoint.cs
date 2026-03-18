@@ -34,6 +34,5 @@ public class Checkpoint : MonoBehaviour
 
         // 2. On prévient le chef (GameManager)
         GameManager.instance.UpdateCheckpoint(transform.position);
-
     }
 }

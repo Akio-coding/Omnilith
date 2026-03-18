@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Mouvements settings")]
@@ -42,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Le décalage du centre pour que les pieds restent au sol")]
     [SerializeField] private Vector2 dashColliderOffset;
 
-    // Variables
+    // Dash Variables
     private bool isDashing;
     private bool canDash = true;
     private float actualTime;
@@ -54,14 +53,13 @@ public class PlayerMovement : MonoBehaviour
 
     // --- End of Dash ---
 
+    private bool isAttackStepping = false;
     private int facingDirection = 1; // 1 = right -1 = left
 
     public AnimationCurve dashSpeedCurve;
     private Rigidbody2D rb;
     private TrailRenderer tr;
     private PlayerCombat combat;
-
-    public bool Isclimbing = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -73,8 +71,6 @@ public class PlayerMovement : MonoBehaviour
         initialGravity = rb.gravityScale;
         initialSize = dashCollider.size;
         initialOffset = dashCollider.offset;
-
-        
     }
 
     // Update is called once per frame
@@ -209,16 +205,19 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveForward()
     {
-        
         // --- BLOCAGE PENDANT L'ATTAQUE ---
         // Si le script de combat existe ET qu'on est en train d'attaquer
         if (combat != null && combat.IsAttacking && isOnGround)
         {
-            // 1. On empêche le mouvement (pour éviter le "moonwalk")
-            // On garde la vitesse Y (gravité) mais on met X à 0
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            // ET qu'on n'est PAS en train de faire le petit pas automatique
+            if (!isAttackStepping)
+            {
+                // 1. On empêche le mouvement (pour éviter le "moonwalk")
+                // On garde la vitesse Y (gravité) mais on met X à 0
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
 
-            // 2. On arrête la fonction ici : le code de rotation ci-dessous ne sera pas lu
+            // Dans tous les cas (step ou pas), on empêche le joueur de contrôler avec les touches
             return;
         }
         // ---------------------------------
@@ -243,40 +242,22 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
     }
 
-    void MoveUpward()
+    public void ApplyAttackStep(float strength)
     {
-
-        // --- BLOCAGE PENDANT L'ATTAQUE ---
-        // Si le script de combat existe ET qu'on est en train d'attaquer
-        if (combat != null && combat.IsAttacking && isOnGround)
-        {
-            // 1. On empêche le mouvement (pour éviter le "moonwalk")
-            // On garde la vitesse Y (gravité) mais on met X à 0
-            rb.velocity = new Vector2(0, rb.velocity.y);
-
-            // 2. On arrête la fonction ici : le code de rotation ci-dessous ne sera pas lu
-            return;
-        }
-        // ---------------------------------
-
-        float inputX = Input.GetAxis("Horizontal");
-
-        // Flip direction of sprite depending on walk direction
-        if (inputX > 0)
-        {
-            // Flip to the original side
-            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 0);
-            facingDirection = 1;
-        }
-
-        else if (inputX < 0)
-        {
-            // Flip the character to the opposite side
-            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, 0);
-            facingDirection = -1;
-        }
-
-        rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
+        // On lance une petite routine pour gérer la durée du pas
+        StartCoroutine(AttackStepRoutine(strength));
     }
 
+    private IEnumerator AttackStepRoutine(float strength)
+    {
+        isAttackStepping = true; // On signale qu'on est en train de faire le pas
+
+        // On applique la vitesse dans la direction où regarde le joueur
+        rb.velocity = new Vector2(facingDirection * strength, rb.velocity.y);
+
+        // On attend une fraction de seconde (très court pour un effet "snappy")
+        yield return new WaitForSeconds(0.1f);
+
+        isAttackStepping = false; // On rend le contrôle au blocage habituel
+    }
 }
