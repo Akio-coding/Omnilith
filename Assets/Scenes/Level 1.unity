@@ -3417,6 +3417,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: b3cc2d6318753074583cd2d33537c243, type: 2}
+    - target: {fileID: 4507910864121749656, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_GravityScale
+      value: 2.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.7
@@ -3467,7 +3471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: jumpForce
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashCollider
@@ -3475,7 +3479,7 @@ PrefabInstance:
       objectReference: {fileID: 1803859231}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashCooldown
-      value: 1.4
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashDistance
@@ -3487,7 +3491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: fallMultiplier
-      value: 3
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: dashSpeedCurve.m_Curve.Array.data[1].time
