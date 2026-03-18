@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Mouvements settings")]
@@ -60,6 +61,8 @@ public class PlayerMovement : MonoBehaviour
     private TrailRenderer tr;
     private PlayerCombat combat;
 
+    public bool Isclimbing = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -70,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
         initialGravity = rb.gravityScale;
         initialSize = dashCollider.size;
         initialOffset = dashCollider.offset;
+
+        
     }
 
     // Update is called once per frame
@@ -205,6 +210,42 @@ public class PlayerMovement : MonoBehaviour
     void MoveForward()
     {
         
+        // --- BLOCAGE PENDANT L'ATTAQUE ---
+        // Si le script de combat existe ET qu'on est en train d'attaquer
+        if (combat != null && combat.IsAttacking && isOnGround)
+        {
+            // 1. On empêche le mouvement (pour éviter le "moonwalk")
+            // On garde la vitesse Y (gravité) mais on met X à 0
+            rb.velocity = new Vector2(0, rb.velocity.y);
+
+            // 2. On arrête la fonction ici : le code de rotation ci-dessous ne sera pas lu
+            return;
+        }
+        // ---------------------------------
+
+        float inputX = Input.GetAxis("Horizontal");
+
+        // Flip direction of sprite depending on walk direction
+        if (inputX > 0)
+        {
+            // Flip to the original side
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 0);
+            facingDirection = 1;
+        }
+
+        else if (inputX < 0)
+        {
+            // Flip the character to the opposite side
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, 0);
+            facingDirection = -1;
+        }
+
+        rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
+    }
+
+    void MoveUpward()
+    {
+
         // --- BLOCAGE PENDANT L'ATTAQUE ---
         // Si le script de combat existe ET qu'on est en train d'attaquer
         if (combat != null && combat.IsAttacking && isOnGround)
