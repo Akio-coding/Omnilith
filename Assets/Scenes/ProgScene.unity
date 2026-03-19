@@ -2890,6 +2890,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1770389516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2990,7 +2995,11 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
+<<<<<<< Updated upstream
   m_CollisionDetection: 0
+=======
+  m_CollisionDetection: 1
+>>>>>>> Stashed changes
   m_Constraints: 0
 --- !u!212 &1770389520
 SpriteRenderer:
@@ -3110,6 +3119,10 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0174797, y: 0.097566605}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 --- !u!1 &1818784127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,10 +3227,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 2437076735979823706, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
     - target: {fileID: 3493396109613708147, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: attackStepForce
       value: 2
@@ -3225,10 +3242,30 @@ PrefabInstance:
     - target: {fileID: 3493396109613708147, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: UpAttackCollider
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 3890257807272528490}
     - target: {fileID: 4507910864121749656, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_GravityScale
       value: 2.1
+=======
+      objectReference: {fileID: 1655592811}
+    - target: {fileID: 4354305805910585402, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: _maxHealth
+      value: 5
+=======
+    - target: {fileID: 2437076735979823706, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007022099808792787, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507910864121749656, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_GravityScale
+      value: 2.1
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3295,11 +3332,45 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+<<<<<<< Updated upstream
 --- !u!61 &3890257807272528490 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 9160274130800990719, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
   m_PrefabInstance: {fileID: 3890257807272528489}
   m_PrefabAsset: {fileID: 0}
+=======
+<<<<<<< Updated upstream
+--- !u!1 &3890257807272528490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1074342966812473807, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+  m_PrefabInstance: {fileID: 3890257807272528489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &3890257807272528491
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890257807272528490}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.18956968
+  m_Height: 0.95747447
+  m_Direction: 1
+  m_Center: {x: -0.004252583, y: 0.72717273, z: 0}
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
