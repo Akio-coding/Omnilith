@@ -403,10 +403,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SlashCollider: {fileID: 698730105349837944}
   StabCollider: {fileID: 962101979000611258}
-  UpAttackCollider: {fileID: 0}
+  UpAttackCollider: {fileID: 9160274130800990719}
   maxHitInCombo: 3
   comboTolerance: 0.5
-  attackStepForce: 10
+  attackStepForce: 2
 --- !u!1 &3007022099808792787
 GameObject:
   m_ObjectHideFlags: 0

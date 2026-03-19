@@ -53,4 +53,12 @@ Physics2DSettings:
   m_ReuseCollisionCallbacks: 1
   m_AutoSyncTransforms: 0
   m_GizmoOptions: 10
+<<<<<<< Updated upstream
+  m_LayerCollisionMatrix: fffdfffffffdfffffffdfffffffffffffffdfffffff9fffffffdffffffe8ffff7fffffff08e9ffff5fedffffffffffff7ff9ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+=======
+<<<<<<< Updated upstream
   m_LayerCollisionMatrix: fffdfffffffdfffffffdfffffffffffffffdfffffff9fffffffdfffffff8ffff7fffffff08f9ffff5ffdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+=======
+  m_LayerCollisionMatrix: fffdfffffffdfffffffdfffffffffffffffdfffffff9fffffffdffffffe0ffff7fffffff08e9ffff5fedffff7fffffff7ff9ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
