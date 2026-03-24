@@ -11,6 +11,10 @@ public class FollowingMonkey : MonoBehaviour
     [SerializeField] private float moveSpeed = 4f;
     [SerializeField] private float stopDistance = 1f;
 
+    [Header("Réglage du suivi (Avec Objet)")]
+    [SerializeField] private float carryFollowDelay = 0.1f;
+    [SerializeField] private float carryStopDistance = 0.5f;
+
     [Header("Sécurité Téléportation")]
     [SerializeField] private float maxDistanceBeforeTP = 10f; // Si > 10 unités de distances, on tp
     [SerializeField] private float tpDelay = 0.2f; // Petit délai pour l'effet visuel
@@ -34,7 +38,6 @@ public class FollowingMonkey : MonoBehaviour
         }
     }
 
-
     [Header("Système de Lancer")]
     [SerializeField] private float detectionRadius = 2f; // Distance pour ramasser
     [SerializeField] private LayerMask throwableLayer; // Layer des objets lancables
@@ -53,7 +56,6 @@ public class FollowingMonkey : MonoBehaviour
     [SerializeField] private bool isGrounded;
     private bool playerWasGrounded;
     private bool isTeleporting = false;
-
 
     private Vector3 lastRecordedPos;
 
@@ -164,8 +166,12 @@ public class FollowingMonkey : MonoBehaviour
 
     private void MoveMonkey()
     {
+
+        float currentDelay = (carriedObject != null) ? carryFollowDelay : followDelay;
+        float currentStop = (carriedObject != null) ? carryStopDistance : stopDistance;
+
         // On ne fait rien si la liste est vide ou si le temps n'est pas venu
-        if (playerHistory.Count == 0 || Time.time < playerHistory.Peek().timeStamp + followDelay)
+        if (playerHistory.Count == 0 || Time.time < playerHistory.Peek().timeStamp + currentDelay)
         {
             StopMoving();
             return;
@@ -185,7 +191,7 @@ public class FollowingMonkey : MonoBehaviour
         }
 
         // 2. GESTION DU DÉPLACEMENT HORIZONTAL
-        if (distanceToPlayer > stopDistance)
+        if (distanceToPlayer > currentStop)
         {
             float direction = targetStep.position.x > transform.position.x ? 1 : -1;
             rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
@@ -200,8 +206,6 @@ public class FollowingMonkey : MonoBehaviour
         else
         {
             StopMoving();
-            // ATTENTION : J'ai supprimé le playerHistory.Clear() ici ! 
-            // C'était lui qui effaçait les sauts quand le joueur décollait juste à côté du singe.
         }
 
         // 3. PASSAGE AU POINT SUIVANT

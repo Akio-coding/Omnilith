@@ -2925,7 +2925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 985268955}
   followDelay: 0.1
-  moveSpeed: 4
+  moveSpeed: 4.5
   stopDistance: 1
   maxDistanceBeforeTP: 10
   tpDelay: 0.2
@@ -2943,6 +2943,8 @@ MonoBehaviour:
   highThrowForce: {x: 5, y: 10}
   lowThrowForce: {x: 8, y: 3}
   isGrounded: 0
+  carryFollowDelay: 0.1
+  carryStopDistance: 0.5
 --- !u!95 &1770389518
 Animator:
   serializedVersion: 7
