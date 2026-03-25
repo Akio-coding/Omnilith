@@ -2924,11 +2924,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 985268955}
-  followDelay: 0.1
+  followDelay: 0.7
   moveSpeed: 4.5
   stopDistance: 1
+  carryFollowDelay: 0.1
+  carryStopDistance: 0.5
   maxDistanceBeforeTP: 10
-  tpDelay: 0.2
+  tpDelay: 0.1
   jumpForce: 13
   groundLayer:
     serializedVersion: 2
@@ -2943,8 +2945,6 @@ MonoBehaviour:
   highThrowForce: {x: 5, y: 10}
   lowThrowForce: {x: 8, y: 3}
   isGrounded: 0
-  carryFollowDelay: 0.1
-  carryStopDistance: 0.5
 --- !u!95 &1770389518
 Animator:
   serializedVersion: 7
@@ -3224,22 +3224,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 3493396109613708147, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-      propertyPath: attackStepForce
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493396109613708147, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-      propertyPath: UpAttackCollider
-      value: 
-      objectReference: {fileID: 3890257807272528490}
-    - target: {fileID: 4354305805910585402, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-      propertyPath: _maxHealth
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4507910864121749656, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-      propertyPath: m_GravityScale
-      value: 2.1
-      objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.496
@@ -3284,10 +3268,6 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5350796280156042039, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5689288251926289612, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8
@@ -3305,11 +3285,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
---- !u!61 &3890257807272528490 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 9160274130800990719, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
-  m_PrefabInstance: {fileID: 3890257807272528489}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
