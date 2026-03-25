@@ -47,6 +47,9 @@ public class FollowingMonkey : MonoBehaviour
 
     private GameObject carriedObject;
 
+    [Header("Système de lancer de joueur")]
+    [SerializeField] private Vector2 playerThrowForce = new Vector2(4f, 8f);
+    private bool isChasingPlayer = false; // Indique si le singe essaye d'attraper le joueur 
     // -------------------------------------
 
     private Queue<PlayerHistoryItem> playerHistory = new Queue<PlayerHistoryItem>();
@@ -79,16 +82,24 @@ public class FollowingMonkey : MonoBehaviour
             return; // On stoppe la logique si on est en train de se TP
         }
 
-        RecordHistory();
-        CheckGroundStatus();
-        CheckForTeleport();
-        MoveMonkey();
-
         HandleInteraction();
-
+        if (isChasingPlayer) 
+        {
+            ChasePlayerForPickUp();
+        }
+        else
+        {
+            RecordHistory();
+            CheckGroundStatus();
+            CheckForTeleport();
+            MoveMonkey();
+        }
+            
         if (carriedObject != null && throwPoint != null)
         {
             carriedObject.transform.position = throwPoint.position;
+            // On force la vitesse du joueur à 0 pour éviter qu'il tremble en essayant de bouger
+            carriedObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }
 
@@ -191,7 +202,7 @@ public class FollowingMonkey : MonoBehaviour
         }
 
         // 2. GESTION DU DÉPLACEMENT HORIZONTAL
-        if (distanceToPlayer > currentStop)
+        if (distanceToPlayer > currentStop && carriedObject != playerTransform.gameObject)
         {
             float direction = targetStep.position.x > transform.position.x ? 1 : -1;
             rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
@@ -242,9 +253,20 @@ public class FollowingMonkey : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             if (carriedObject == null)
-                TryPickUp();
+            {
+                if (isChasingPlayer)
+                {
+                    isChasingPlayer = false; // Annule la course vers le joueur si on a appuyé par erreur
+                }
+                else
+                {
+                    TryPickUp();
+                }
+            }
             else
+            {
                 ThrowObject();
+            }
         }
     }
 
@@ -258,7 +280,47 @@ public class FollowingMonkey : MonoBehaviour
             carriedObject = hit.gameObject;
             // On désactive la physique de l'objet pendant qu'on le porte
             carriedObject.GetComponent<Rigidbody2D>().isKinematic = true;
-            carriedObject.GetComponent<Collider2D>().enabled = false;
+            carriedObject.GetComponentInChildren<Collider2D>().enabled = false;
+        }
+        else
+        {
+            // Pas d'objet ? ==> on part attraper le joueur
+            isChasingPlayer = true;
+            playerHistory.Clear();
+        }
+    }
+
+    private void ChasePlayerForPickUp()
+    {
+        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+
+        if (distanceToPlayer <= stopDistance * detectionRadius)
+        {
+            carriedObject = playerTransform.gameObject;
+
+            // On désactive la physique du joueur pour éviter les déplacements 
+            Rigidbody2D prb = carriedObject.GetComponent<Rigidbody2D>();
+            prb.isKinematic = true;
+            prb.velocity = Vector2.zero;
+            carriedObject.GetComponentInChildren<Collider2D>().enabled = false;
+
+            isChasingPlayer = false;
+            StopMoving();
+        }
+        else
+        {
+            // mouvement vers le joueur 
+            float direction = playerTransform.position.x > transform.position.x ? 1 : -1;
+            rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
+
+            if (animator != null)
+            {
+                animator.SetBool("isWalking", true);
+            }
+
+            Vector3 localScale = transform.localScale;
+            localScale.x = direction < 0 ? -Mathf.Abs(localScale.x) : Mathf.Abs(localScale.x);
+            transform.localScale = localScale;
         }
     }
 
@@ -266,23 +328,32 @@ public class FollowingMonkey : MonoBehaviour
     {
         // On détache l'objet
         Rigidbody2D objRb = carriedObject.GetComponent<Rigidbody2D>();
-        carriedObject.GetComponent<Collider2D>().enabled = true;
+        carriedObject.GetComponentInChildren<Collider2D>().enabled = true;
         objRb.isKinematic = false;
 
         // Détermine la direction (basée sur le flipX du sprite du singe)
         float lookDir = transform.localScale.x < 0 ? -1f : 1f;
         Vector2 finalForce;
 
-        // Type de lancer : Vers le haut si on maintient 'Z' ou 'UpArrow'
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        // Si l'objet porté est le joueur
+        if (carriedObject == playerTransform.gameObject)
         {
-            finalForce = new Vector2(highThrowForce.x * lookDir, highThrowForce.y);
-        }
-        else // Lancer ras du sol par défaut
-        {
-            finalForce = new Vector2(lowThrowForce.x * lookDir, lowThrowForce.y);
+            finalForce = new Vector2(playerThrowForce.x * lookDir, playerThrowForce.y);
         }
 
+        else
+        {
+            // Type de lancer : Vers le haut si on maintient 'Z' ou 'UpArrow'
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                finalForce = new Vector2(highThrowForce.x * lookDir, highThrowForce.y);
+            }
+            else // Lancer ras du sol par défaut
+            {
+                finalForce = new Vector2(lowThrowForce.x * lookDir, lowThrowForce.y);
+            }
+        }
+        
         carriedObject.transform.rotation = Quaternion.identity;
 
         objRb.AddForce(finalForce, ForceMode2D.Impulse);
