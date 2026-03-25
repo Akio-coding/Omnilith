@@ -68,12 +68,12 @@ public class FollowingMonkey : MonoBehaviour
 
     private void OnEnable()
     {
-        DialogueManager.OnDialogueFinished += UnlockMonkey;
+        DialogueManager.OnMonkeyUnlocked += UnlockMonkey;
     }
 
     private void OnDisable()
     {
-        DialogueManager.OnDialogueFinished -= UnlockMonkey;
+        DialogueManager.OnMonkeyUnlocked -= UnlockMonkey;
     }
 
     void Start()

@@ -5,6 +5,10 @@ using UnityEngine;
 [CreateAssetMenu (fileName ="Nouveau Dialogue", menuName ="Mon Jeu/Dialogue")]
 public class DialogueData : ScriptableObject
 {
+    [Header("Evènements spéciaux")]
+    // Case à cocher pour débloquer le singe
+    public bool unlocksMonkey = false;
+
     [System.Serializable]
     public struct DialogueLine
     {

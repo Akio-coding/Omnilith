@@ -6,8 +6,8 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
-    public static event Action OnDialogueFinished; // l'alarme pour le singe !
-
+    public static event Action OnMonkeyUnlocked; // l'alarme pour le singe !
+    
     [Header("UI Elements")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI nameText;
@@ -95,7 +95,11 @@ public class DialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
 
-        //  On déclenche l'alarme que le singe va écouter
-        OnDialogueFinished?.Invoke();
+        // On vérifie si on doit débloquer le singe
+        if (currentDialogue.unlocksMonkey)
+        {
+            //  On déclenche l'alarme que le singe va écouter
+            OnMonkeyUnlocked?.Invoke();
+        }
     }
 }

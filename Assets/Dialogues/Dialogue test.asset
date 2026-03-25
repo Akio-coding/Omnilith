@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2dd9e6680d87241b78c79669bd7f18, type: 3}
   m_Name: Dialogue test
   m_EditorClassIdentifier: 
+  unlocksMonkey: 1
   lines:
   - speakerName: Ranza
     texte: 'Ouga boouga dou ougah bouga doo
