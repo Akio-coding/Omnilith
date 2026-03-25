@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
@@ -50,17 +51,30 @@ public class FollowingMonkey : MonoBehaviour
     [Header("Système de lancer de joueur")]
     [SerializeField] private Vector2 playerThrowForce = new Vector2(4f, 8f);
     private bool isChasingPlayer = false; // Indique si le singe essaye d'attraper le joueur 
+
+    // Unlocking the monkey
+    private bool isUnlocked = false;
+
     // -------------------------------------
 
+    [SerializeField] private bool isGrounded;
     private Queue<PlayerHistoryItem> playerHistory = new Queue<PlayerHistoryItem>();
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer sr;
-    [SerializeField] private bool isGrounded;
     private bool playerWasGrounded;
     private bool isTeleporting = false;
-
     private Vector3 lastRecordedPos;
+
+    private void OnEnable()
+    {
+        DialogueManager.OnMonkeyUnlocked += UnlockMonkey;
+    }
+
+    private void OnDisable()
+    {
+        DialogueManager.OnMonkeyUnlocked -= UnlockMonkey;
+    }
 
     void Start()
     {
@@ -77,6 +91,14 @@ public class FollowingMonkey : MonoBehaviour
 
     void Update()
     {
+        // Si le singe n'est pas débloqué 
+        if (!isUnlocked)
+        {
+            CheckGroundStatus();
+            StopMoving();
+            return;
+        }
+
         if (isTeleporting)
         {
             return; // On stoppe la logique si on est en train de se TP
@@ -268,6 +290,16 @@ public class FollowingMonkey : MonoBehaviour
                 ThrowObject();
             }
         }
+
+        // Libérer le joueur du singe
+        // On verifie si il porte un objet ET que cet objet est le joueur 
+        if (carriedObject != null && carriedObject == playerTransform.gameObject) 
+        {
+            if (Input.GetButtonDown("Fire1")) 
+            {
+                DropObject();
+            }
+        }
     }
 
     private void TryPickUp()
@@ -358,6 +390,40 @@ public class FollowingMonkey : MonoBehaviour
 
         objRb.AddForce(finalForce, ForceMode2D.Impulse);
         carriedObject = null;
+    }
+
+    private void DropObject()
+    {
+        if (carriedObject == null)
+        {
+            return;
+        }
+
+        // Remttre l'objet/joueur a la normale
+        Rigidbody2D objRb = carriedObject.GetComponent<Rigidbody2D>();
+        carriedObject.GetComponentInChildren<Collider2D>().enabled = true;
+        objRb.isKinematic = false;
+
+        // Remettre la chose portée droite 
+        carriedObject.transform.rotation =Quaternion.identity;
+
+        // Reset vitesse 
+        objRb.velocity = Vector2.zero;
+
+        carriedObject = null;
+    }
+
+    private void UnlockMonkey()
+    {
+        isUnlocked = true;
+        playerHistory.Clear();
+
+        if(playerTransform != null)
+        {
+            lastRecordedPos = playerTransform.position;
+        }
+
+        Debug.Log("le singe rejoins l'aventure");
     }
 
 }
