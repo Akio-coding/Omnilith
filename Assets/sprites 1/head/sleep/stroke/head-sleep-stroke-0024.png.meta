@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      head-sleep-stroke-0024_0: 397804955324386237
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

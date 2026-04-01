@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slide-fill-0012_0: 7256763100253202701
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

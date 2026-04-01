@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      punch-fill-0002_0: 4052138744990908594
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
