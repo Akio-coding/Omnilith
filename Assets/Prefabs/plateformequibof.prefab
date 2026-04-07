@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4160961888847069146}
   m_Layer: 0
-  m_Name: plateformequiapparait
+  m_Name: plateformequibof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
