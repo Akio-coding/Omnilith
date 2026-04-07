@@ -4051,10 +4051,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 6
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: 520d5e1053a3847498c4aebb70906494, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -4434,13 +4434,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 985268955}
   followDelay: 0.7
-  moveSpeed: 4.5
+  moveSpeed: 5
   stopDistance: 1
   carryFollowDelay: 0.1
   carryStopDistance: 0.5
   maxDistanceBeforeTP: 10
   tpDelay: 0.1
-  jumpForce: 13
+  jumpForce: 12
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -4451,9 +4451,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   throwPoint: {fileID: 761234473}
-  highThrowForce: {x: 5, y: 10}
-  lowThrowForce: {x: 8, y: 3}
-  playerThrowForce: {x: 4, y: 8}
+  highThrowForce: {x: 38, y: 100}
+  lowThrowForce: {x: 100, y: 25}
+  playerThrowForce: {x: 10, y: 15}
   isGrounded: 0
 --- !u!95 &1770389518
 Animator:
