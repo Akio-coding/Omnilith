@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -52,6 +53,13 @@ public class PlayerCombat : MonoBehaviour
         // 2. Input Handling
         if (Input.GetButtonDown("Fire1"))
         {
+            // NEW SECURITY: Prevent attack if the mouse is hovering over a UI element
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            {
+                // We stop reading the function here, the attack is canceled
+                return;
+            }
+
             // Verify if we input in up direction
             float yInput = Input.GetAxisRaw("Vertical");
 
