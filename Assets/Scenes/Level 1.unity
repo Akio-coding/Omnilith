@@ -6985,6 +6985,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: plateformequiapparait (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7756317088550327461, guid: 5c0616e18d023c049b9e11f1a50801ab, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756317088550327461, guid: 5c0616e18d023c049b9e11f1a50801ab, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.51
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7983,7 +7991,7 @@ Transform:
   m_GameObject: {fileID: 213280340}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 145.73, y: 31.138, z: -18}
+  m_LocalPosition: {x: 222.61, y: 43.183624, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22453,11 +22461,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 145.12
+      value: 222
       objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.1
+      value: 41.145622
       objectReference: {fileID: 0}
     - target: {fileID: 4619016295567292593, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27553,11 +27561,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3068769329107113570, guid: ec74af5d53a87314cabec05b0ce6aa1a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2583924
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3068769329107113570, guid: ec74af5d53a87314cabec05b0ce6aa1a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.64
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3068769329107113570, guid: ec74af5d53a87314cabec05b0ce6aa1a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3068769329107113570, guid: ec74af5d53a87314cabec05b0ce6aa1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27565,7 +27577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3068769329107113570, guid: ec74af5d53a87314cabec05b0ce6aa1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.98
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 3068769329107113570, guid: ec74af5d53a87314cabec05b0ce6aa1a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -67043,7 +67055,7 @@ Transform:
   m_GameObject: {fileID: 1976733432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146.14415, y: 29.463804, z: -18}
+  m_LocalPosition: {x: 222.53995, y: 41.257896, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68932,6 +68944,18 @@ PrefabInstance:
     - target: {fileID: 6450407702537201113, guid: 5c0616e18d023c049b9e11f1a50801ab, type: 3}
       propertyPath: m_Name
       value: plateformequiapparait (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756317088550327461, guid: 5c0616e18d023c049b9e11f1a50801ab, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756317088550327461, guid: 5c0616e18d023c049b9e11f1a50801ab, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756317088550327461, guid: 5c0616e18d023c049b9e11f1a50801ab, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.51
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -72329,6 +72353,14 @@ PrefabInstance:
     - target: {fileID: 6450407702537201113, guid: 5c0616e18d023c049b9e11f1a50801ab, type: 3}
       propertyPath: m_Name
       value: plateformequiapparait
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756317088550327461, guid: 5c0616e18d023c049b9e11f1a50801ab, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756317088550327461, guid: 5c0616e18d023c049b9e11f1a50801ab, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.51
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
