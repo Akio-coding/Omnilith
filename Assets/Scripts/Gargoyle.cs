@@ -22,10 +22,6 @@ public class Gargoyle : MonoBehaviour
     private Vector3 diveTarget; // Le point visé lors du plongeon
     private Rigidbody2D rb;
 
-    [Header("Animations")]
-    public bool isDiving;
-    public bool isKO;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -68,13 +64,11 @@ public class Gargoyle : MonoBehaviour
             case State.Diving:
                 // Plongeon rapide vers la cible
                 transform.position = Vector3.MoveTowards(transform.position, diveTarget, diveSpeed * Time.deltaTime);
-                isDiving = true;
 
                 // Si la gargouille est arrivée au point d'impact
                 if(Vector3.Distance(transform.position, diveTarget) < 0.1f)
                 {
                     currentState = State.Follow;
-                    isDiving= false;
                 }
                 break;
 
