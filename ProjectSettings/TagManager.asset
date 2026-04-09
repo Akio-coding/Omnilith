@@ -7,6 +7,8 @@ TagManager:
   - Ennemy
   - Vines
   - Hitbox
+  - platform
+  - Porte
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - PlayerHurtbox
   - PlayerHitbox
   - Throwable
-  - 
+  - Monkey
   - 
   - 
   - 
