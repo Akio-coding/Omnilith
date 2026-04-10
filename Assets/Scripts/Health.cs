@@ -180,8 +180,28 @@ public class Health : MonoBehaviour
         
     }
 
-    void die() 
+    void die()
     {
-        Destroy(this.gameObject);
+        // 1. On lance l'animation de KO
+        if (anim != null)
+        {
+            anim.SetTrigger("Die");
+        }
+
+        // 2. On désactive la hitbox pour qu'il ne blesse plus le joueur en tombant
+        if (playerCollider != null)
+        {
+            playerCollider.enabled = false;
+        }
+
+        // 3. On coupe le moteur physique pour qu'il s'arrête de glisser
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.simulated = false;
+        }
+
+        // 4. On détruit l'objet après un délai de 1 seconde (laisse le temps à l'anim de se jouer)
+        Destroy(this.gameObject, 1f);
     }
 }
