@@ -1343,6 +1343,10 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7960125808006708279, guid: e585c9a922389d94894c024ff6643f77, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8389311823189617277, guid: e585c9a922389d94894c024ff6643f77, type: 3}
       propertyPath: m_Name
       value: Gray bird
@@ -5164,6 +5168,10 @@ PrefabInstance:
     - target: {fileID: 2286019028155086738, guid: 92d5f01ca4d91b240b6bd110393d9a7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485823371117707407, guid: 92d5f01ca4d91b240b6bd110393d9a7f, type: 3}
+      propertyPath: deathDelay
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8485823371117707407, guid: 92d5f01ca4d91b240b6bd110393d9a7f, type: 3}
       propertyPath: flashing.b
