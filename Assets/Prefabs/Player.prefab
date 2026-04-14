@@ -332,7 +332,7 @@ MonoBehaviour:
   fallMultiplier: 1.6
   dashDistance: 3.5
   dashDuration: 0.3
-  dashCooldown: 2
+  dashCooldown: 0.3
   dashCollider: {fileID: 4877593484285198402}
   dashColliderSize: {x: 0.7008879, y: 0.7273617}
   dashColliderOffset: {x: 0, y: 0.6741703}
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 3881573840991304339}
   m_Layer: 10
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

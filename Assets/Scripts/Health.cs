@@ -23,9 +23,8 @@ public class Health : MonoBehaviour
 
     [Header("Respawn")]
     [Tooltip("Durée pendant laquelle on désactive tous les contrôles du joueur, doit être de la même durée que l'animation de mort en secondes")]
-    [SerializeField] private float deathDelay = 2f; // Duration of death animation
-    [SerializeField] private Behaviour[] componentsToDisable; 
-
+    [SerializeField] private float deathDelay = 1f; // Duration of death animation
+    [SerializeField] private Behaviour[] componentsToDisable;
 
     // ---- Events ----
     // Other scripts can subscribe to these events without Health being aware of them
@@ -211,6 +210,6 @@ public class Health : MonoBehaviour
         }
 
         // 4. On détruit l'objet après un délai de 1 seconde (laisse le temps à l'anim de se jouer)
-        Destroy(this.gameObject, 1f);
+        Destroy(this.gameObject, 2f);
     }
 }
