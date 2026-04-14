@@ -67,9 +67,9 @@ public class Health : MonoBehaviour
                 CurrentHealth = 0;
                 StartCoroutine(RespawnRoutine());
             }
-            else if (CompareTag("Ennemy") == true)
+            else if (CompareTag("Enemy") == true)
             {
-                die();
+                Die();
             }
         }
         else
@@ -166,21 +166,30 @@ public class Health : MonoBehaviour
         isInvincible = true;
 
         // flashing effect
-        for (int loopCount = 0; loopCount < flashCount; loopCount++)
+        if (sr != null)
         {
-            sr.color = flashing; // Choosed color
-            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
-            sr.color = Color.white; // Normal
-            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
+            for (int loopCount = 0; loopCount < flashCount; loopCount++)
+            {
+                sr.color = flashing;
+                yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
+                sr.color = Color.white;
+                yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
+            }
+            sr.color = Color.white;
+        }
+        else
+        {
+            // Si on n'a pas de SpriteRenderer, on attend juste la durée de l'invincibilité normalement
+            yield return new WaitForSeconds(invincibilityDuration);
         }
 
-        sr.color = Color.white;
         isInvincible = false;
-        
     }
 
-    void die()
+    void Die()
     {
+        Debug.Log("meurt meurt meurt");
+
         // 1. On lance l'animation de KO
         if (anim != null)
         {
