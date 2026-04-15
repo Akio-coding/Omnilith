@@ -4963,9 +4963,9 @@ GameObject:
   - component: {fileID: 8788007160047755622}
   - component: {fileID: 5304794618607360540}
   - component: {fileID: 6050530289269191028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "Alicanto Dor\xE9"
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
