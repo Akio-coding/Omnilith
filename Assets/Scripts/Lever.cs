@@ -7,7 +7,6 @@ public class Lever : MonoBehaviour
 {
 
     public GameObject Door;
-    public Sprite levierActiveSprite;
     public bool IsActivated = false;
     public float HauteurCible = 5;
     public Vector3 OrginalDoorPosition;
@@ -33,9 +32,7 @@ public class Lever : MonoBehaviour
         {
             Door.transform.Translate(0.01f * Time.deltaTime * Vector3.up);
             yield return null;
-
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
