@@ -36,31 +36,26 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1012420760832281619}
-    m_Position: {x: 380, y: 200, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 3802970021272107774}
-    m_Position: {x: 240, y: 90, z: 0}
+    m_Position: {x: 240, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4721704240005375272}
-    m_Position: {x: 500, y: 90, z: 0}
+    m_Position: {x: 610, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 354964019000244}
-    m_Position: {x: 380, y: 290, z: 0}
+    m_Position: {x: 650, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6223864783257848953}
-    m_Position: {x: 380, y: 450, z: 0}
+    m_Position: {x: 680, y: 380, z: 0}
   m_ChildStateMachines: []
-  m_AnyStateTransitions:
-  - {fileID: 5785332664831459460}
-  - {fileID: 4120691791718786032}
+  m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 400, y: 370, z: 0}
-  m_EntryPosition: {x: -100, y: 190, z: 0}
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 3802970021272107774}
+  m_DefaultState: {fileID: 1012420760832281619}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -117,8 +112,7 @@ AnimatorState:
   m_Name: Onion Damage
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 6060732942361282419}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -144,9 +138,7 @@ AnimatorState:
   m_Name: Onion Idle
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 3749076660070888342}
-  - {fileID: 7213439305875974265}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -249,8 +241,7 @@ AnimatorState:
   m_Name: Onion Attack
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 6182078985915224467}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
