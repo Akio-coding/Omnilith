@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Collections;
 
 public class Slime : MonoBehaviour
 {
     [Header("Stats")]
     [SerializeField] private float speed = 2f;
-
+    [SerializeField] private float rotationSpeed = 300f; // La vitesse de la rotation (en degrés par seconde)
+    
     [Header("Détection")]
     [SerializeField] private Transform groundCheck; // Le point devant et en bas
     [SerializeField] private Transform wallCheck;   // Le point droit devant
@@ -12,6 +14,7 @@ public class Slime : MonoBehaviour
     [SerializeField] private LayerMask groundLayer; // Le calque de tes plateformes
 
     private Rigidbody2D rb;
+    private bool isRotating = false; // NOUVEAU : Un verrou pour bloquer les actions pendant qu'il tourne
 
     void Start()
     {
@@ -24,6 +27,9 @@ public class Slime : MonoBehaviour
 
     void Update()
     {
+        // NOUVEAU : Si le slime est en pleine animation de rotation, on empêche l'Update de le faire avancer
+        if (isRotating) return;
+
         // 1. Le slime avance toujours "tout droit" par rapport à lui-même
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
@@ -36,17 +42,48 @@ public class Slime : MonoBehaviour
         // 4. Logique de rotation
         if (hittingWall)
         {
-            // Il y a un mur devant : on pivote de 90 degrés (il se cabre pour grimper)
-            transform.Rotate(0, 0, -90f);
+            // On lance la rotation fluide au lieu de la téléportation d'angle
+            StartCoroutine(SmoothRotation(-90f, false));
         }
         else if (!isGrounded)
         {
-            // Il n'y a plus de sol : il est au bord d'un trou ! On pivote vers le bas pour faire le tour.
-            transform.Rotate(0, 0, 90f);
-
-            // On le pousse très légèrement en avant pour qu'il "colle" à la nouvelle surface
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
+            // Pareil pour le vide
+            StartCoroutine(SmoothRotation(90f, true));
         }
+    }
+
+    // La fonction qui gère l'animation de rotation image par image
+    private IEnumerator SmoothRotation(float angleOffset, bool isEdge)
+    {
+        // On active le verrou pour bloquer le mouvement dans Update()
+        isRotating = true;
+
+        // On calcule la rotation mathématique cible
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = startRotation * Quaternion.Euler(0, 0, angleOffset);
+
+        // Tant qu'on n'a pas (presque) atteint l'angle cible...
+        while (Quaternion.Angle(transform.rotation, targetRotation) > 0.1f)
+        {
+            // On tourne progressivement vers la cible
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            // On attend la frame suivante avant de continuer la boucle
+            yield return null;
+        }
+
+        // On force la rotation finale exacte pour éviter les micro-erreurs de calcul (ex: 89.999°)
+        transform.rotation = targetRotation;
+
+        // Si c'est un précipice, on applique la petite correction pour "coller" au mur
+        if (isEdge)
+        {
+            // On le pousse un peu en avant (X) et un peu vers le haut (Y) pour le sortir du mur.
+            // Si 0.1f ne suffit pas, essaie 0.15f ou 0.2f !
+            transform.Translate(new Vector2(0.1f, 0.1f));
+        }
+        // On retire le verrou, le slime va recommencer à avancer à la prochaine frame !
+        isRotating = false;
     }
 
     // Affiche les antennes dans l'éditeur pour t'aider à les placer
