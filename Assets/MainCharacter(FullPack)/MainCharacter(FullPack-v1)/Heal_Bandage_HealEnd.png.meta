@@ -182,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Heal_Bandage_HealEnd_0: 5618570470400712635
+      Heal_Bandage_HealEnd_1: -1373579237317679696
+      Heal_Bandage_HealEnd_2: -7002874551558590828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

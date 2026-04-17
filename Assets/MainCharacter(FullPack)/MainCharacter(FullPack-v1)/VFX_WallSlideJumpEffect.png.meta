@@ -257,7 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX_WallSlideJumpEffect_0: -7859234044038883342
+      VFX_WallSlideJumpEffect_1: -6666840800509187129
+      VFX_WallSlideJumpEffect_2: -8350928311060568995
+      VFX_WallSlideJumpEffect_3: 6296389710238469562
+      VFX_WallSlideJumpEffect_4: -2713047043851221560
+      VFX_WallSlideJumpEffect_5: -2768236290971017337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

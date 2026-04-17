@@ -407,7 +407,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wounded_Walk_0: 7816381944484258929
+      Wounded_Walk_1: -5866518318379624104
+      Wounded_Walk_10: -1058839273325876949
+      Wounded_Walk_11: -655164159009539215
+      Wounded_Walk_2: 6346614302188474383
+      Wounded_Walk_3: -7996421842561300501
+      Wounded_Walk_4: -698172596895611379
+      Wounded_Walk_5: 748894006731858057
+      Wounded_Walk_6: -2400329971816748803
+      Wounded_Walk_7: 8609153871174991544
+      Wounded_Walk_8: 8071824947206869075
+      Wounded_Walk_9: -2009341298805030784
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

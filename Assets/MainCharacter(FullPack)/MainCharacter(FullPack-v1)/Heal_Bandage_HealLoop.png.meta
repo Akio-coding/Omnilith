@@ -357,7 +357,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Heal_Bandage_HealLoop_0: 6160224007524616669
+      Heal_Bandage_HealLoop_1: -8614252661938715390
+      Heal_Bandage_HealLoop_2: 5976729235663863160
+      Heal_Bandage_HealLoop_3: 6130672840184333792
+      Heal_Bandage_HealLoop_4: -4961244430210460463
+      Heal_Bandage_HealLoop_5: -4890697885284630525
+      Heal_Bandage_HealLoop_6: 8729758815126050051
+      Heal_Bandage_HealLoop_7: 883133904283681691
+      Heal_Bandage_HealLoop_8: -7679791653553700156
+      Heal_Bandage_HealLoop_9: 9149298813090749439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

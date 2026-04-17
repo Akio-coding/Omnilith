@@ -382,7 +382,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LadderClimb_EdgeClimb_0: -7471210695525220597
+      LadderClimb_EdgeClimb_1: 3968756141221045784
+      LadderClimb_EdgeClimb_10: -1968814294771514570
+      LadderClimb_EdgeClimb_2: 6164613949699310332
+      LadderClimb_EdgeClimb_3: -681135564693190849
+      LadderClimb_EdgeClimb_4: 8690075046363021888
+      LadderClimb_EdgeClimb_5: -7868329289768040563
+      LadderClimb_EdgeClimb_6: -8204704504787651121
+      LadderClimb_EdgeClimb_7: -1912969895425863228
+      LadderClimb_EdgeClimb_8: -7094786124559920123
+      LadderClimb_EdgeClimb_9: 9057413925823989274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

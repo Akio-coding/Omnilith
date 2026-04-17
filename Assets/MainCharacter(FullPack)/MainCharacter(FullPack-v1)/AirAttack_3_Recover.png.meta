@@ -182,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AirAttack_3_Recover_0: 959726573595389593
+      AirAttack_3_Recover_1: -1777689965985849626
+      AirAttack_3_Recover_2: 6426069203501772010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

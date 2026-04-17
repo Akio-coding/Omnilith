@@ -307,7 +307,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PierceAttack_End_0: 2935375082158933707
+      PierceAttack_End_1: -4405571544208568377
+      PierceAttack_End_2: -7525924217800336137
+      PierceAttack_End_3: 1577446219803636062
+      PierceAttack_End_4: -7005751599678167870
+      PierceAttack_End_5: -7062904183853156184
+      PierceAttack_End_6: 5402398318257671137
+      PierceAttack_End_7: -4892244546552307445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

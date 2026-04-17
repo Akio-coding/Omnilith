@@ -182,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX_Landing_0: 3497806175438810063
+      VFX_Landing_1: 3207889100322690803
+      VFX_Landing_2: 3385496507432112022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

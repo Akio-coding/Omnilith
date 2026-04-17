@@ -207,7 +207,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Slide_Loop_0: 6552166320815463782
+      Slide_Loop_1: -1009310364905357957
+      Slide_Loop_2: 2312443378609560459
+      Slide_Loop_3: -8940707637300704846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

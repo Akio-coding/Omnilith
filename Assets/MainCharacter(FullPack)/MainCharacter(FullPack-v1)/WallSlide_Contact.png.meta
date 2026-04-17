@@ -207,7 +207,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WallSlide_Contact_0: 5262782889617333995
+      WallSlide_Contact_1: 5151412353079194322
+      WallSlide_Contact_2: 2162711522960099939
+      WallSlide_Contact_3: -1024507968460682033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

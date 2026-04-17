@@ -332,7 +332,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ChargeAttack_Attack_0: -9177061094793908131
+      ChargeAttack_Attack_1: -7952936552893921756
+      ChargeAttack_Attack_2: -6775150900023636964
+      ChargeAttack_Attack_3: 7659498595529304697
+      ChargeAttack_Attack_4: -1704286527126961775
+      ChargeAttack_Attack_5: 8653294929051925246
+      ChargeAttack_Attack_6: -7425224038076016476
+      ChargeAttack_Attack_7: 7222261295050252382
+      ChargeAttack_Attack_8: 5925793056244886671
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

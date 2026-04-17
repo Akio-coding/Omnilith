@@ -457,7 +457,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Heal_Apple_0: -6172266373955219263
+      Heal_Apple_1: 6621774022744331292
+      Heal_Apple_10: -2180900639622457949
+      Heal_Apple_11: -3144369807048488805
+      Heal_Apple_12: -5586343291968062499
+      Heal_Apple_13: 7655093902066139849
+      Heal_Apple_2: 954199722565750725
+      Heal_Apple_3: -9036538854917437271
+      Heal_Apple_4: -420110709069050498
+      Heal_Apple_5: 2233457784766097878
+      Heal_Apple_6: 3128238955472486343
+      Heal_Apple_7: -1438078752576697260
+      Heal_Apple_8: -956744366203057390
+      Heal_Apple_9: -7071508157429695265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

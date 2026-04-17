@@ -407,7 +407,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SwordOnBack_0: -7066141372671230987
+      SwordOnBack_1: 8259768599731105711
+      SwordOnBack_10: 8261154737295212218
+      SwordOnBack_11: 3647914400912011724
+      SwordOnBack_2: -6951117756120147838
+      SwordOnBack_3: 8925594632375564132
+      SwordOnBack_4: 6596001448401485293
+      SwordOnBack_5: -8357861115743033228
+      SwordOnBack_6: 5529075892729659657
+      SwordOnBack_7: -4653056287756063292
+      SwordOnBack_8: 5961269038350897870
+      SwordOnBack_9: 5656593894282036922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -357,7 +357,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SlowRun_Loop_0: -1336013019207505054
+      SlowRun_Loop_1: -5696831058717683223
+      SlowRun_Loop_2: -3557494610406009558
+      SlowRun_Loop_3: -1176771674499573208
+      SlowRun_Loop_4: -6757873196037581849
+      SlowRun_Loop_5: -3345616136315648683
+      SlowRun_Loop_6: -359678213288573960
+      SlowRun_Loop_7: 8767623704102352682
+      SlowRun_Loop_8: 9211056964866954841
+      SlowRun_Loop_9: -5249473275857735432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

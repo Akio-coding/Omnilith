@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PierceAttack_Static_Pose_0: 7052083631770584778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

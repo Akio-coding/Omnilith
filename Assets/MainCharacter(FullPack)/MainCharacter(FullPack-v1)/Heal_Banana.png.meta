@@ -457,7 +457,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Heal_Banana_0: 534143068956467479
+      Heal_Banana_1: -1423028899979120037
+      Heal_Banana_10: -8642500036571328325
+      Heal_Banana_11: 5349986528021692797
+      Heal_Banana_12: 8647864954454998152
+      Heal_Banana_13: -7043291296492978981
+      Heal_Banana_2: -394829469232779312
+      Heal_Banana_3: 6090600141362849330
+      Heal_Banana_4: 4812375071697483600
+      Heal_Banana_5: -1486108435378666392
+      Heal_Banana_6: 7917594626525940981
+      Heal_Banana_7: -536696989005463098
+      Heal_Banana_8: -4962544164640312700
+      Heal_Banana_9: 3277233624818880486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

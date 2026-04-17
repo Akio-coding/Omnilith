@@ -207,7 +207,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Air_HitToFall_Landing_0: -1502468660464026795
+      Air_HitToFall_Landing_1: -3921852462958543494
+      Air_HitToFall_Landing_2: 9088570733521716222
+      Air_HitToFall_Landing_3: -581080043582488181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

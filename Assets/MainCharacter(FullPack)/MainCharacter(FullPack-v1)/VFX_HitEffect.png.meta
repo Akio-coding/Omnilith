@@ -182,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX_HitEffect_0: -5283998113348922258
+      VFX_HitEffect_1: -1260973770352279365
+      VFX_HitEffect_2: 7208636907710580624
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

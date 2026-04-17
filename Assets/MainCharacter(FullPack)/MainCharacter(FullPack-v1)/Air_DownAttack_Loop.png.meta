@@ -207,7 +207,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Air_DownAttack_Loop_0: 4670607775714054665
+      Air_DownAttack_Loop_1: 7192951705517425123
+      Air_DownAttack_Loop_2: 3735897594801117228
+      Air_DownAttack_Loop_3: -5960462035588903973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

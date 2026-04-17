@@ -382,7 +382,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Interact_TalkShop_0: -7030749550147639763
+      Interact_TalkShop_1: -6050949826376553630
+      Interact_TalkShop_10: 7947043784429025059
+      Interact_TalkShop_2: 6262190720160733260
+      Interact_TalkShop_3: 4286700850072978834
+      Interact_TalkShop_4: 2622985276555836691
+      Interact_TalkShop_5: -8646544349449747779
+      Interact_TalkShop_6: -6583867671854388176
+      Interact_TalkShop_7: 2284564014973368693
+      Interact_TalkShop_8: 4971216129354766419
+      Interact_TalkShop_9: -8175627313386269975
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

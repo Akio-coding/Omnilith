@@ -357,7 +357,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Crouch_Walk_0: 7656049502787129457
+      Crouch_Walk_1: 9218349227404244107
+      Crouch_Walk_2: -5806722352967026873
+      Crouch_Walk_3: -1527858796447928906
+      Crouch_Walk_4: 7657518033814115673
+      Crouch_Walk_5: -7892146258407380155
+      Crouch_Walk_6: -2991290416588374931
+      Crouch_Walk_7: -1115159375952973010
+      Crouch_Walk_8: -4027044575501603385
+      Crouch_Walk_9: 6449437478360770602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

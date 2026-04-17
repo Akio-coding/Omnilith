@@ -257,7 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Crouch_GetUp_0: -3768447690016269616
+      Crouch_GetUp_1: 7076688880164281514
+      Crouch_GetUp_2: 3913487264273477137
+      Crouch_GetUp_3: 2210017151349064569
+      Crouch_GetUp_4: -7548346445789053205
+      Crouch_GetUp_5: 4198290222885814113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

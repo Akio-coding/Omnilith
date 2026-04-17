@@ -382,7 +382,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Interact_Push_0: -6719622901339276268
+      Interact_Push_1: -2755392835882149871
+      Interact_Push_10: 7525119262881432798
+      Interact_Push_2: -7604195289627550442
+      Interact_Push_3: 1177548863700380176
+      Interact_Push_4: 3018694001152358713
+      Interact_Push_5: -4040643860776900692
+      Interact_Push_6: 7028477940644117680
+      Interact_Push_7: 5620232061426712852
+      Interact_Push_8: 8719021464197025718
+      Interact_Push_9: -2253028271016044020
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

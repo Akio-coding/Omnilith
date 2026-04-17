@@ -207,7 +207,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX_PierceAttack_SpecialAttack_Effect_0: 8298890964771591753
+      VFX_PierceAttack_SpecialAttack_Effect_1: -7808741772604579704
+      VFX_PierceAttack_SpecialAttack_Effect_2: -2659646306643038076
+      VFX_PierceAttack_SpecialAttack_Effect_3: -1711709750562553515
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

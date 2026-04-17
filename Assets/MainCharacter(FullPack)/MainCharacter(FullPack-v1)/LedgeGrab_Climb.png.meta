@@ -507,7 +507,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LedgeGrab_Climb_0: -6549085646767305337
+      LedgeGrab_Climb_1: 1656992376889493008
+      LedgeGrab_Climb_10: 5266238609467700684
+      LedgeGrab_Climb_11: 15489785931261465
+      LedgeGrab_Climb_12: 7128705841448514360
+      LedgeGrab_Climb_13: -3699724693438737235
+      LedgeGrab_Climb_14: 1603722159358067458
+      LedgeGrab_Climb_15: 7521038856542417481
+      LedgeGrab_Climb_2: 6295425315074798342
+      LedgeGrab_Climb_3: 386578778230427298
+      LedgeGrab_Climb_4: -758298181647553172
+      LedgeGrab_Climb_5: -1804021271766123401
+      LedgeGrab_Climb_6: 4902366449361327038
+      LedgeGrab_Climb_7: 7686822174067871972
+      LedgeGrab_Climb_8: -2292206195656838808
+      LedgeGrab_Climb_9: 94327218863471569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
