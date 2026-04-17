@@ -242,7 +242,7 @@ public class Onion : MonoBehaviour
             Health playerHealth = collision.gameObject.GetComponent<Health>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damage);
+                playerHealth.TakeDamage(damage, transform);
             }
 
             // Optionnel : S'il touche le joueur pendant la charge, il peut s'arrêter
