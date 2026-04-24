@@ -27,6 +27,12 @@ public class Health : MonoBehaviour
     [SerializeField] private Behaviour[] componentsToDisable; 
 
 
+    [Header("Knockback Settings")]
+    [Tooltip("La force du recul. X = projection horizontale, Y = petit saut en l'air")]
+    [SerializeField] private Vector2 knockbackForce = new Vector2(5f, 2f);
+    [Tooltip("Durée de la perte de contrôle pendant le recul")]
+    [SerializeField] private float knockbackDuration = 0.2f;
+
     // ---- Events ----
     // Other scripts can subscribe to these events without Health being aware of them
     // It is similar to delegates in unreal 
@@ -46,7 +52,7 @@ public class Health : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage(int damageAmount, Transform damageSource = null)
     {
         // If we are invincible or dead, ignore 
         if (isInvincible || CurrentHealth <= 0) 
@@ -75,8 +81,44 @@ public class Health : MonoBehaviour
         }
         else
         {
+            // On applique le knockback si on sait d'où vient le coup
+            if (damageSource != null && rb != null)
+            {
+                StartCoroutine(KnockbackRoutine(damageSource));
+            }
+
             // If we survive, launch the coroutine 
             StartCoroutine(InvincibilityRoutine());
+        }
+    }
+
+    // La coroutine qui gère la physique du recul
+    private IEnumerator KnockbackRoutine(Transform damageSource)
+    {
+        // 1. On coupe les contrôles (PlayerMovement) pour qu'il n'annule pas la physique
+        foreach (var component in componentsToDisable)
+        {
+            component.enabled = false;
+        }
+
+        // 2. On détermine la direction (1 = vers la droite, -1 = vers la gauche)
+        float pushDirection = 1f;
+        if (transform.position.x < damageSource.position.x)
+        {
+            pushDirection = -1f; // L'attaquant est à droite, on recule vers la gauche
+        }
+
+        // 3. On applique la force !
+        rb.velocity = Vector2.zero; // On stoppe le mouvement actuel net
+        rb.AddForce(new Vector2(knockbackForce.x * pushDirection, knockbackForce.y), ForceMode2D.Impulse);
+
+        // 4. On attend que le joueur finisse de reculer
+        yield return new WaitForSeconds(knockbackDuration);
+
+        // 5. On rend les contrôles
+        foreach (var component in componentsToDisable)
+        {
+            component.enabled = true;
         }
     }
 

@@ -126,7 +126,7 @@ public class Gargoyle : MonoBehaviour
             Health playerHealth = collision.gameObject.GetComponent<Health>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damage);
+                playerHealth.TakeDamage(damage, transform);
             }    
         }
     }
