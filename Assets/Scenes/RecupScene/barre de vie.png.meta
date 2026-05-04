@@ -182,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      barre de vie_0: -2836606292114380488
+      barre de vie_1: -4910355931735727871
+      barre de vie_2: -3824313872705518971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
