@@ -14,7 +14,7 @@ public class Slime : MonoBehaviour
     [SerializeField] private LayerMask groundLayer; // Le calque de tes plateformes
 
     private Rigidbody2D rb;
-    private bool isRotating = false; // NOUVEAU : Un verrou pour bloquer les actions pendant qu'il tourne
+    private bool isRotating = false; // Un verrou pour bloquer les actions pendant qu'il tourne
 
     void Start()
     {
