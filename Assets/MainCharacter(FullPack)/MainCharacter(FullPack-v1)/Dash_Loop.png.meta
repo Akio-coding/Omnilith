@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -207,7 +207,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dash_Loop_0: -3070624569373098907
+      Dash_Loop_1: -1007201532008072984
+      Dash_Loop_2: -3736784219687358151
+      Dash_Loop_3: 8049791954984631301
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -49,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -232,7 +232,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Air_Landing_0: -388219925744245747
+      Air_Landing_1: 3802570995400751068
+      Air_Landing_2: -5467549784641623406
+      Air_Landing_3: 7118942398343225399
+      Air_Landing_4: 1371525700437520479
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

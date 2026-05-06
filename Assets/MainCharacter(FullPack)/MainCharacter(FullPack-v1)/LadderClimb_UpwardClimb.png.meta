@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -357,7 +357,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LadderClimb_UpwardClimb_0: 3260138021624521051
+      LadderClimb_UpwardClimb_1: -7062023432131812219
+      LadderClimb_UpwardClimb_2: -4462216720867963208
+      LadderClimb_UpwardClimb_3: -4694124564221028914
+      LadderClimb_UpwardClimb_4: -2314189318110750221
+      LadderClimb_UpwardClimb_5: -4328981835282530292
+      LadderClimb_UpwardClimb_6: -493066592641908958
+      LadderClimb_UpwardClimb_7: -7617798870740902949
+      LadderClimb_UpwardClimb_8: 1477814784490493614
+      LadderClimb_UpwardClimb_9: -1178286109170193073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

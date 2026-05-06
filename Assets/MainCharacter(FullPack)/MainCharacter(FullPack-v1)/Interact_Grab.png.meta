@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -307,7 +307,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Interact_Grab_0: 2437891204390159883
+      Interact_Grab_1: -7460469429984839490
+      Interact_Grab_2: 7922171415610838312
+      Interact_Grab_3: 8680578588778046513
+      Interact_Grab_4: 5814403630190833843
+      Interact_Grab_5: -3558715029403661552
+      Interact_Grab_6: -4781061706338124557
+      Interact_Grab_7: -6138459374965500999
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

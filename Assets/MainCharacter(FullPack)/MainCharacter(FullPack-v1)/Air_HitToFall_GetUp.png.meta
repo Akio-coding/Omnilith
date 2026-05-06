@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -407,7 +407,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Air_HitToFall_GetUp_0: 3488758253401443902
+      Air_HitToFall_GetUp_1: 992302727357232806
+      Air_HitToFall_GetUp_10: -4272627381138973448
+      Air_HitToFall_GetUp_11: 1097882779580091516
+      Air_HitToFall_GetUp_2: -1167085415472816035
+      Air_HitToFall_GetUp_3: 4344945665086594763
+      Air_HitToFall_GetUp_4: 3817427679043323966
+      Air_HitToFall_GetUp_5: 7005228289410216696
+      Air_HitToFall_GetUp_6: -5584094379415966896
+      Air_HitToFall_GetUp_7: 3094878275068371186
+      Air_HitToFall_GetUp_8: 7668326311662127702
+      Air_HitToFall_GetUp_9: 2038062116566614160
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

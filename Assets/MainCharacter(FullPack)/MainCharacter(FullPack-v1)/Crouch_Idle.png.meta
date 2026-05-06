@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -357,7 +357,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Crouch_Idle_0: -1722153878218258150
+      Crouch_Idle_1: -4264539294725873844
+      Crouch_Idle_2: -5767959375252307415
+      Crouch_Idle_3: -661477381576490934
+      Crouch_Idle_4: -7331415813006750976
+      Crouch_Idle_5: -7927517099694444154
+      Crouch_Idle_6: -7632937586865954548
+      Crouch_Idle_7: 8596787927762794113
+      Crouch_Idle_8: -1866687590153320914
+      Crouch_Idle_9: 239137331156017981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -282,7 +282,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX_Jump_0: 6223012419027428791
+      VFX_Jump_1: 6384367018922139421
+      VFX_Jump_2: -6113531816412826141
+      VFX_Jump_3: 5115979128242914939
+      VFX_Jump_4: -2015800137893748673
+      VFX_Jump_5: 5470857330216068838
+      VFX_Jump_6: 4076465225316492208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

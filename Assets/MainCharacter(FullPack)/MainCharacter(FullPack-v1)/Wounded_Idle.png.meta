@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -357,7 +357,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wounded_Idle_0: -8116991867602064015
+      Wounded_Idle_1: 7516099888149504068
+      Wounded_Idle_2: -2749837314449104165
+      Wounded_Idle_3: -6531267342076005146
+      Wounded_Idle_4: -1962983177260955034
+      Wounded_Idle_5: 3973681400377795028
+      Wounded_Idle_6: -8788447663711183921
+      Wounded_Idle_7: -42693046232053760
+      Wounded_Idle_8: -7958890906189192131
+      Wounded_Idle_9: 1300436892126846343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

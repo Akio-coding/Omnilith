@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -282,7 +282,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX_ChargeAttack_ShatterEffect_0: -4594944890972927486
+      VFX_ChargeAttack_ShatterEffect_1: 7187911875209366675
+      VFX_ChargeAttack_ShatterEffect_2: 2781847294865017552
+      VFX_ChargeAttack_ShatterEffect_3: -984586895735711683
+      VFX_ChargeAttack_ShatterEffect_4: 8836751018781085633
+      VFX_ChargeAttack_ShatterEffect_5: -6391816963228507801
+      VFX_ChargeAttack_ShatterEffect_6: 2551166466839346987
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

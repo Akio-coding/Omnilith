@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -207,7 +207,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AirAttack_2_0: -1971876174919341572
+      AirAttack_2_1: -5062133686587805486
+      AirAttack_2_2: -6176352873371405693
+      AirAttack_2_3: 7695832496048055696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -88,7 +88,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -557,7 +557,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EnergyBuff_0: 2433666763244894588
+      EnergyBuff_1: -1497654936713955496
+      EnergyBuff_10: 560569438135927153
+      EnergyBuff_11: 5198910343598198659
+      EnergyBuff_12: 7780340803520142865
+      EnergyBuff_13: -7683359114276095094
+      EnergyBuff_14: -4577296368749627437
+      EnergyBuff_15: -3102356565308693581
+      EnergyBuff_16: 7715914833800591049
+      EnergyBuff_17: -7171130897381440470
+      EnergyBuff_2: 6118478284177404301
+      EnergyBuff_3: -3559052952084265873
+      EnergyBuff_4: -4449081751107312828
+      EnergyBuff_5: -1507383990484186650
+      EnergyBuff_6: -170415104052301170
+      EnergyBuff_7: -4862724667668218819
+      EnergyBuff_8: -6016862768608384066
+      EnergyBuff_9: -7784557503916236520
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

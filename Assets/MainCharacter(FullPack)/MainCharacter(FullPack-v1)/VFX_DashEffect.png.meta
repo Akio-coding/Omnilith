@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -257,7 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX_DashEffect_0: -3704012088481692232
+      VFX_DashEffect_1: -5802521939107485148
+      VFX_DashEffect_2: -288336430900264016
+      VFX_DashEffect_3: -6400336620265386198
+      VFX_DashEffect_4: -7949775316512987535
+      VFX_DashEffect_5: -8279437476706339174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

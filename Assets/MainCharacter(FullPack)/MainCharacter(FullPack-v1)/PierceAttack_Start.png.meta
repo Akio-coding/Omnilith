@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -207,7 +207,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PierceAttack_Start_0: -7834281529387308961
+      PierceAttack_Start_1: -5734049776046679354
+      PierceAttack_Start_2: 4826279639750989532
+      PierceAttack_Start_3: 8092389266977390533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -73,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -432,7 +432,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Crouch_Attack_0: -4703859783714166221
+      Crouch_Attack_1: -353732461730026703
+      Crouch_Attack_10: 5647578824209694531
+      Crouch_Attack_11: 4949226643994815810
+      Crouch_Attack_12: -2566212867616575841
+      Crouch_Attack_2: -1441714661733616884
+      Crouch_Attack_3: 3522014533150530766
+      Crouch_Attack_4: -694162968284216560
+      Crouch_Attack_5: -9201637500942102157
+      Crouch_Attack_6: 708239773573855011
+      Crouch_Attack_7: 3489885828046501502
+      Crouch_Attack_8: 2368015236505586314
+      Crouch_Attack_9: 5508912187212792155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

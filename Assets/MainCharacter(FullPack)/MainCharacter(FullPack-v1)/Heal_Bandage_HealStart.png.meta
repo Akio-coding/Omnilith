@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -257,7 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Heal_Bandage_HealStart_0: 962094908958808733
+      Heal_Bandage_HealStart_1: 8303912951256242236
+      Heal_Bandage_HealStart_2: -2273944226032784411
+      Heal_Bandage_HealStart_3: 7151043404178468447
+      Heal_Bandage_HealStart_4: -7856016065240228135
+      Heal_Bandage_HealStart_5: -2692501633516625087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
