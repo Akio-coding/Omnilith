@@ -43,9 +43,6 @@ public class PlayerFireBall : MonoBehaviour
             {
                 Debug.Log("Pas assez de charges pour lancer le sort !");
             }
-
-            Shoot();
-            nextFireTime = Time.time + fireRate;
         }
     }
 
@@ -58,7 +55,10 @@ public class PlayerFireBall : MonoBehaviour
         // Note : Ton script de mouvement utilise flipX, donc on regarde ça.
         Vector2 direction = sr.flipX ? Vector2.left : Vector2.right;
 
-        // 3. Envoyer la direction au script de la boule de feu
-        //bullet.GetComponent<Projectile>().SetDirection(direction);
+        FireBall fireBallScript = bullet.GetComponent<FireBall>();
+        if (fireBallScript != null)
+        {
+            fireBallScript.SetDirection(direction);
+        }
     }
 }

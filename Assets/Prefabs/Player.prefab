@@ -203,6 +203,7 @@ Transform:
   - {fileID: 5438853804755559491}
   - {fileID: 6988702205499603020}
   - {fileID: 4309679346135035753}
+  - {fileID: 6955670535291756128}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1551060455016233308
@@ -389,6 +390,8 @@ MonoBehaviour:
   deathDelay: 2
   componentsToDisable:
   - {fileID: 5350796280156042039}
+  knockbackForce: {x: 5, y: 2}
+  knockbackDuration: 0.2
 --- !u!114 &3493396109613708147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,6 +526,37 @@ MonoBehaviour:
   playerTransform: {fileID: 4619016295567292593}
   lookAheadAmount: 2
   smoothTime: 0.2
+--- !u!1 &5628077758057443002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6955670535291756128}
+  m_Layer: 7
+  m_Name: fireball spawn point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6955670535291756128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628077758057443002}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.134, y: 0.102, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4619016295567292593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7683683656601065051
 GameObject:
   m_ObjectHideFlags: 0
