@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
         combat = GetComponent<PlayerCombat>();
@@ -205,6 +206,7 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveForward()
     {
+        Debug.Log("Can Move");
         // --- BLOCAGE PENDANT L'ATTAQUE ---
         // Si le script de combat existe ET qu'on est en train d'attaquer
         if (combat != null && combat.IsAttacking && isOnGround)
@@ -240,6 +242,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
+        Debug.Log("Has Moved");
     }
 
     public void ApplyAttackStep(float strength)

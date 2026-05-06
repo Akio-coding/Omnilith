@@ -34,6 +34,7 @@ public class PlayerCombat : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         movement = GetComponent<PlayerMovement>();
+        IsAttacking = false;
 
         // Ensure that the sword collider is deactivated at the start
         DisableHitbox();
@@ -85,6 +86,11 @@ public class PlayerCombat : MonoBehaviour
                 }
                     
             }
+        }
+
+        if (IsAttacking == true)
+        {
+            print("Coucou");
         }
     }
 
