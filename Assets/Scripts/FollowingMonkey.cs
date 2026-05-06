@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class FollowingMonkey : MonoBehaviour
 {
     [Header("Réglage du suivi")]

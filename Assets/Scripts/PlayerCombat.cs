@@ -32,7 +32,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         movement = GetComponent<PlayerMovement>();
         IsAttacking = false;
 

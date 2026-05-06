@@ -2343,11 +2343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8401468518413724011, guid: 88781d5e6c31ad94c83875eaebbbf5bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.421711
+      value: -11.78
       objectReference: {fileID: 0}
     - target: {fileID: 8401468518413724011, guid: 88781d5e6c31ad94c83875eaebbbf5bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.7992973
+      value: 16.01
       objectReference: {fileID: 0}
     - target: {fileID: 8401468518413724011, guid: 88781d5e6c31ad94c83875eaebbbf5bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4561,11 +4561,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8401468518413724011, guid: 88781d5e6c31ad94c83875eaebbbf5bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.35
+      value: -24.99
       objectReference: {fileID: 0}
     - target: {fileID: 8401468518413724011, guid: 88781d5e6c31ad94c83875eaebbbf5bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.64
+      value: 15.88
       objectReference: {fileID: 0}
     - target: {fileID: 8401468518413724011, guid: 88781d5e6c31ad94c83875eaebbbf5bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4829,7 +4829,6 @@ GameObject:
   - component: {fileID: 1770389521}
   - component: {fileID: 1770389520}
   - component: {fileID: 1770389519}
-  - component: {fileID: 1770389518}
   - component: {fileID: 1770389522}
   - component: {fileID: 1770389517}
   m_Layer: 12
@@ -4874,28 +4873,6 @@ MonoBehaviour:
   lowThrowForce: {x: 8, y: 3}
   playerThrowForce: {x: 4, y: 8}
   isGrounded: 0
---- !u!95 &1770389518
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770389516}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &1770389519
 Rigidbody2D:
   serializedVersion: 4
@@ -5770,6 +5747,14 @@ PrefabInstance:
     - target: {fileID: 3390865335320607055, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.263
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782333281804450755, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782333281804450755, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.322
       objectReference: {fileID: 0}
     - target: {fileID: 4309679346135035753, guid: 5a11bb46b873fe84e8f62c120c9c5e4f, type: 3}
       propertyPath: m_LocalPosition.x
