@@ -34,6 +34,7 @@ public class PlayerCombat : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         movement = GetComponent<PlayerMovement>();
+        IsAttacking = false;
 
         // Ensure that the sword collider is deactivated at the start
         DisableHitbox();
