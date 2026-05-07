@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      head-smile-fill-0006_0: 5601824563808819338
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
