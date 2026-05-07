@@ -23,8 +23,9 @@ public class Health : MonoBehaviour
 
     [Header("Respawn")]
     [Tooltip("Durée pendant laquelle on désactive tous les contrôles du joueur, doit être de la même durée que l'animation de mort en secondes")]
-    [SerializeField] private float deathDelay = 1f; // Duration of death animation
-    [SerializeField] private Behaviour[] componentsToDisable;
+    [SerializeField] private float deathDelay = 2f; // Duration of death animation
+    [SerializeField] private Behaviour[] componentsToDisable; 
+
 
     // ---- Events ----
     // Other scripts can subscribe to these events without Health being aware of them
@@ -67,9 +68,9 @@ public class Health : MonoBehaviour
                 CurrentHealth = 0;
                 StartCoroutine(RespawnRoutine());
             }
-            else if (CompareTag("Enemy") == true)
+            else if (CompareTag("Ennemy") == true)
             {
-                Die();
+                die();
             }
         }
         else
@@ -166,50 +167,21 @@ public class Health : MonoBehaviour
         isInvincible = true;
 
         // flashing effect
-        if (sr != null)
+        for (int loopCount = 0; loopCount < flashCount; loopCount++)
         {
-            for (int loopCount = 0; loopCount < flashCount; loopCount++)
-            {
-                sr.color = flashing;
-                yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
-                sr.color = Color.white;
-                yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
-            }
-            sr.color = Color.white;
-        }
-        else
-        {
-            // Si on n'a pas de SpriteRenderer, on attend juste la durée de l'invincibilité normalement
-            yield return new WaitForSeconds(invincibilityDuration);
+            sr.color = flashing; // Choosed color
+            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
+            sr.color = Color.white; // Normal
+            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
         }
 
+        sr.color = Color.white;
         isInvincible = false;
+        
     }
 
-    void Die()
+    void die() 
     {
-        Debug.Log("meurt meurt meurt");
-
-        // 1. On lance l'animation de KO
-        if (anim != null)
-        {
-            anim.SetTrigger("Die");
-        }
-
-        // 2. On désactive la hitbox pour qu'il ne blesse plus le joueur en tombant
-        if (playerCollider != null)
-        {
-            playerCollider.enabled = false;
-        }
-
-        // 3. On coupe le moteur physique pour qu'il s'arrête de glisser
-        if (rb != null)
-        {
-            rb.velocity = Vector2.zero;
-            rb.simulated = false;
-        }
-
-        // 4. On détruit l'objet après un délai de 1 seconde (laisse le temps à l'anim de se jouer)
-        Destroy(this.gameObject, 2f);
+        Destroy(this.gameObject);
     }
 }
