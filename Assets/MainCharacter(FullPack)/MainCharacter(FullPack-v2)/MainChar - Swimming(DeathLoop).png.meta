@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MainChar - Swimming(DeathLoop)_0: 9140736519885267222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
