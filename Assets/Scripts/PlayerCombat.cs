@@ -87,11 +87,6 @@ public class PlayerCombat : MonoBehaviour
                     
             }
         }
-
-        if (IsAttacking == true)
-        {
-            print("Coucou");
-        }
     }
 
     private void StartAttack()
