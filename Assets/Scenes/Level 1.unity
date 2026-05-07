@@ -39696,7 +39696,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 257.93, y: 22.594936, z: 0}
+    - position: {x: 259.93, y: -8.405064, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -39704,7 +39704,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 211.93, y: 3.5949364, z: 0}
+    - position: {x: 177.93, y: -29.405064, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -39712,23 +39712,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 108.04001, y: 3.5200005, z: 0}
-      leftTangent: {x: 0, y: 0, z: 0}
-      rightTangent: {x: 0, y: 0, z: 0}
-      mode: 0
-      height: 1
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-    - position: {x: 86.04001, y: -6.4799995, z: 0}
-      leftTangent: {x: 0, y: 0, z: 0}
-      rightTangent: {x: 0, y: 0, z: 0}
-      mode: 0
-      height: 1
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-    - position: {x: 0.040008545, y: -6.4799995, z: 0}
+    - position: {x: -3.0700073, y: -37.405064, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -39827,8 +39811,8 @@ SpriteShapeRenderer:
   - {fileID: -1740160323, guid: 1c55fa55b6f40084289e067abd6de6f2, type: 3}
   - {fileID: -429526067, guid: 1c55fa55b6f40084289e067abd6de6f2, type: 3}
   m_LocalAABB:
-    m_Center: {x: 130.06178, y: 28.404612, z: 0}
-    m_Extent: {x: 131.64258, y: 35.73887, z: 0}
+    m_Center: {x: 128.91661, y: 13.002964, z: 0}
+    m_Extent: {x: 132.73375, y: 51.14051, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &791802667
 Transform:
@@ -93586,7 +93570,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1502871615, guid: 9d8abfa471908df4586c7fd5c434f448, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
