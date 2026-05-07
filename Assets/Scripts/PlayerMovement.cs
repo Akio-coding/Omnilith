@@ -96,6 +96,12 @@ public class PlayerMovement : MonoBehaviour
 
     void InputManager()
     {
+        // Test 1212
+        if (Input.GetButtonDown("Jump"))
+        {
+            Debug.Log("Touche saut pressée ! isOnGround = " + isOnGround + " | isDashing = " + isDashing);
+        }
+
         if (Input.GetButtonDown("Jump") && isOnGround && !isDashing)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);

@@ -7,14 +7,18 @@ public class PlayerFireBall : MonoBehaviour
     [SerializeField] private GameObject fireballPrefab; 
     [SerializeField] private float fireRate = 0.5f;
 
+    [SerializeField] private int manaCost = 1;
 
     private float nextFireTime = 0f;
     private SpriteRenderer sr;
+    private ManaManager manaManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        // On récupère automatiquement le script ManaManager qui est sur le joueur
+        manaManager = GetComponent<ManaManager>();
     }
 
     // Update is called once per frame
@@ -23,8 +27,22 @@ public class PlayerFireBall : MonoBehaviour
         // Si on appuie sur F (ou Fire1/Clic gauche) et que le temps de recharge est passé
         if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime)
         {
-            Shoot();
-            nextFireTime = Time.time + fireRate;
+            // NOUVEAU : On demande au ManaManager si on a assez de charges
+            if (manaManager != null && manaManager.TryConsumeCharge(manaCost))
+            {
+                Shoot();
+                nextFireTime = Time.time + fireRate;
+            }
+            else if (manaManager == null)
+            {
+                // Si on a oublié de mettre le script ManaManager, l'attaque marche quand même par sécurité
+                Shoot();
+                nextFireTime = Time.time + fireRate;
+            }
+            else
+            {
+                Debug.Log("Pas assez de charges pour lancer le sort !");
+            }
         }
     }
 
@@ -37,7 +55,10 @@ public class PlayerFireBall : MonoBehaviour
         // Note : Ton script de mouvement utilise flipX, donc on regarde ça.
         Vector2 direction = sr.flipX ? Vector2.left : Vector2.right;
 
-        // 3. Envoyer la direction au script de la boule de feu
-        //bullet.GetComponent<Projectile>().SetDirection(direction);
+        FireBall fireBallScript = bullet.GetComponent<FireBall>();
+        if (fireBallScript != null)
+        {
+            fireBallScript.SetDirection(direction);
+        }
     }
 }

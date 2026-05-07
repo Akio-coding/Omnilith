@@ -23,7 +23,7 @@ public class DamageDealer : MonoBehaviour
         // If the target has an Health component 
         if (targetHealth != null)
         {
-            targetHealth.TakeDamage(damageAmount);
+            targetHealth.TakeDamage(damageAmount, transform);
             Debug.Log("you took damages");
         }
     }
@@ -42,7 +42,7 @@ public class DamageDealer : MonoBehaviour
 
         if (targetHealth != null)
         {
-            targetHealth.TakeDamage(damageAmount);
+            targetHealth.TakeDamage(damageAmount, transform);
             Debug.Log("damages collision");
         }
     }
