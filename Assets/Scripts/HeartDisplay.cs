@@ -3,39 +3,39 @@ using UnityEngine.UI;
 
 public class HeartDisplay : MonoBehaviour
 {
-    //[SerializeField] private Sprite fullHeart;
-    //[SerializeField] private Sprite emptyHeart;
+    [SerializeField] private Sprite fullHeart;
+    [SerializeField] private Sprite emptyHeart;
 
-    //private Image heartImage;
+    private Image heartImage;
 
-    //void Awake()
-    //{
-    //    heartImage = GetComponent<Image>();
-    //}
-
-    //// public because this function will be called by the manager 
-    //public void SetHeartStatus(bool isFull)
-    //{
-    //    if (isFull)
-    //    {
-    //        heartImage.sprite = fullHeart;
-    //    }
-    //    else
-    //    {
-    //        heartImage.sprite = emptyHeart;
-    //    }
-    //}
-
-
-    [SerializeField] private Slider slider;
-    public void SetmaxHeath(int health)
+    void Awake()
     {
-        slider.maxValue = health;
-        slider.value = 0;
+        heartImage = GetComponent<Image>();
     }
 
-    public void SetHealth(int health)
+     //public because this function will be called by the manager 
+    public void SetHeartStatus(bool isFull)
     {
-        slider.value = health;
+        if (isFull)
+       {
+            heartImage.sprite = fullHeart;
+        }
+        else
+        {
+            heartImage.sprite = emptyHeart;
+        }
     }
+
+
+    //[SerializeField] private Slider slider;
+    //public void SetmaxHeath(int health)
+    //{
+    //    slider.maxValue = health;
+    //    slider.value = 0;
+    //}
+
+    //public void SetHealth(int health)
+    //{
+    //    slider.value = health;
+    //}
 }
