@@ -61,6 +61,8 @@ public class PlayerMovement : MonoBehaviour
     private TrailRenderer tr;
     private PlayerCombat combat;
 
+    public Animator animator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -68,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
         combat = GetComponent<PlayerCombat>();
+        animator = GetComponent<Animator>();
 
         initialGravity = rb.gravityScale;
         initialSize = dashCollider.size;
@@ -89,6 +92,10 @@ public class PlayerMovement : MonoBehaviour
             GravityHandler();
             MoveForward(); 
         }
+
+        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        animator.SetFloat("Speed", characterVelocity);
+
     }
     void VerifyIfOnGround()
     {
