@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      punch-stroke-0006_0: 7482335741548191374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

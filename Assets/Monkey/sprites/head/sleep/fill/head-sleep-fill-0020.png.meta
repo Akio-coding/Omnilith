@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      head-sleep-fill-0020_0: 3282242023215273602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
