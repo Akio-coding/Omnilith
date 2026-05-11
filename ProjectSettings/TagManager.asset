@@ -5,15 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ennemy
-  - Vines
-  - Hitbox
-  - Porte
+  - Enemy
   - Attack
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player Projectile
   - Water
   - UI
   - Ground
@@ -21,8 +19,8 @@ TagManager:
   - Enemy
   - PlayerHurtbox
   - PlayerHitbox
-  - 
-  - 
+  - Throwable
+  - Monkey
   - 
   - 
   - 
