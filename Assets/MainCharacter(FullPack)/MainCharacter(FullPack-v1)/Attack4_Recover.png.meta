@@ -109,12 +109,12 @@ TextureImporter:
       name: Attack4_Recover_0
       rect:
         serializedVersion: 2
-        x: 68
-        y: 31
-        width: 63
-        height: 91
+        x: 0
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: Attack4_Recover_1
       rect:
         serializedVersion: 2
-        x: 237
-        y: 31
-        width: 82
-        height: 61
+        x: 192
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: Attack4_Recover_2
       rect:
         serializedVersion: 2
-        x: 458
-        y: 31
-        width: 45
-        height: 60
+        x: 384
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2825c69c5349f4a48840020849fd3c1f
     internalID: 0
     vertices: []
     indices: 
