@@ -61,13 +61,20 @@ public class Gargoyle : MonoBehaviour
                 // Si le joueur entre dans la zone de vision
                 if(distanceToPlayer <= visionRadius)
                 {
+                    // On ajoute un cooldown avant le plongeon
+                    StartCoroutine(DelayDive(divingDelay));
+                }
+                break;
+
+            IEnumerator DelayDive(float divingDelay)
+                {
+                    yield return new WaitForSeconds(divingDelay);
                     // On enregistre la position actuelle du joueur pour plonger vers ce point
                     diveTarget = playerTransform.position;
 
                     // On ajoute un cooldown avant le plongeon
                     StartCoroutine(DelayDive(divingDelay));
                 }
-                break;
 
             case State.Diving:
                 // Lance l'animation de dive

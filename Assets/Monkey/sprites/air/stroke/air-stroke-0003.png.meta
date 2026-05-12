@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      air-stroke-0003_0: -5783859392984327868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

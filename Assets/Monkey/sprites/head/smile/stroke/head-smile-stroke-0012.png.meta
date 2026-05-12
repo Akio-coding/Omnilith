@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      head-smile-stroke-0012_0: 292496591962026196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
