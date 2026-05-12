@@ -63,6 +63,8 @@ public class Health : MonoBehaviour
         // We apply damages
         CurrentHealth -= damageAmount;
 
+        anim.SetTrigger("TakeDamage");
+
         // Notify everyone (UI, Audio, etc.)
         OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
         OnDamageTaken?.Invoke();

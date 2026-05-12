@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerCombat combat;
 
     public Animator animator;
+    public float RunCooldown = 0.3f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -95,7 +96,6 @@ public class PlayerMovement : MonoBehaviour
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
-
     }
     void VerifyIfOnGround()
     {
