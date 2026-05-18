@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Crab : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class Crab : MonoBehaviour
     private Animator anim;
     private Health health;
     private DamageDealer damageDealer;
+    private Collider2D crabCollider;
 
     private int facingDirection = -1;
 
@@ -263,6 +265,83 @@ public class Crab : MonoBehaviour
 
         currentState = State.Patrol;
     }
+
+    // --- FONCTIONS POUR LE SINGE ---
+
+    // Fonction à appeler depuis le script du Singe quand il ramasse le crabe
+    public void PickUpByMonkey()
+    {
+        if(currentState != State.Hiding)
+        {
+            return;
+        }
+        isCarried = false;
+        isThrown = true;
+
+        rb.isKinematic = false; 
+        rb.velocity = Vector2.zero;
+        if (crabCollider != null)
+        {
+            crabCollider.enabled = false;
+        }
+    }
+
+    // Fonction à appeler depuis le script du Singe quand il lance le crabe
+    public void ThrowByMonkey(Vector2 throwForce)
+    {
+        if(currentState != State.Hiding)
+        {
+            isCarried = false;
+            isThrown = true;
+
+            rb.isKinematic = false;
+            if (crabCollider != null)
+            {
+                crabCollider.enabled = true;
+            }
+
+            rb.AddForce(throwForce, ForceMode2D.Impulse);
+        }
+    }
+
+    // --- GESTION DES COLLISIONS EN CARAPACE ---
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        // 1. DÉTECTION DU COUP D'ÉPÉE (Knockback)
+        // L'épée du joueur a le script DamageDealer. On vérifie si c'est bien l'épée qui nous touche.
+        if(currentState == State.Hiding && collider.GetComponent<DamageDealer>() != null && !isCarried)
+        {
+            // On calcule d'où vient le coup pour le repousser dans la bonne direction
+            float pushDirection = (collider.transform.position.x > transform.position.x) ? -1f : 1f;
+
+            rb.velocity = Vector2.zero;
+            rb.AddForce(new Vector2(carapaceKnockback.x * pushDirection, carapaceKnockback.y), ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (currentState == State.Hiding)
+        {
+            // 2. LE CRABE EST LANCÉ ET TOUCHE UN ENNEMI
+            if (isThrown && collision.gameObject.CompareTag("Ennemy"))
+            {
+                Health enemyHealth = collision.gameObject.GetComponent<Health>();
+
+                // On vérifie qu'il ne se blesse pas lui-même
+                if (enemyHealth != null && enemyHealth.gameObject != this.gameObject)
+                {
+                    enemyHealth.TakeDamage(thrownDamage, transform); // Inflict heavy damage
+                    DiePermanently(); 
+                }
+            }
+
+            // 3. LA CARAPACE TOUCHE UN LEVIER
+            // (Assure-toi de mettre le Tag "Lever" sur tes leviers dans Unity)
+        }
+    }
+
 
     private void OnDrawGizmosSelected()
     {
