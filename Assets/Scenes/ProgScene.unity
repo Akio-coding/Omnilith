@@ -1154,6 +1154,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9566719895c404da4f10043084a61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &441718176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441718161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd08555457497f439e279ded4d0ad62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  pointA: {fileID: 1520010000}
+  pointB: {fileID: 1909655198}
+  patrolSpeed: 2
+  followSpeed: 2.5
+  chargeSpeed: 8
+  warningDuration: 0.5
+  chargeMaxDuration: 1.5
+  recoverDuration: 1
+  visionDistance: 6
+  visionBoxSize: {x: 0.5, y: 1.5}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  edgeCheck: {fileID: 1680012254}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4486,6 +4516,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541061321}
   m_CullTransparentMesh: 1
+--- !u!4 &1680012254 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3612174224140857314, guid: 9e1ba684913a6654cb8081319fabcbde, type: 3}
+  m_PrefabInstance: {fileID: 2236301446638081385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1715283226
 GameObject:
   m_ObjectHideFlags: 0
@@ -5682,6 +5717,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1249686145736908179, guid: 9e1ba684913a6654cb8081319fabcbde, type: 3}
       insertIndex: -1
       addedObject: {fileID: 441718169}
+    - targetCorrespondingSourceObject: {fileID: 1249686145736908179, guid: 9e1ba684913a6654cb8081319fabcbde, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 441718176}
   m_SourcePrefab: {fileID: 100100000, guid: 9e1ba684913a6654cb8081319fabcbde, type: 3}
 --- !u!1001 &6903045701374707611
 PrefabInstance:
