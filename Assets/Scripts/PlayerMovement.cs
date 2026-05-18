@@ -124,6 +124,7 @@ public class PlayerMovement : MonoBehaviour
         // DASH (Left Shift Key by default "Fire3" or check input manager
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
+            animator.SetTrigger("Dash");
             StartDash();            
         }
     }

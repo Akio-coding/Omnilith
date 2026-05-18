@@ -103,12 +103,12 @@ TextureImporter:
       name: AirAttack_1_Recover_0
       rect:
         serializedVersion: 2
-        x: 83
-        y: 32
-        width: 53
-        height: 62
+        x: 0
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d98a9f24d62f16940a56948a8593002a
     internalID: 0
     vertices: []
     indices: 
