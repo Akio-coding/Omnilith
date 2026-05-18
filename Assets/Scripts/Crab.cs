@@ -20,6 +20,18 @@ public class Crab : MonoBehaviour
     [SerializeField] private float visionDistance = 5f;
     private Transform playerTransform;
 
+    [Header("Carapace (Vulnérabilité)")]
+    [Tooltip("Temps en secondes avant qu'il ne ressorte de sa carapace")]
+    [SerializeField] private float hidingDuration = 6f;
+    [Tooltip("Force du recul quand le joueur tape la carapace à l'épée")]
+    [SerializeField] private Vector2 carapaceKnockback = new Vector2(6f, 3f);
+    [Tooltip("Dégâts infligés aux autres ennemis si la carapace est lancée dessus")]
+    [SerializeField] private int thrownDamage = 3;
+
+    private float hidingTimer;
+    private bool isCarried = false; // Porté par le singe
+    private bool isThrown = false;  // Lancé en l'air par le singe
+
     [Header("Detection")]
     [SerializeField] private Vector2 visionBoxSize = new Vector2(0.5f,1f);
     [SerializeField] private LayerMask playerLayer;
@@ -72,6 +84,7 @@ public class Crab : MonoBehaviour
     {
         if(currentState == State.Hiding)
         {
+            HidingBehavior();
             return;
         }
 
@@ -208,12 +221,47 @@ public class Crab : MonoBehaviour
     private void EnterHidingState()
     {
         currentState = State.Hiding;
+        hidingTimer = hidingDuration;
+        isCarried = false;
+        isThrown = false;
+
         rb.velocity = Vector2.zero;
 
         if(damageDealer != null)
         {
             damageDealer.enabled = false;
         }
+    }
+
+    private void HidingBehavior()
+    {
+        // Si le singe le porte ou s'il est en train de voler suite à un lancer, on met le timer en pause !
+        if(!isCarried && !isThrown)
+        {
+            hidingTimer -= Time.deltaTime;
+            if (hidingTimer < 0)
+            {
+                WakeUp();
+            }
+        }
+    }
+
+    private void WakeUp()
+    {
+        if (health != null)
+        {
+            health.Heal(health.maxHealth);
+        }
+        if (damageDealer != null)
+        {
+            damageDealer.enabled = true;
+        }
+        if (anim != null)
+        {
+            anim.SetTrigger("WakeUp");
+        }
+
+        currentState = State.Patrol;
     }
 
     private void OnDrawGizmosSelected()
