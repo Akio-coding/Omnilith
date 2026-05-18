@@ -312,6 +312,12 @@ public class FollowingMonkey : MonoBehaviour
             // On désactive la physique de l'objet pendant qu'on le porte
             carriedObject.GetComponent<Rigidbody2D>().isKinematic = true;
             carriedObject.GetComponentInChildren<Collider2D>().enabled = false;
+
+            Crab crabScript = carriedObject.GetComponentInParent<Crab>();
+            if (crabScript != null)
+            {
+                crabScript.PickUpByMonkey();
+            }
         }
         else
         {
@@ -388,6 +394,13 @@ public class FollowingMonkey : MonoBehaviour
         carriedObject.transform.rotation = Quaternion.identity;
 
         objRb.AddForce(finalForce, ForceMode2D.Impulse);
+
+        Crab crabScript = carriedObject.GetComponentInParent<Crab>();
+        if (crabScript != null)
+        {
+            crabScript.ThrowByMonkey();
+        }
+
         carriedObject = null;
     }
 
@@ -408,6 +421,12 @@ public class FollowingMonkey : MonoBehaviour
 
         // Reset vitesse 
         objRb.velocity = Vector2.zero;
+
+        Crab crabScript = carriedObject.GetComponentInParent<Crab>();
+        if (crabScript != null)
+        {
+            crabScript.DropByMonkey();
+        }
 
         carriedObject = null;
     }

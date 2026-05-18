@@ -233,6 +233,9 @@ public class Crab : MonoBehaviour
         {
             damageDealer.enabled = false;
         }
+
+        // On le passe sur le Layer "Throwable" pour que le singe puisse le voir !
+        gameObject.layer = LayerMask.NameToLayer("Throwable");
     }
 
     private void HidingBehavior()
@@ -262,6 +265,8 @@ public class Crab : MonoBehaviour
         {
             anim.SetTrigger("WakeUp");
         }
+        // Il redevient un ennemi normal, le singe ne peut plus le porter
+        gameObject.layer = LayerMask.NameToLayer("Ennemy");
 
         currentState = State.Patrol;
     }
@@ -277,31 +282,27 @@ public class Crab : MonoBehaviour
         }
         isCarried = false;
         isThrown = true;
-
-        rb.isKinematic = false; 
-        rb.velocity = Vector2.zero;
-        if (crabCollider != null)
-        {
-            crabCollider.enabled = false;
-        }
     }
 
     // Fonction à appeler depuis le script du Singe quand il lance le crabe
-    public void ThrowByMonkey(Vector2 throwForce)
+    public void ThrowByMonkey()
     {
         if(currentState != State.Hiding)
         {
-            isCarried = false;
-            isThrown = true;
-
-            rb.isKinematic = false;
-            if (crabCollider != null)
-            {
-                crabCollider.enabled = true;
-            }
-
-            rb.AddForce(throwForce, ForceMode2D.Impulse);
+            return;    
         }
+        isCarried = false;
+        isThrown = true;
+    }
+
+    public void DropByMonkey()
+    {
+        if( currentState != State.Hiding)
+        {
+            return;
+        }
+        isCarried = false;
+        isThrown = false;
     }
 
     // --- GESTION DES COLLISIONS EN CARAPACE ---
@@ -338,8 +339,24 @@ public class Crab : MonoBehaviour
             }
 
             // 3. LA CARAPACE TOUCHE UN LEVIER
-            // (Assure-toi de mettre le Tag "Lever" sur tes leviers dans Unity)
+            if (collision.gameObject.CompareTag("Lever"))
+            {
+                DiePermanently();
+            }
+
+            // 4. DÉTECTION DU SOL (Fin du lancer)
+            // Si la carapace lancée touche le sol (GroundLayer), elle n'est plus considérée comme "en l'air"
+            if (isThrown &&((1 << collision.gameObject.layer) & groundLayer) != 0)
+            {
+                isThrown = false;
+            }
         }
+    }
+
+    private void DiePermanently()
+    {
+        // Optionnel : Jouer un effet de particule de destruction ou un son ici
+        Destroy(gameObject);
     }
 
 
