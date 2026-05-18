@@ -23,9 +23,14 @@ public class Health : MonoBehaviour
 
     [Header("Respawn")]
     [Tooltip("Durée pendant laquelle on désactive tous les contrôles du joueur, doit être de la même durée que l'animation de mort en secondes")]
-    [SerializeField] private float deathDelay = 2f; // Duration of death animation
-    [SerializeField] private Behaviour[] componentsToDisable; 
+    [SerializeField] private float deathDelay = 1f; // Duration of death animation
+    [SerializeField] private Behaviour[] componentsToDisable;
 
+    [Header("Knockback Settings")]
+    [Tooltip("La force du recul. X = projection horizontale, Y = petit saut en l'air")]
+    [SerializeField] private Vector2 knockbackForce = new Vector2(5f, 2f);
+    [Tooltip("Durée de la perte de contrôle pendant le recul")]
+    [SerializeField] private float knockbackDuration = 0.2f;
 
     // ---- Events ----
     // Other scripts can subscribe to these events without Health being aware of them
@@ -46,7 +51,7 @@ public class Health : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage(int damageAmount, Transform damageSource = null)
     {
         // If we are invincible or dead, ignore 
         if (isInvincible || CurrentHealth <= 0) 
@@ -68,15 +73,51 @@ public class Health : MonoBehaviour
                 CurrentHealth = 0;
                 StartCoroutine(RespawnRoutine());
             }
-            else if (CompareTag("Ennemy") == true)
+            else if (CompareTag("Enemy") == true)
             {
-                die();
+                Die();
             }
         }
         else
         {
+            // On applique le knockback si on sait d'où vient le coup
+            if (damageSource != null && rb != null)
+            {
+                StartCoroutine(KnockbackRoutine(damageSource));
+            }
+
             // If we survive, launch the coroutine 
             StartCoroutine(InvincibilityRoutine());
+        }
+    }
+
+    // La coroutine qui gère la physique du recul
+    private IEnumerator KnockbackRoutine(Transform damageSource)
+    {
+        // 1. On coupe les contrôles (PlayerMovement) pour qu'il n'annule pas la physique
+        foreach (var component in componentsToDisable)
+        {
+            component.enabled = false;
+        }
+
+        // 2. On détermine la direction (1 = vers la droite, -1 = vers la gauche)
+        float pushDirection = 1f;
+        if (transform.position.x < damageSource.position.x)
+        {
+            pushDirection = -1f; // L'attaquant est à droite, on recule vers la gauche
+        }
+
+        // 3. On applique la force !
+        rb.velocity = Vector2.zero; // On stoppe le mouvement actuel net
+        rb.AddForce(new Vector2(knockbackForce.x * pushDirection, knockbackForce.y), ForceMode2D.Impulse);
+
+        // 4. On attend que le joueur finisse de reculer
+        yield return new WaitForSeconds(knockbackDuration);
+
+        // 5. On rend les contrôles
+        foreach (var component in componentsToDisable)
+        {
+            component.enabled = true;
         }
     }
 
@@ -167,21 +208,50 @@ public class Health : MonoBehaviour
         isInvincible = true;
 
         // flashing effect
-        for (int loopCount = 0; loopCount < flashCount; loopCount++)
+        if (sr != null)
         {
-            sr.color = flashing; // Choosed color
-            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
-            sr.color = Color.white; // Normal
-            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
+            for (int loopCount = 0; loopCount < flashCount; loopCount++)
+            {
+                sr.color = flashing;
+                yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
+                sr.color = Color.white;
+                yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
+            }
+            sr.color = Color.white;
+        }
+        else
+        {
+            // Si on n'a pas de SpriteRenderer, on attend juste la durée de l'invincibilité normalement
+            yield return new WaitForSeconds(invincibilityDuration);
         }
 
-        sr.color = Color.white;
         isInvincible = false;
-        
     }
 
-    void die() 
+    void Die()
     {
-        Destroy(this.gameObject);
+        Debug.Log("meurt meurt meurt");
+
+        // 1. On lance l'animation de KO
+        if (anim != null)
+        {
+            anim.SetTrigger("Die");
+        }
+
+        // 2. On désactive la hitbox pour qu'il ne blesse plus le joueur en tombant
+        if (playerCollider != null)
+        {
+            playerCollider.enabled = false;
+        }
+
+        // 3. On coupe le moteur physique pour qu'il s'arrête de glisser
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.simulated = false;
+        }
+
+        // 4. On détruit l'objet après un délai de 1 seconde (laisse le temps à l'anim de se jouer)
+        Destroy(this.gameObject, 2f);
     }
 }

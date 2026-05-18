@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Gargoyle : MonoBehaviour
@@ -17,10 +18,15 @@ public class Gargoyle : MonoBehaviour
     [SerializeField] private float visionRadius = 7f; // Zone où la gargouille repère le joueur
     [SerializeField] private float loseInterestRadius = 12f; // Zone où elle abandonne (doit être > visionRadius)
 
+    [Header("Delay")]
+    [SerializeField] private float divingDelay = 2f;
+
+    [Header("Animations")]
     private Transform playerTransform;
     private Vector3 initialPosition; // Le perchoir d'origine
     private Vector3 diveTarget; // Le point visé lors du plongeon
     private Rigidbody2D rb;
+    [SerializeField] private Animator anim;
 
     private void Start()
     {
@@ -55,13 +61,25 @@ public class Gargoyle : MonoBehaviour
                 // Si le joueur entre dans la zone de vision
                 if(distanceToPlayer <= visionRadius)
                 {
-                    // On enregistre la position actuelle du joueur pour plonger vers ce point
-                    diveTarget = playerTransform.position;
-                    currentState = State.Diving;
+                    // On ajoute un cooldown avant le plongeon
+                    StartCoroutine(DelayDive(divingDelay));
                 }
                 break;
 
+            IEnumerator DelayDive(float divingDelay)
+                {
+                    yield return new WaitForSeconds(divingDelay);
+                    // On enregistre la position actuelle du joueur pour plonger vers ce point
+                    diveTarget = playerTransform.position;
+
+                    // On ajoute un cooldown avant le plongeon
+                    StartCoroutine(DelayDive(divingDelay));
+                }
+
             case State.Diving:
+                // Lance l'animation de dive
+                anim.SetBool("isDiving", true);
+
                 // Plongeon rapide vers la cible
                 transform.position = Vector3.MoveTowards(transform.position, diveTarget, diveSpeed * Time.deltaTime);
 
@@ -73,6 +91,9 @@ public class Gargoyle : MonoBehaviour
                 break;
 
             case State.Follow:
+                // Retour à l'animation de vol
+                anim.SetBool("isDiving", false);
+
                 // Poursuite lente vers le joueur (qui bouge)
                 transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, flySpeed * Time.deltaTime);
 
@@ -98,6 +119,12 @@ public class Gargoyle : MonoBehaviour
         FlipSprite();
     }
 
+    private IEnumerator DelayDive(float divingDelay)
+    {
+        yield return new WaitForSeconds(divingDelay);
+        currentState = State.Diving;
+    }
+
     // Gestion des dégâts de contact
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -106,7 +133,7 @@ public class Gargoyle : MonoBehaviour
             Health playerHealth = collision.gameObject.GetComponent<Health>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damage);
+                playerHealth.TakeDamage(damage, transform);
             }    
         }
     }
