@@ -207,4 +207,9 @@ public class PlayerCombat : MonoBehaviour
             movement.ApplyAttackStep(attackStepForce);
         }
     }
+
+    private void EndRecover()
+    {
+        anim.SetTrigger("Idle");
+    }
 }

@@ -56902,6 +56902,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.5704085
       objectReference: {fileID: 0}
+    - target: {fileID: 1200445241228570697, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
+      propertyPath: m_TagString
+      value: Lever
+      objectReference: {fileID: 0}
     - target: {fileID: 1578606244967331579, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
       propertyPath: m_FlipY
       value: 1
