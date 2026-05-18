@@ -1242,6 +1242,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291020672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &413443018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6179069300394547311, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
+  m_PrefabInstance: {fileID: 940499480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,7 +2586,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6179069300394547311, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1551375329}
   m_SourcePrefab: {fileID: 100100000, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
 --- !u!1 &1062053163
 GameObject:
@@ -4636,6 +4644,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6855922155757072960, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
   m_PrefabInstance: {fileID: 940499480}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1551375329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413443018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc4c08f99906724086779b8d243c859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbSpeed: 5
+  rb: {fileID: 1551375318}
+  isTouchingVine: 0
+  isClimbing: 0
+  verticalInput: 0
+  defaultGravity: 0
 --- !u!1 &1699360459
 GameObject:
   m_ObjectHideFlags: 0

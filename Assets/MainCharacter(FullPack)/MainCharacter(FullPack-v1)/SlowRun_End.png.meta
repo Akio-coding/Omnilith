@@ -112,12 +112,12 @@ TextureImporter:
       name: SlowRun_End_0
       rect:
         serializedVersion: 2
-        x: 83
-        y: 31
-        width: 40
-        height: 58
+        x: 0
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: SlowRun_End_1
       rect:
         serializedVersion: 2
-        x: 274
-        y: 31
-        width: 43
-        height: 59
+        x: 192
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -156,12 +156,12 @@ TextureImporter:
       name: SlowRun_End_2
       rect:
         serializedVersion: 2
-        x: 463
-        y: 31
-        width: 43
-        height: 60
+        x: 384
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,12 +178,12 @@ TextureImporter:
       name: SlowRun_End_3
       rect:
         serializedVersion: 2
-        x: 651
-        y: 31
-        width: 45
-        height: 60
+        x: 576
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b12ef01ea10ca2541b7890f843ec3626
     internalID: 0
     vertices: []
     indices: 

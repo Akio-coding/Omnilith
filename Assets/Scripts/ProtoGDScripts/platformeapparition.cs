@@ -36,7 +36,7 @@ public class platformeapparition : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Hitbox"))
+        if (collision.CompareTag("Attack"))
         {
             IsActivated = true;
 

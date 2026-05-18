@@ -49,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -115,12 +115,12 @@ TextureImporter:
       name: MainChar - Camping&Drink(CrouchEnd)_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 31
-        width: 47
-        height: 45
+        x: 0
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,12 +137,12 @@ TextureImporter:
       name: MainChar - Camping&Drink(CrouchEnd)_1
       rect:
         serializedVersion: 2
-        x: 265
-        y: 31
-        width: 45
-        height: 46
+        x: 192
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,12 +159,12 @@ TextureImporter:
       name: MainChar - Camping&Drink(CrouchEnd)_2
       rect:
         serializedVersion: 2
-        x: 458
-        y: 31
-        width: 47
-        height: 53
+        x: 384
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: MainChar - Camping&Drink(CrouchEnd)_3
       rect:
         serializedVersion: 2
-        x: 652
-        y: 31
-        width: 45
-        height: 59
+        x: 576
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: MainChar - Camping&Drink(CrouchEnd)_4
       rect:
         serializedVersion: 2
-        x: 844
-        y: 31
-        width: 45
-        height: 60
+        x: 768
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c0fe737074e0a2c4ca09a07ca6c42092
     internalID: 0
     vertices: []
     indices: 
