@@ -1154,24 +1154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9566719895c404da4f10043084a61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  pointA: {fileID: 1520010000}
-  pointB: {fileID: 1909655198}
-  patrolSpeed: 2
-  followSpeed: 2.5
-  chargeSpeed: 8
-  warningDuration: 0.5
-  chargeMaxDuration: 1.5
-  recoverDuration: 1
-  visionDistance: 6
-  visionBoxSize: {x: 0.5, y: 1.5}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  edgeCheck: {fileID: 542161150}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,11 +1342,6 @@ MonoBehaviour:
   risingDamping: 0.5
   fallingDamping: 0.1
   threshold: -0.1
---- !u!4 &542161150 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3612174224140857314, guid: 9e1ba684913a6654cb8081319fabcbde, type: 3}
-  m_PrefabInstance: {fileID: 2236301446638081385}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &598805220
 GameObject:
   m_ObjectHideFlags: 0
@@ -4967,11 +4944,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5076986624381113156, guid: d9b5c066570dfe3499ff596c7d1121ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.61
+      value: -23.047417
       objectReference: {fileID: 0}
     - target: {fileID: 5076986624381113156, guid: d9b5c066570dfe3499ff596c7d1121ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.08
+      value: 10.773359
       objectReference: {fileID: 0}
     - target: {fileID: 5076986624381113156, guid: d9b5c066570dfe3499ff596c7d1121ed, type: 3}
       propertyPath: m_LocalPosition.z

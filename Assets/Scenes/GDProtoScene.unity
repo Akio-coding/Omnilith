@@ -5001,10 +5001,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alicanto
       objectReference: {fileID: 0}
-    - target: {fileID: 4729004624481619579, guid: 88781d5e6c31ad94c83875eaebbbf5bb, type: 3}
-      propertyPath: visionRadius
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8401468518413724011, guid: 88781d5e6c31ad94c83875eaebbbf5bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.047834
@@ -6091,10 +6087,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Alicanto Dor\xE9"
       objectReference: {fileID: 0}
-    - target: {fileID: 4251774190778522958, guid: d9b5c066570dfe3499ff596c7d1121ed, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 2092a62998f9e8f48b096a44aeb58665, type: 2}
     - target: {fileID: 5076986624381113156, guid: d9b5c066570dfe3499ff596c7d1121ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.047417
@@ -6134,18 +6126,6 @@ PrefabInstance:
     - target: {fileID: 5076986624381113156, guid: d9b5c066570dfe3499ff596c7d1121ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6050530289269191028, guid: d9b5c066570dfe3499ff596c7d1121ed, type: 3}
-      propertyPath: m_Intensity
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6050530289269191028, guid: d9b5c066570dfe3499ff596c7d1121ed, type: 3}
-      propertyPath: m_PointLightInnerRadius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6050530289269191028, guid: d9b5c066570dfe3499ff596c7d1121ed, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
