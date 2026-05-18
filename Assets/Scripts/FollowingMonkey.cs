@@ -308,6 +308,9 @@ public class FollowingMonkey : MonoBehaviour
 
         if (hit != null)
         {
+            // On lance l'animation
+            animator.SetTrigger("Punch");
+
             carriedObject = hit.gameObject;
             // On désactive la physique de l'objet pendant qu'on le porte
             carriedObject.GetComponent<Rigidbody2D>().isKinematic = true;
@@ -333,6 +336,9 @@ public class FollowingMonkey : MonoBehaviour
 
         if (distanceToPlayer <= stopDistance * detectionRadius)
         {
+            // On lance l'animation
+            animator.SetTrigger("Punch");
+
             carriedObject = playerTransform.gameObject;
 
             // On désactive la physique du joueur pour éviter les déplacements 
@@ -363,6 +369,9 @@ public class FollowingMonkey : MonoBehaviour
 
     private void ThrowObject()
     {
+        // On lance l'animation
+        animator.SetTrigger("Punch");
+
         // On détache l'objet
         Rigidbody2D objRb = carriedObject.GetComponent<Rigidbody2D>();
         carriedObject.GetComponentInChildren<Collider2D>().enabled = true;
