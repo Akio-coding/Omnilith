@@ -4,7 +4,7 @@ using UnityEngine;
 public class Gargoyle : MonoBehaviour
 {
     // Les 4 états possibles de notre gargouille
-    private enum State { Idle, Diving, Follow, Returning}
+    private enum State { Idle, Warning, Diving, Follow, Returning}
     private State currentState = State.Idle;
 
     [Header("Stats")]
@@ -20,6 +20,7 @@ public class Gargoyle : MonoBehaviour
 
     [Header("Delay")]
     [SerializeField] private float divingDelay = 2f;
+    private float delayTimer;
 
     [Header("Animations")]
     private Transform playerTransform;
@@ -61,24 +62,31 @@ public class Gargoyle : MonoBehaviour
                 // Si le joueur entre dans la zone de vision
                 if(distanceToPlayer <= visionRadius)
                 {
-                    // On ajoute un cooldown avant le plongeon
-                    StartCoroutine(DelayDive(divingDelay));
+                    currentState = State.Warning;
+                    delayTimer = divingDelay; // On arme le chronomètre (2 secondes)
+                }
+                // On enregistre la position actuelle du joueur pour plonger vers ce point
+                diveTarget = playerTransform.position;
+                break;
+
+            case State.Warning:
+                // chronometre 
+                delayTimer -= Time.deltaTime;
+                if (delayTimer <= 0f)
+                {
+                    // On enregistre la position actuelle du joueur pour plonger vers ce point
+                    diveTarget = playerTransform.position;
+                    currentState = State.Diving;
                 }
                 break;
 
-            IEnumerator DelayDive(float divingDelay)
-                {
-                    yield return new WaitForSeconds(divingDelay);
-                    // On enregistre la position actuelle du joueur pour plonger vers ce point
-                    diveTarget = playerTransform.position;
-
-                    // On ajoute un cooldown avant le plongeon
-                    StartCoroutine(DelayDive(divingDelay));
-                }
-
             case State.Diving:
-                // Lance l'animation de dive
-                anim.SetBool("isDiving", true);
+                if(anim != null)
+                {
+                    // Lance l'animation de dive
+                    anim.SetBool("isDiving", true);
+                }
+                
 
                 // Plongeon rapide vers la cible
                 transform.position = Vector3.MoveTowards(transform.position, diveTarget, diveSpeed * Time.deltaTime);
@@ -91,8 +99,11 @@ public class Gargoyle : MonoBehaviour
                 break;
 
             case State.Follow:
-                // Retour à l'animation de vol
-                anim.SetBool("isDiving", false);
+                if(anim != null)
+                {
+                    // Retour à l'animation de vol
+                    anim.SetBool("isDiving", false);
+                }
 
                 // Poursuite lente vers le joueur (qui bouge)
                 transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, flySpeed * Time.deltaTime);
@@ -119,12 +130,6 @@ public class Gargoyle : MonoBehaviour
         FlipSprite();
     }
 
-    private IEnumerator DelayDive(float divingDelay)
-    {
-        yield return new WaitForSeconds(divingDelay);
-        currentState = State.Diving;
-    }
-
     // Gestion des dégâts de contact
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -144,7 +149,7 @@ public class Gargoyle : MonoBehaviour
         Vector3 targetPos = transform.position;
 
         // On regarde vers la destination active
-        if (currentState == State.Diving)
+        if (currentState == State.Diving || currentState == State.Warning)
         {
             targetPos = diveTarget;
         }
