@@ -58,26 +58,26 @@ public class Onion : MonoBehaviour
         }
 
         // On s'abonne à l'événement de dégâts pour jouer l'animation
-        if (health != null)
-        {
-            health.OnDamageTaken += PlayDamageAnimation;
-        }
+        //if (health != null)
+        //{
+        //    health.OnDamageTaken += PlayDamageAnimation;
+        //}
     }
 
-    // NEW : Se désabonner quand l'ennemi meurt pour éviter les fuites de mémoire
-    void OnDestroy()
-    {
-        if (health != null)
-        {
-            health.OnDamageTaken -= PlayDamageAnimation;
-        }
-    }
+    // Se désabonner quand l'ennemi meurt pour éviter les fuites de mémoire
+    //void OnDestroy()
+    //{
+    //    if (health != null)
+    //    {
+    //        health.OnDamageTaken -= PlayDamageAnimation;
+    //    }
+    //}
 
-    // NEW : Fonction appelée automatiquement par Health.cs
-    private void PlayDamageAnimation()
-    {
-        if (anim != null) anim.SetTrigger("Damage");
-    }
+    // Fonction appelée automatiquement par Health.cs
+    //private void PlayDamageAnimation()
+    //{
+    //    if (anim != null) anim.SetTrigger("Damage");
+    //}
 
     void Update()
     {
