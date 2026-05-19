@@ -5072,14 +5072,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3982590749970269504}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5090,7 +5090,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1656095727441195190
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5151,11 +5151,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCollider: {fileID: 0}
   _maxHealth: 3
-  invincibilityDuration: 1
-  flashCount: 5
+  invincibilityDuration: 0
+  flashCount: 2
   flashing: {r: 0, g: 0, b: 0, a: 0}
-  deathDelay: 1
+  deathDelay: 2
   componentsToDisable: []
+  disablePhysicsOnDeath: 1
+  destroyOnDeath: 1
+  destroyDelay: 2
   knockbackForce: {x: 5, y: 2}
   knockbackDuration: 0.2
 --- !u!114 &5304794618607360540
