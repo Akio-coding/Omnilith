@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2dd9e6680d87241b78c79669bd7f18, type: 3}
+  m_Name: obtention objet cristal beralux
+  m_EditorClassIdentifier: 
+  unlocksMonkey: 0
+  lines:
+  - speakerName: Jim
+    texte: 'Un cristal ?
+
+'
+  - speakerName: "R\xE4\u2019adz"
+    texte: "Le cristal de Biralux r\xE9compense ceux qui \u0153uvrent pour le bien
+      commun par une richesse infinie."
+  - speakerName: Jim
+    texte: "Hum... \nA quoi \xE7a sert?"
+  - speakerName: "R\xE4\u2019adz"
+    texte: "Le cristal drainait la valeur autour de lui : plus il donnait, plus il
+      appauvrissait le monde.\r\nBiralux l\u2019a compris trop tard et a tent\xE9
+      de le d\xE9truire mais, il a \xE9t\xE9 assassin\xE9 avant"
+  - speakerName: Jim
+    texte: "On dirait qu\u2019il brille moins\u2026\r\n"
+  - speakerName: "R\xE4\u2019adz"
+    texte: "Parce qu\u2019il a d\xE9j\xE0 pris ce qu\u2019il voulait."

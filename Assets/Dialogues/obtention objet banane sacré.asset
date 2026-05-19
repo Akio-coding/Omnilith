@@ -10,11 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e2dd9e6680d87241b78c79669bd7f18, type: 3}
-  m_Name: Nouveau Dialogue
+  m_Name: "obtention objet banane sacr\xE9"
   m_EditorClassIdentifier: 
   unlocksMonkey: 0
   lines:
-  - speakerName: Ra'adz Lakar
-    texte: 'Regarde jim ....
+  - speakerName: Jim
+    texte: 'Pourquoi cette banane est si special ?
 
 '
+  - speakerName: "R\xE4\u2019adz"
+    texte: "C'est le Fruit B\xE9ni, source de force pour le Gardien de la Grotte."
+  - speakerName: Jim
+    texte: "Il prot\xE9ger uniquement \xE7a "
+  - speakerName: "R\xE4\u2019adz"
+    texte: "On prot\xE8ge toujours ce qu\u2019on ne peut pas remplacer."

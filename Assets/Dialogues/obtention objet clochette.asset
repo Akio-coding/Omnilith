@@ -10,9 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e2dd9e6680d87241b78c79669bd7f18, type: 3}
-  m_Name: Nouveau Dialogue 1
+  m_Name: obtention objet clochette
   m_EditorClassIdentifier: 
   unlocksMonkey: 0
   lines:
   - speakerName: Jim
-    texte: 
+    texte: 'Cet objet est magnifique. '
+  - speakerName: Jim
+    texte: "Restaurer j\u2019en aurais pour un bon prix."
+  - speakerName: Jim
+    texte: ...
+  - speakerName: Jim
+    texte: "Il s'est pass\xE9 quoi ?\nC'\xE9tait quoi ce bruit?"

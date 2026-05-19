@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2dd9e6680d87241b78c79669bd7f18, type: 3}
+  m_Name: "obtention objet St\xE8le heros oublier"
+  m_EditorClassIdentifier: 
+  unlocksMonkey: 0
+  lines:
+  - speakerName: Lore
+    texte: "Ici reposent ceux qui ont donn\xE9 leur vie pour sauver le monde lors
+      de la Grande Fracture. Leur courage sera \xE9ternel."
+  - speakerName: Jim
+    texte: "Ils ont l\u2019air\u2026 nombreux."
+  - speakerName: "R\xE4\u2019adz"
+    texte: "Les chiffres n\u2019ont jamais \xE9t\xE9 un probl\xE8me. Les cons\xE9quences,
+      si."
