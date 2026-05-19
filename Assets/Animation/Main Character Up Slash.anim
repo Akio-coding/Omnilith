@@ -30,8 +30,6 @@ AnimationClip:
       value: {fileID: -2361355628664476400, guid: 6383cbfd326f6f94baace482170dceb1, type: 3}
     - time: 0.53333336
       value: {fileID: -4481701969095578137, guid: 6383cbfd326f6f94baace482170dceb1, type: 3}
-    - time: 0.6666667
-      value: {fileID: -8154881005140736650, guid: 6383cbfd326f6f94baace482170dceb1, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -59,13 +57,12 @@ AnimationClip:
     - {fileID: -7947747227298428932, guid: 6383cbfd326f6f94baace482170dceb1, type: 3}
     - {fileID: -2361355628664476400, guid: 6383cbfd326f6f94baace482170dceb1, type: 3}
     - {fileID: -4481701969095578137, guid: 6383cbfd326f6f94baace482170dceb1, type: 3}
-    - {fileID: -8154881005140736650, guid: 6383cbfd326f6f94baace482170dceb1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.68333334
+    m_StopTime: 0.55
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -93,6 +90,13 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.4
+    functionName: DisableHitbox
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.53333336
     functionName: EnableHitbox
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -100,13 +104,6 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.53333336
-    functionName: DisableHitbox
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6666667
     functionName: FinishAttack
     data: 
     objectReferenceParameter: {fileID: 0}
