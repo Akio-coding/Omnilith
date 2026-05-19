@@ -21,11 +21,19 @@ public class Health : MonoBehaviour
     [SerializeField] private Color flashing;
     private bool isInvincible = false; // The state of the player
 
-    [Header("Respawn")]
+    [Header("Respawn Player")]
     [Tooltip("Durée pendant laquelle on désactive tous les contrôles du joueur, doit être de la même durée que l'animation de mort en secondes")]
     [SerializeField] private float deathDelay = 2f; // Duration of death animation
-    [SerializeField] private Behaviour[] componentsToDisable; 
+    [SerializeField] private Behaviour[] componentsToDisable;
 
+    // Réglages personnalisables par ennemi !
+    [Header("Death Settings (Enemies)")]
+    [Tooltip("Désactiver la physique à la mort ? (Coché pour l'Oignon, Décoché pour le Crabe)")]
+    [SerializeField] private bool disablePhysicsOnDeath = true;
+    [Tooltip("Détruire l'objet après sa mort ? (Coché pour l'Oignon, Décoché pour le Crabe)")]
+    [SerializeField] private bool destroyOnDeath = true;
+    [Tooltip("Délai avant destruction (si activé)")]
+    [SerializeField] private float destroyDelay = 2f;
 
     [Header("Knockback Settings")]
     [Tooltip("La force du recul. X = projection horizontale, Y = petit saut en l'air")]
@@ -209,23 +217,53 @@ public class Health : MonoBehaviour
     private IEnumerator InvincibilityRoutine()
     {
         isInvincible = true;
-
-        // flashing effect
-        for (int loopCount = 0; loopCount < flashCount; loopCount++)
+        if (sr  != null)
         {
-            sr.color = flashing; // Choosed color
-            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
-            sr.color = Color.white; // Normal
-            yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
-        }
+            // flashing effect
+            for (int loopCount = 0; loopCount < flashCount; loopCount++)
+            {
+                sr.color = flashing; // Choosed color
+                yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
+                sr.color = Color.white; // Normal
+                yield return new WaitForSeconds(invincibilityDuration / (flashCount * 2));
+            }
 
-        sr.color = Color.white;
+            sr.color = Color.white;
+        }
+        
         isInvincible = false;
         
     }
 
     void die() 
     {
-        Destroy(this.gameObject);
+        // 1. On lance l'événement pour prévenir le script du Crabe qu'il doit se cacher
+        OnDeath?.Invoke();
+
+        // 2. On lance l'animation (Onion Ko, Crab Hide, etc.)
+        if (anim != null && anim.runtimeAnimatorController != null)
+        {
+            anim.SetTrigger("Die");
+        }
+
+        // 3. On désactive la hitbox pour qu'il ne bloque plus le joueur
+        if(playerCollider != null)
+        {
+            playerCollider.enabled = false;
+        }
+
+        // 4. Si c'est un Oignon, il s'arrête de bouger et n'a plus de physique 
+        // Si c'est un Crabe, on garde la physique pour sa carapace
+        if(disablePhysicsOnDeath && rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.simulated = false;
+        }
+
+        // 5. Destruction au bout de 2s (Oui pour l'Oignon, Non pour le Crabe)
+        if (destroyOnDeath)
+        {
+            Destroy(gameObject, destroyDelay);
+        }
     }
 }
