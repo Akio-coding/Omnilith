@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Crab : MonoBehaviour
 {
@@ -20,6 +21,18 @@ public class Crab : MonoBehaviour
     [SerializeField] private float visionDistance = 5f;
     private Transform playerTransform;
 
+    [Header("Carapace (Vulnérabilité)")]
+    [Tooltip("Temps en secondes avant qu'il ne ressorte de sa carapace")]
+    [SerializeField] private float hidingDuration = 6f;
+    [Tooltip("Force du recul quand le joueur tape la carapace à l'épée")]
+    [SerializeField] private Vector2 carapaceKnockback = new Vector2(6f, 3f);
+    [Tooltip("Dégâts infligés aux autres ennemis si la carapace est lancée dessus")]
+    [SerializeField] private int thrownDamage = 3;
+
+    private float hidingTimer;
+    private bool isCarried = false; // Porté par le singe
+    private bool isThrown = false;  // Lancé en l'air par le singe
+
     [Header("Detection")]
     [SerializeField] private Vector2 visionBoxSize = new Vector2(0.5f,1f);
     [SerializeField] private LayerMask playerLayer;
@@ -31,6 +44,7 @@ public class Crab : MonoBehaviour
     private Animator anim;
     private Health health;
     private DamageDealer damageDealer;
+    private Collider2D crabCollider;
 
     private int facingDirection = -1;
 
@@ -72,6 +86,7 @@ public class Crab : MonoBehaviour
     {
         if(currentState == State.Hiding)
         {
+            HidingBehavior();
             return;
         }
 
@@ -208,13 +223,142 @@ public class Crab : MonoBehaviour
     private void EnterHidingState()
     {
         currentState = State.Hiding;
+        hidingTimer = hidingDuration;
+        isCarried = false;
+        isThrown = false;
+
         rb.velocity = Vector2.zero;
 
         if(damageDealer != null)
         {
             damageDealer.enabled = false;
         }
+
+        // On le passe sur le Layer "Throwable" pour que le singe puisse le voir !
+        gameObject.layer = LayerMask.NameToLayer("Throwable");
     }
+
+    private void HidingBehavior()
+    {
+        // Si le singe le porte ou s'il est en train de voler suite à un lancer, on met le timer en pause !
+        if(!isCarried && !isThrown)
+        {
+            hidingTimer -= Time.deltaTime;
+            if (hidingTimer < 0)
+            {
+                WakeUp();
+            }
+        }
+    }
+
+    private void WakeUp()
+    {
+        if (health != null)
+        {
+            health.Heal(health.maxHealth);
+        }
+        if (damageDealer != null)
+        {
+            damageDealer.enabled = true;
+        }
+        if (anim != null)
+        {
+            anim.SetTrigger("WakeUp");
+        }
+        // Il redevient un ennemi normal, le singe ne peut plus le porter
+        gameObject.layer = LayerMask.NameToLayer("Ennemy");
+
+        currentState = State.Patrol;
+    }
+
+    // --- FONCTIONS POUR LE SINGE ---
+
+    // Fonction à appeler depuis le script du Singe quand il ramasse le crabe
+    public void PickUpByMonkey()
+    {
+        if(currentState != State.Hiding)
+        {
+            return;
+        }
+        isCarried = false;
+        isThrown = true;
+    }
+
+    // Fonction à appeler depuis le script du Singe quand il lance le crabe
+    public void ThrowByMonkey()
+    {
+        if(currentState != State.Hiding)
+        {
+            return;    
+        }
+        isCarried = false;
+        isThrown = true;
+    }
+
+    public void DropByMonkey()
+    {
+        if( currentState != State.Hiding)
+        {
+            return;
+        }
+        isCarried = false;
+        isThrown = false;
+    }
+
+    // --- GESTION DES COLLISIONS EN CARAPACE ---
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        // 1. DÉTECTION DU COUP D'ÉPÉE (Knockback)
+        // L'épée du joueur a le script DamageDealer. On vérifie si c'est bien l'épée qui nous touche.
+        if(currentState == State.Hiding && collider.GetComponent<DamageDealer>() != null && !isCarried)
+        {
+            // On calcule d'où vient le coup pour le repousser dans la bonne direction
+            float pushDirection = (collider.transform.position.x > transform.position.x) ? -1f : 1f;
+
+            rb.velocity = Vector2.zero;
+            rb.AddForce(new Vector2(carapaceKnockback.x * pushDirection, carapaceKnockback.y), ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (currentState == State.Hiding)
+        {
+            // 2. LE CRABE EST LANCÉ ET TOUCHE UN ENNEMI
+            if (isThrown && collision.gameObject.CompareTag("Ennemy"))
+            {
+                Health enemyHealth = collision.gameObject.GetComponent<Health>();
+
+                // On vérifie qu'il ne se blesse pas lui-même
+                if (enemyHealth != null && enemyHealth.gameObject != this.gameObject)
+                {
+                    enemyHealth.TakeDamage(thrownDamage, transform); // Inflict heavy damage
+                    DiePermanently(); 
+                }
+            }
+
+            // 3. LA CARAPACE TOUCHE UN LEVIER
+            if (collision.gameObject.CompareTag("Lever"))
+            {
+                DiePermanently();
+            }
+
+            // 4. DÉTECTION DU SOL (Fin du lancer)
+            // Si la carapace lancée touche le sol (GroundLayer), elle n'est plus considérée comme "en l'air"
+            if (isThrown &&((1 << collision.gameObject.layer) & groundLayer) != 0)
+            {
+                isThrown = false;
+            }
+        }
+    }
+
+    private void DiePermanently()
+    {
+        // Optionnel : Jouer un effet de particule de destruction ou un son ici
+        Destroy(gameObject);
+    }
+
 
     private void OnDrawGizmosSelected()
     {

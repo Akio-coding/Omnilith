@@ -308,10 +308,19 @@ public class FollowingMonkey : MonoBehaviour
 
         if (hit != null)
         {
+            // On lance l'animation
+            animator.SetTrigger("Punch");
+
             carriedObject = hit.gameObject;
             // On désactive la physique de l'objet pendant qu'on le porte
             carriedObject.GetComponent<Rigidbody2D>().isKinematic = true;
             carriedObject.GetComponentInChildren<Collider2D>().enabled = false;
+
+            Crab crabScript = carriedObject.GetComponentInParent<Crab>();
+            if (crabScript != null)
+            {
+                crabScript.PickUpByMonkey();
+            }
         }
         else
         {
@@ -327,6 +336,9 @@ public class FollowingMonkey : MonoBehaviour
 
         if (distanceToPlayer <= stopDistance * detectionRadius)
         {
+            // On lance l'animation
+            animator.SetTrigger("Punch");
+
             carriedObject = playerTransform.gameObject;
 
             // On désactive la physique du joueur pour éviter les déplacements 
@@ -357,6 +369,9 @@ public class FollowingMonkey : MonoBehaviour
 
     private void ThrowObject()
     {
+        // On lance l'animation
+        animator.SetTrigger("Punch");
+
         // On détache l'objet
         Rigidbody2D objRb = carriedObject.GetComponent<Rigidbody2D>();
         carriedObject.GetComponentInChildren<Collider2D>().enabled = true;
@@ -388,6 +403,13 @@ public class FollowingMonkey : MonoBehaviour
         carriedObject.transform.rotation = Quaternion.identity;
 
         objRb.AddForce(finalForce, ForceMode2D.Impulse);
+
+        Crab crabScript = carriedObject.GetComponentInParent<Crab>();
+        if (crabScript != null)
+        {
+            crabScript.ThrowByMonkey();
+        }
+
         carriedObject = null;
     }
 
@@ -408,6 +430,12 @@ public class FollowingMonkey : MonoBehaviour
 
         // Reset vitesse 
         objRb.velocity = Vector2.zero;
+
+        Crab crabScript = carriedObject.GetComponentInParent<Crab>();
+        if (crabScript != null)
+        {
+            crabScript.DropByMonkey();
+        }
 
         carriedObject = null;
     }
