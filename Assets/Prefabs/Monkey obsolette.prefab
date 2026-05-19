@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6475724175082771779}
   - component: {fileID: 4369707765992684163}
   m_Layer: 12
-  m_Name: Monkey
+  m_Name: Monkey obsolette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
