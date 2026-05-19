@@ -5156,6 +5156,9 @@ MonoBehaviour:
   flashing: {r: 0, g: 0, b: 0, a: 0}
   deathDelay: 1
   componentsToDisable: []
+  disablePhysicsOnDeath: 1
+  destroyOnDeath: 1
+  destroyDelay: 2
   knockbackForce: {x: 5, y: 2}
   knockbackDuration: 0.2
 --- !u!114 &5304794618607360540
