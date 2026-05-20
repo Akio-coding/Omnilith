@@ -307,7 +307,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Beraluxv_0: 7094286402649703561
+      Beraluxv_1: -3531339219612979360
+      Beraluxv_2: -2550511541977929457
+      Beraluxv_3: 5494390634300282106
+      Beraluxv_4: 1023991370594688261
+      Beraluxv_5: 7850958757969472131
+      Beraluxv_6: 3816922618119829470
+      Beraluxv_7: 4930381031315567026
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

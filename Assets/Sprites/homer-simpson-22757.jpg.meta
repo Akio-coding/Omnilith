@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      homer-simpson-22757_0: 2197026760646069070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
