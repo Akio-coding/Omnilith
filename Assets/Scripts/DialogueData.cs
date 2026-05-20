@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 // Cette ligne permet de créer ce fichier depuis le munu cllic droit unity
 
@@ -15,6 +16,7 @@ public class DialogueData : ScriptableObject
         public string speakerName; // Nom de celui qui parle 
         [TextArea(3, 5)] // Aggrandit la zone de texte dans l'inspecteur
         public string texte; // Le texte du dialogue
+        public Sprite speakerHead;
     }
 
     [Header("Lignes de dialogues")]
