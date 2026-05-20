@@ -20,7 +20,7 @@ MonoBehaviour:
   - speakerName: "R\xE4\u2019adz"
     texte: "Les chiffres n\u2019ont jamais \xE9t\xE9 un probl\xE8me. Les cons\xE9quences,
       si."
-    speakerHead: {fileID: 6881888109790457052, guid: 4ce7bb136125a304abe233eec8068689, type: 3}
+    speakerHead: {fileID: 4428417288148582820, guid: bf8c482aab3be104fb3ed776dd2ed478, type: 3}
   - speakerName: Jim
     texte: ...
     speakerHead: {fileID: -7141094417442364729, guid: 99522c038b9ee414694e4cc599ef3010, type: 3}

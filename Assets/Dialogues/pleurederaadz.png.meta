@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 4ce7bb136125a304abe233eec8068689
+guid: bf8c482aab3be104fb3ed776dd2ed478
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6897691245788020651
-    second: raadz pleure_0
+      213: 6267868393210552702
+    second: pleurederaadz_0
   - first:
-      213: 6881888109790457052
-    second: raadz pleure_1
+      213: 4428417288148582820
+    second: pleurederaadz_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: raadz pleure_0
+      name: pleurederaadz_0
       rect:
         serializedVersion: 2
         x: 679
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 550cb748b5a7640a0800000000000000
-      internalID: -6897691245788020651
+      spriteID: e71a6345811fbf650800000000000000
+      internalID: 6267868393210552702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: raadz pleure_1
+      name: pleurederaadz_1
       rect:
         serializedVersion: 2
         x: 629
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cdc6b0826c0618f50800000000000000
-      internalID: 6881888109790457052
+      spriteID: 4a18b419f06e47d30800000000000000
+      internalID: 4428417288148582820
       vertices: []
       indices: 
       edges: []
