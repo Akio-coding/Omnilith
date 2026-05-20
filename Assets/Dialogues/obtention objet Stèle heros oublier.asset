@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlocksMonkey: 0
   lines:
-  - speakerName: Lore
-    texte: "Ici reposent ceux qui ont donn\xE9 leur vie pour sauver le monde lors
-      de la Grande Fracture. Leur courage sera \xE9ternel."
   - speakerName: Jim
     texte: "Ils ont l\u2019air\u2026 nombreux."
+  - speakerName: "R\xE4\u2019adz"
+    texte: "Les chiffres n\u2019ont jamais \xE9t\xE9 un probl\xE8me. Les cons\xE9quences,
+      si."
   - speakerName: "R\xE4\u2019adz"
     texte: "Les chiffres n\u2019ont jamais \xE9t\xE9 un probl\xE8me. Les cons\xE9quences,
       si."

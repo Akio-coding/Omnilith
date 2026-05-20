@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlocksMonkey: 0
   lines:
+  - speakerName: 
+    texte: Vous avez obtenu le "Cristal de Beralux"
   - speakerName: Jim
     texte: 'Un cristal ?
 

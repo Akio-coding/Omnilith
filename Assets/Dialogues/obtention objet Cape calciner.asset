@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlocksMonkey: 0
   lines:
+  - speakerName: "R\xE4\u2019adz"
+    texte: Vous avez obtenu la "Cape calciner"
   - speakerName: Jim
     texte: Un bout  de tissu ?
   - speakerName: "R\xE4\u2019adz"
