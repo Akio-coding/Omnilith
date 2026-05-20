@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      raadz sourire_0: 4893617752468652791
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -157,7 +157,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      raadz cri_0: 5137430236869304561
+      raadz cri_1: -5197237602549779507
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
