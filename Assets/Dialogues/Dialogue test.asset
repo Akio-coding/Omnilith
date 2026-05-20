@@ -18,3 +18,4 @@ MonoBehaviour:
     texte: 'Ouga boouga dou ougah bouga doo
 
 '
+    speakerHead: {fileID: 2197026760646069070, guid: 1c50c7a880c566541a6249e5b06f2f65, type: 3}
