@@ -16,9 +16,11 @@ MonoBehaviour:
   lines:
   - speakerName: Jim
     texte: "Ils ont l\u2019air\u2026 nombreux."
+    speakerHead: {fileID: 1080211091511509889, guid: 62da37894dbe462489488d84056ae9f2, type: 3}
   - speakerName: "R\xE4\u2019adz"
     texte: "Les chiffres n\u2019ont jamais \xE9t\xE9 un probl\xE8me. Les cons\xE9quences,
       si."
-  - speakerName: "R\xE4\u2019adz"
-    texte: "Les chiffres n\u2019ont jamais \xE9t\xE9 un probl\xE8me. Les cons\xE9quences,
-      si."
+    speakerHead: {fileID: 6881888109790457052, guid: 4ce7bb136125a304abe233eec8068689, type: 3}
+  - speakerName: Jim
+    texte: ...
+    speakerHead: {fileID: -7141094417442364729, guid: 99522c038b9ee414694e4cc599ef3010, type: 3}
