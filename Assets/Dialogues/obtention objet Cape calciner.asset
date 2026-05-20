@@ -14,17 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlocksMonkey: 0
   lines:
+  - speakerName: 
+    texte: Vous avez obtenu la "Cape calciner"
+    speakerHead: {fileID: 0}
   - speakerName: Jim
     texte: Un bout  de tissu ?
+    speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: "R\xE4\u2019adz"
     texte: "Non Jim\u2026 C\u2019est le bout de la cape du regret."
+    speakerHead: {fileID: 1966867039414469558, guid: a2724a2797943f044a8327630031c364, type: 3}
   - speakerName: Jim
     texte: 'Quoi ?
 
       A qui il appartener cette cape?'
+    speakerHead: {fileID: 1080211091511509889, guid: 62da37894dbe462489488d84056ae9f2, type: 3}
   - speakerName: "R\xE4\u2019adz"
     texte: "Un sorcier qui aurait  pu sauver ce monde. Mais par sa cupidit\xE9\u2026"
+    speakerHead: {fileID: 1966867039414469558, guid: a2724a2797943f044a8327630031c364, type: 3}
   - speakerName: Jim
     texte: " R\xE4\u2019adz ???!!  R\xE4\u2019adz???!!!\r\n"
+    speakerHead: {fileID: 8264814884637985734, guid: 5da1be964c5197d4494d5d1f3452810a, type: 3}
   - speakerName: "R\xE4\u2019adz"
     texte: ...
+    speakerHead: {fileID: 1966867039414469558, guid: a2724a2797943f044a8327630031c364, type: 3}

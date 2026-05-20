@@ -53,6 +53,13 @@ public class Gargoyle : MonoBehaviour
             return;
         }
 
+        // On annule en permanence les forces physiques (comme le joueur qui lui saute dessus)
+        // pour qu'elle reste maîtresse de sa trajectoire de vol.
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+        }
+
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
         // State Machine

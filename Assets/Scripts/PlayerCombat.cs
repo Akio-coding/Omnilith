@@ -38,8 +38,24 @@ public class PlayerCombat : MonoBehaviour
 
         // Ensure that the sword collider is deactivated at the start
         DisableHitbox();
+
+        // On s'abonne à l'événement de dégâts pour annuler l'attaque
+        Health health = GetComponent<Health>();
+        if(health != null )
+        {
+            health.OnDamageTaken += ResetCombatState;
+        }
     }
 
+    // Toujours se désabonner pour éviter les fuites de mémoire
+    private void OnDestroy()
+    {
+        Health health = GetComponent<Health>();
+        if(health != null)
+        {
+            health.OnDamageTaken -= ResetCombatState;
+        }
+    }
     void Update()
    {
     // 1. Check for Timeout: Reset combo if user waited too long after the last attack
@@ -211,5 +227,17 @@ public class PlayerCombat : MonoBehaviour
     private void EndRecover()
     {
         anim.SetTrigger("Idle");
+    }
+
+    // Remet tout à zéro si on est interrompu
+    private void ResetCombatState()
+    {
+        IsAttacking = false;
+        isAttackingUp = false;
+        inputBuffered = false;
+        comboCounter = 0;
+
+        // Très important pour éviter qu'une hitbox reste allumée pendant qu'on clignote !
+        DisableHitbox() ;
     }
 }

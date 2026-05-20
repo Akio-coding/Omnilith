@@ -233,7 +233,7 @@ AnimatorStateMachine:
     m_Position: {x: 150, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8293790761443654790}
-    m_Position: {x: 150, y: 40, z: 0}
+    m_Position: {x: 140, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4112845189348403875}
     m_Position: {x: 290, y: -130, z: 0}
@@ -242,16 +242,16 @@ AnimatorStateMachine:
     m_Position: {x: -40, y: 700, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5778828760116639659}
-    m_Position: {x: 940, y: 310, z: 0}
+    m_Position: {x: 1350, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7329127384923573257}
-    m_Position: {x: 250, y: 600, z: 0}
+    m_Position: {x: 250, y: 640, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2045451277527331358}
-    m_Position: {x: 120, y: -240, z: 0}
+    m_Position: {x: 110, y: -220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8682613709292067408}
-    m_Position: {x: 440, y: -230, z: 0}
+    m_Position: {x: 440, y: -220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2981304771745762927}
     m_Position: {x: 440, y: 40, z: 0}
@@ -266,19 +266,19 @@ AnimatorStateMachine:
     m_Position: {x: 620, y: 700, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1743160902135463153}
-    m_Position: {x: 940, y: 370, z: 0}
+    m_Position: {x: 1350, y: 350, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3075465391816762442}
-    m_Position: {x: 940, y: 430, z: 0}
+    m_Position: {x: 1350, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8302665924540188438}
-    m_Position: {x: 940, y: 490, z: 0}
+    m_Position: {x: 1390, y: 490, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1324768323958438808}
-    m_Position: {x: 940, y: 550, z: 0}
+    m_Position: {x: 1420, y: 550, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4879504856319329157}
-    m_Position: {x: 940, y: 610, z: 0}
+    m_Position: {x: 1460, y: 620, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -4814089768152130904}
