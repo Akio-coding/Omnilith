@@ -30,4 +30,4 @@ MonoBehaviour:
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: "R\xE4\u2019adz"
     texte: "On prot\xE8ge toujours ce qu\u2019on ne peut pas remplacer."
-    speakerHead: {fileID: 0}
+    speakerHead: {fileID: -2473965909627216055, guid: 25a9e84ea5c041842b82aee686cbc203, type: 3}
