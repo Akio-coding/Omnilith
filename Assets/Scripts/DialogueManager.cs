@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialoguePanel;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public Image speakerPortrait;
 
     [Header("Réglages")]
     public float typingSpeed = 0.04f; // vitesse d'affichage des lettres 
@@ -81,10 +83,23 @@ public class DialogueManager : MonoBehaviour
         nameText.text = line.speakerName;
         dialogueText.text = "";
 
-        // Effet machine à écrire
-        foreach(char letter in line.texte.ToCharArray())
+        // --- GESTION DE L'IMAGE ---
+        // On vérifie si la ligne de dialogue possède un sprite pour la tête
+        if(line.speakerHead != null)
         {
-            dialogueText.text +=   letter;
+            speakerPortrait.sprite = line.speakerHead;
+            speakerPortrait.gameObject.SetActive(true);
+        }
+        else
+        {
+            // S'il n'y a pas de tête de renseignée, on cache le carré blanc
+            speakerPortrait.gameObject.SetActive(false);
+        }
+
+        // Effet machine à écrire
+        foreach (char letter in line.texte.ToCharArray())
+        {
+            dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
 

@@ -84,7 +84,7 @@ public class Health : MonoBehaviour
                 CurrentHealth = 0;
                 StartCoroutine(RespawnRoutine());
             }
-            else if (CompareTag("Ennemy") == true)
+            else if (CompareTag("Enemy") || CompareTag("Ennemy"))
             {
                 die();
             }
@@ -124,6 +124,12 @@ public class Health : MonoBehaviour
 
         // 4. On attend que le joueur finisse de reculer
         yield return new WaitForSeconds(knockbackDuration);
+
+        // On force l'arrêt total pour éviter que les ennemis sans gravité ne glissent à l'infini !
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+        }
 
         // 5. On rend les contrôles
         foreach (var component in componentsToDisable)
