@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2dd9e6680d87241b78c79669bd7f18, type: 3}
+  m_Name: "obtention objet coeur de Calam\xE9on"
+  m_EditorClassIdentifier: 
+  unlocksMonkey: 0
+  lines:
+  - speakerName: 
+    texte: "Vous avez obtenu le \"Coeur de Calam\xE9on\""
+  - speakerName: 'Lore '
+    texte: "Calam\xE9on absorbait les catastrophes\u2026 jusqu\u2019\xE0 ce qu\u2019il
+      en devienne une."
+  - speakerName: "R\xE4\u2019adz"
+    texte: Attend, n'y touche pas !!!
+  - speakerName: Jim
+    texte: ...
+  - speakerName: "R\xE4\u2019adz"
+    texte: "A la base, le \"Coeur de Calam\xE9on\" pouvez cr\xE9er des Catastrophes."
+  - speakerName: Jim
+    texte: "Mais l\xE0, il ne se passe rien, si \xE7a se trouve c'est juste devenu
+      un cristal banal comme tous les autres? "
+  - speakerName: "R\xE4\u2019adz"
+    texte: "Il a perdu \xE7a puissance d'antan, maintenant il ne fais que l\xE9viter. "
+  - speakerName: Jim
+    texte: On peux le revendre pour un bon prix
+  - speakerName: "R\xE4\u2019adz"
+    texte: 'C''est vrai que tu as de grande poche pour transporter un telle cristal '
