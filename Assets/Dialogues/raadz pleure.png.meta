@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 1c50c7a880c566541a6249e5b06f2f65
+guid: 4ce7bb136125a304abe233eec8068689
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2197026760646069070
-    second: homer-simpson-22757_0
+      213: -6897691245788020651
+    second: raadz pleure_0
+  - first:
+      213: 6881888109790457052
+    second: raadz pleure_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: homer-simpson-22757_0
+      name: raadz pleure_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 308
+        x: 679
+        y: 1436
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4b065ec2386d7e10800000000000000
-      internalID: 2197026760646069070
+      spriteID: 550cb748b5a7640a0800000000000000
+      internalID: -6897691245788020651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raadz pleure_1
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 567
+        width: 703
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc6b0826c0618f50800000000000000
+      internalID: 6881888109790457052
       vertices: []
       indices: 
       edges: []
@@ -132,8 +157,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      homer-simpson-22757_0: 2197026760646069070
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

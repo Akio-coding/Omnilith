@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 1c50c7a880c566541a6249e5b06f2f65
+guid: 25a9e84ea5c041842b82aee686cbc203
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2197026760646069070
-    second: homer-simpson-22757_0
+      213: -2159018269469501678
+    second: raasz_0
+  - first:
+      213: -2473965909627216055
+    second: raasz_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: homer-simpson-22757_0
+      name: raasz_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 308
+        x: 438
+        y: 1080
+        width: 664
+        height: 763
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4b065ec2386d7e10800000000000000
-      internalID: 2197026760646069070
+      spriteID: 21711b8a250a902e0800000000000000
+      internalID: -2159018269469501678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raasz_1
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 555
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f5e32ec15baadd0800000000000000
+      internalID: -2473965909627216055
       vertices: []
       indices: 
       edges: []
@@ -132,8 +157,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      homer-simpson-22757_0: 2197026760646069070
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

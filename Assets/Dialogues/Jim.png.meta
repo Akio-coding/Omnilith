@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 1c50c7a880c566541a6249e5b06f2f65
+guid: 62da37894dbe462489488d84056ae9f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2197026760646069070
-    second: homer-simpson-22757_0
+      213: 2057452171022541536
+    second: Jim_0
+  - first:
+      213: 7609885547425297673
+    second: Jim_1
+  - first:
+      213: 1080211091511509889
+    second: Jim_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: homer-simpson-22757_0
+      name: Jim_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 308
+        x: 334
+        y: 2118
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4b065ec2386d7e10800000000000000
-      internalID: 2197026760646069070
+      spriteID: 0e2a72449d98d8c10800000000000000
+      internalID: 2057452171022541536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jim_1
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 2023
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905f9a3269ebb9960800000000000000
+      internalID: 7609885547425297673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jim_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 649
+        width: 1028
+        height: 1302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1830bf7b34eadfe00800000000000000
+      internalID: 1080211091511509889
       vertices: []
       indices: 
       edges: []
@@ -132,8 +182,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      homer-simpson-22757_0: 2197026760646069070
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

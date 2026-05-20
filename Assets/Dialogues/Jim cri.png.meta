@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1c50c7a880c566541a6249e5b06f2f65
+guid: 5da1be964c5197d4494d5d1f3452810a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2197026760646069070
-    second: homer-simpson-22757_0
+      213: 8264814884637985734
+    second: Jim cri_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: homer-simpson-22757_0
+      name: Jim cri_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 300
-        height: 308
+        x: 306
+        y: 1277
+        width: 588
+        height: 570
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4b065ec2386d7e10800000000000000
-      internalID: 2197026760646069070
+      spriteID: 6cb4535495582b270800000000000000
+      internalID: 8264814884637985734
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      homer-simpson-22757_0: 2197026760646069070
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
