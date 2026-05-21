@@ -102,6 +102,11 @@ public class PlayerMovement : MonoBehaviour
         isOnGround = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
     }
 
+    public bool GetIsOnGround()
+    {
+        return isOnGround;
+    }
+
     void InputManager()
     {
         // Test 1212

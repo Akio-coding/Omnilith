@@ -7,9 +7,6 @@ public class Gargoyle : MonoBehaviour
     private enum State { Idle, Warning, Diving, Follow, Returning}
     private State currentState = State.Idle;
 
-    [Header("Stats")]
-    [SerializeField] private int damage = 1;
-
     [Header("Mouvements (Flying)")]
     [SerializeField] private float diveSpeed = 15f; // Vitesse fulgurante du plongeon
     [SerializeField] private float flySpeed = 2f; // Vitesse lente de poursuite
@@ -135,19 +132,6 @@ public class Gargoyle : MonoBehaviour
         }
 
         FlipSprite();
-    }
-
-    // Gestion des dégâts de contact
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Health playerHealth = collision.gameObject.GetComponent<Health>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage, transform);
-            }    
-        }
     }
 
     // Gère la direction du regard du sprite
