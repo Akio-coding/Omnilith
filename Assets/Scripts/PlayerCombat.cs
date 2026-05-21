@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Collider2D SlashCollider;
     [SerializeField] private Collider2D StabCollider;
     [SerializeField] private Collider2D UpAttackCollider;
+    [SerializeField] private Collider2D DownAttackCollider;
 
     [Header("Gestion timing")]
     [Tooltip("Nombre de coups maximum dans un combo")]
@@ -22,6 +23,7 @@ public class PlayerCombat : MonoBehaviour
     // -- State --
     public bool IsAttacking { get; private set; }
     private bool isAttackingUp = false;
+    private bool isAttackingDown = false;
     private bool inputBuffered = false;
     private int comboCounter = 0;
     private float lastAttackEndTime = 0f; // New: To track the tolerance window
@@ -90,8 +92,12 @@ public class PlayerCombat : MonoBehaviour
             }
             else
             {
+                if (!movement.GetIsOnGround() && yInput < -0.1f)
+                {
+                    StartDownAttack();
+                }
                 // If we input up => UpAttack
-                if(yInput > 0.1f)
+                else if (yInput > 0.1f)
                 {
                     StartUpAttack();
                 }
@@ -111,6 +117,7 @@ public class PlayerCombat : MonoBehaviour
         inputBuffered = false;
         IsAttacking = true;
         isAttackingUp = false;
+        isAttackingDown = false;
 
         // Loop the combo if we exceeded max hits (Optional, depends on design)
         if (comboCounter >= maxHitInCombo)
@@ -131,10 +138,28 @@ public class PlayerCombat : MonoBehaviour
         inputBuffered = false;
         IsAttacking = true;
         isAttackingUp = true;
+        isAttackingDown = false;
 
         // On ne touche pas au comboCounter pour l'attaque haute (souvent c'est un coup unique)
         // Ou tu peux décider qu'elle casse le combo, à toi de voir.
-        anim.SetTrigger("AttackUp");
+        if (!movement.GetIsOnGround())
+        {
+            anim.SetTrigger("AirAttackUp");
+        }
+        else
+        {
+            anim.SetTrigger("AttackUp");
+        }
+    }
+
+    private void StartDownAttack()
+    {
+        inputBuffered = false;
+        IsAttacking = true;
+        isAttackingUp = false;
+        isAttackingDown = true;
+
+        anim.SetTrigger("AttackDown");
     }
 
     // --- FUNCTIONS CALLED BY THE ANIMATOR ---
@@ -149,6 +174,13 @@ public class PlayerCombat : MonoBehaviour
             if(UpAttackCollider != null)
             {
                 UpAttackCollider.enabled = true;
+            }
+        }
+        else if (isAttackingDown)
+        {
+            if(DownAttackCollider != null)
+            {
+                DownAttackCollider.enabled = true;
             }
         }
         else
@@ -178,6 +210,11 @@ public class PlayerCombat : MonoBehaviour
         if (UpAttackCollider != null)
         {
             UpAttackCollider.enabled = false;
+        }
+
+        if (DownAttackCollider != null)
+        {
+            DownAttackCollider.enabled = false;
         }
 
         if (SlashCollider != null)
@@ -213,12 +250,13 @@ public class PlayerCombat : MonoBehaviour
             IsAttacking = false;
             lastAttackEndTime = Time.time;
             isAttackingUp = false;
+            isAttackingDown = false;
         }
     }
     private void TriggerAttackStep()
     {
         // Permit a step when attacking, only on ground and only when doing normal combo
-        if (movement != null && !isAttackingUp)
+        if (movement != null && !isAttackingUp && !isAttackingDown)
         {
             movement.ApplyAttackStep(attackStepForce);
         }
@@ -234,6 +272,7 @@ public class PlayerCombat : MonoBehaviour
     {
         IsAttacking = false;
         isAttackingUp = false;
+        isAttackingDown = false;
         inputBuffered = false;
         comboCounter = 0;
 
