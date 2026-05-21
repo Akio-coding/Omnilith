@@ -5354,7 +5354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   bounceOnHit: 1
-  bounceForce: 45.4
+  bounceForce: 15
 --- !u!61 &2034296439
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -96,6 +96,11 @@ public class PlayerMovement : MonoBehaviour
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
+
+        if (animator != null)
+        {
+            animator.SetBool("IsOnGround", isOnGround);
+        }
     }
     void VerifyIfOnGround()
     {
