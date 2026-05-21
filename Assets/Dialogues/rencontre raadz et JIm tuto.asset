@@ -15,39 +15,37 @@ MonoBehaviour:
   unlocksMonkey: 0
   lines:
   - speakerName: Lore
-    texte: 'Jim regarde la statut en pensant qu''elle faisait partie du paysage.
-
-'
+    texte: Jim regarde la statue en pensant qu'elle faisait partie du paysage.
     speakerHead: {fileID: 0}
   - speakerName: Lore
     texte: "R\xE4\u2019adz Lakar commence \xE0 parler."
     speakerHead: {fileID: 0}
   - speakerName: "R\xE4\u2019adz"
-    texte: 'Qui va la ? '
+    texte: "Qui va l\xE0 ?"
     speakerHead: {fileID: -2159018269469501678, guid: 25a9e84ea5c041842b82aee686cbc203, type: 3}
   - speakerName: Jim
     texte: La pierre, elle parle ?
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: "bien sur ! tu ne sais pas \xE0 qui tu parle ?\nJe suis..."
+    texte: "Bien s\xFBr ! Tu ne sais pas \xE0 qui tu parles ?\nJe suis\u2026"
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: attend , je suis qui ?
+    texte: Attends, je suis qui ?
     speakerHead: {fileID: 6881888109790457052, guid: 4ce7bb136125a304abe233eec8068689, type: 3}
   - speakerName: 'Jim '
-    texte: "qu'est ce qu'une tete de pierre fait ici?\net comment tu es arriv\xE9
-      l\xE0?"
+    texte: "Qu'est-ce qu'une t\xEAte de pierre fait ici ?\nEt comment tu es arriv\xE9
+      l\xE0 ?"
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: "je sais plus ! \nun peu pars si, un peu pars l\xE0 ! \nje suis partout
-      \xE0 la fois. Quoi ? "
+    texte: "Je sais plus !\nUn peu par-ci, un peu par-l\xE0 !\nJe suis partout \xE0
+      la fois. Quoi ?"
     speakerHead: {fileID: 1966867039414469558, guid: a2724a2797943f044a8327630031c364, type: 3}
   - speakerName: "R\xE4'adz"
     texte: "Si tu m\u2019aides \xE0 retrouver ma noblesse d\u2019autrefois et les
-      partie de mon corp disperser a travers le monde"
+      parties de mon corps dispers\xE9es \xE0 travers le monde\u2026"
     speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "je t\u2019aiderai \xE0 mon tour."
+    texte: "Je t\u2019aiderai \xE0 mon tour."
     speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
   - speakerName: Jim
     texte: "Un v\u0153u ! Je veux un v\u0153u !!"

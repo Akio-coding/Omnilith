@@ -21,11 +21,11 @@ MonoBehaviour:
     texte: 'Cet objet est magnifique. '
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: Jim
-    texte: "Restaurer j\u2019en aurais pour un bon prix."
+    texte: "Restaur\xE9e, j\u2019en aurais pour un bon prix."
     speakerHead: {fileID: -4635919162899075175, guid: 0eaa2c1f28dfe1f4da7fa63591b7e78c, type: 3}
   - speakerName: Jim
     texte: ...
     speakerHead: {fileID: 1080211091511509889, guid: 62da37894dbe462489488d84056ae9f2, type: 3}
   - speakerName: Jim
-    texte: "Il s'est pass\xE9 quoi ?\nC'\xE9tait quoi ce bruit?"
+    texte: "Il s'est pass\xE9 quoi ?\nC'\xE9tait quoi, ce bruit ?"
     speakerHead: {fileID: 1080211091511509889, guid: 62da37894dbe462489488d84056ae9f2, type: 3}

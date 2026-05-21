@@ -34,10 +34,8 @@ MonoBehaviour:
 '
     speakerHead: {fileID: 1080211091511509889, guid: 62da37894dbe462489488d84056ae9f2, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: 'Deja c''est pas un singe mais un Mandrills
-
-      Et de deux, il fait
-      les meilleur tarte au mot interdit'
+    texte: "D\xE9j\xE0, ce n'est pas un singe, mais un mandrill. \nEt de deux, il
+      fait les meilleures tartes aux mots interdits."
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: "R\xE4'adz"
     texte: "RESPECT MON MEILLEUR POTE !\nMon ge\xF4lier !"
@@ -49,10 +47,9 @@ MonoBehaviour:
     texte: "NE DIS PLUS JAMAIS JAMAIS \nB . A . N . A . N . E"
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "Bon petit Ranza tu viens avec R\xE4'adz recup\xE9rer les partie de mon
-      corps ? "
+    texte: "Bon, petit Ranza, tu viens avec R\xE4'adz r\xE9cup\xE9rer les parties
+      de mon corps ?"
     speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
   - speakerName: Jim
-    texte: "Bah c'est super une t\xEAte d\xE9pressif et un singe. \nCa va etre une
-      super aventure!"
+    texte: "Bah c'est super une t\xEAte d\xE9pressif et un singe. "
     speakerHead: {fileID: -7141094417442364729, guid: 99522c038b9ee414694e4cc599ef3010, type: 3}
