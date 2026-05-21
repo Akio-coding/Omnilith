@@ -1,0 +1,1545 @@
+fileFormatVersion: 2
+guid: 6a69e33c2deba724181b4d57138d35c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1217228025145263891
+    second: Beralux_0
+  - first:
+      213: 2089907226617192946
+    second: Beralux_1
+  - first:
+      213: 6294512392552713331
+    second: Beralux_2
+  - first:
+      213: -6117269586578141922
+    second: Beralux_3
+  - first:
+      213: -7806061594798363749
+    second: Beralux_4
+  - first:
+      213: -5558412847272381827
+    second: Beralux_5
+  - first:
+      213: -2871511195376967651
+    second: Beralux_6
+  - first:
+      213: 1862962398681717690
+    second: Beralux_7
+  - first:
+      213: -471618788714692938
+    second: Beralux_8
+  - first:
+      213: -351927337161402107
+    second: Beralux_9
+  - first:
+      213: 3828313043297216893
+    second: Beralux_10
+  - first:
+      213: 5348584157497598705
+    second: Beralux_11
+  - first:
+      213: -8287414056251999403
+    second: Beralux_12
+  - first:
+      213: -7541577274066759462
+    second: Beralux_13
+  - first:
+      213: -6753470059612044156
+    second: Beralux_14
+  - first:
+      213: 8516821082127193880
+    second: Beralux_15
+  - first:
+      213: 6133084195393888843
+    second: Beralux_16
+  - first:
+      213: 1232635671937638137
+    second: Beralux_17
+  - first:
+      213: 4391242321479465317
+    second: Beralux_18
+  - first:
+      213: -4910574056422953794
+    second: Beralux_19
+  - first:
+      213: -8619570608328528670
+    second: Beralux_20
+  - first:
+      213: -4679901709944062269
+    second: Beralux_21
+  - first:
+      213: -5124581013453354783
+    second: Beralux_22
+  - first:
+      213: -7346024535225635272
+    second: Beralux_23
+  - first:
+      213: 146135334356405043
+    second: Beralux_24
+  - first:
+      213: 2320197994750149520
+    second: Beralux_25
+  - first:
+      213: -6997083738129593597
+    second: Beralux_26
+  - first:
+      213: -386555256916502240
+    second: Beralux_27
+  - first:
+      213: 8152872704512240163
+    second: Beralux_28
+  - first:
+      213: -6213103728634971939
+    second: Beralux_29
+  - first:
+      213: 8640520577532193083
+    second: Beralux_30
+  - first:
+      213: 302403995274365476
+    second: Beralux_31
+  - first:
+      213: 4114598212908659715
+    second: Beralux_32
+  - first:
+      213: 8318847408057013458
+    second: Beralux_33
+  - first:
+      213: -7489923526714528845
+    second: Beralux_34
+  - first:
+      213: -1502999309024487140
+    second: Beralux_35
+  - first:
+      213: 5119805649693589410
+    second: Beralux_36
+  - first:
+      213: 9030446047389303734
+    second: Beralux_37
+  - first:
+      213: 6776445181053903705
+    second: Beralux_38
+  - first:
+      213: 8068077786106665498
+    second: Beralux_39
+  - first:
+      213: -1592175787151995807
+    second: Beralux_40
+  - first:
+      213: -3139670992639226270
+    second: Beralux_41
+  - first:
+      213: 8333244432322280915
+    second: Beralux_42
+  - first:
+      213: 7217360587097494107
+    second: Beralux_43
+  - first:
+      213: 3231986039376397382
+    second: Beralux_44
+  - first:
+      213: -4765573885917701470
+    second: Beralux_45
+  - first:
+      213: 8434412008941751840
+    second: Beralux_46
+  - first:
+      213: 1782163501028111800
+    second: Beralux_47
+  - first:
+      213: 7750464209624508648
+    second: Beralux_48
+  - first:
+      213: -7392953816999246144
+    second: Beralux_49
+  - first:
+      213: 9050724978337880767
+    second: Beralux_50
+  - first:
+      213: -2716340905176548735
+    second: Beralux_51
+  - first:
+      213: 2816725185204396160
+    second: Beralux_52
+  - first:
+      213: -7521907063726948342
+    second: Beralux_53
+  - first:
+      213: -4120486762392365987
+    second: Beralux_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Beralux_0
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1636
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3170f61907674e010800000000000000
+      internalID: 1217228025145263891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_1
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1653
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f12a00cc87d00d10800000000000000
+      internalID: 2089907226617192946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_2
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1657
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c0668dba99a5750800000000000000
+      internalID: 6294512392552713331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_3
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1661
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d85b0c8b71b1ba0800000000000000
+      internalID: -6117269586578141922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_4
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1615
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b693b765c4ba390800000000000000
+      internalID: -7806061594798363749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_5
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1635
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72bc5317fc8cd2b0800000000000000
+      internalID: -5558412847272381827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_6
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1637
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d10affe18c75628d0800000000000000
+      internalID: -2871511195376967651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_7
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 1642
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb55536e629ad910800000000000000
+      internalID: 1862962398681717690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_8
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1628
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6beb24dd5397479f0800000000000000
+      internalID: -471618788714692938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_9
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1617
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509deb193f3bd1bf0800000000000000
+      internalID: -351927337161402107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_10
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1627
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79a9bafd66e02530800000000000000
+      internalID: 3828313043297216893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_11
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1621
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f22de604fcf93a40800000000000000
+      internalID: 5348584157497598705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_12
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1623
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b358e03d03dfc80800000000000000
+      internalID: -8287414056251999403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_13
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1618
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0971d1d6fe65790800000000000000
+      internalID: -7541577274066759462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_14
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1627
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484869f13cad642a0800000000000000
+      internalID: -6753470059612044156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_15
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1627
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817dfbf66a3d13670800000000000000
+      internalID: 8516821082127193880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_16
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1629
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b42e30cc4971d1550800000000000000
+      internalID: 6133084195393888843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_17
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1626
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe5153ec933b1110800000000000000
+      internalID: 1232635671937638137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_18
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1616
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569f17620a3d0fc30800000000000000
+      internalID: 4391242321479465317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_19
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1540
+        width: 107
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc29abb9e22adbb0800000000000000
+      internalID: -4910574056422953794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_20
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1617
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec2e2e3332216880800000000000000
+      internalID: -8619570608328528670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_21
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1621
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce7a03a036ad0fb0800000000000000
+      internalID: -4679901709944062269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_22
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1588
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8c66e28b4d1e8b0800000000000000
+      internalID: -5124581013453354783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_23
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1554
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e629a2b9dad0a90800000000000000
+      internalID: -7346024535225635272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_24
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1605
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b4275ff4d270200800000000000000
+      internalID: 146135334356405043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_25
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1588
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09308a588cff23020800000000000000
+      internalID: 2320197994750149520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_26
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1585
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b8f1d896d55ee90800000000000000
+      internalID: -6997083738129593597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_27
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 1591
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0299e69ba0ea2aaf0800000000000000
+      internalID: -386555256916502240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_28
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1574
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a2e6b6782d42170800000000000000
+      internalID: 8152872704512240163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_29
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1591
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8be06c31f96c9a0800000000000000
+      internalID: -6213103728634971939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_30
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1184
+        width: 372
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3962429fab49e770800000000000000
+      internalID: 8640520577532193083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_31
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1580
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42accfcd4da523400800000000000000
+      internalID: 302403995274365476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_32
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 1577
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 304b0e9464df91930800000000000000
+      internalID: 4114598212908659715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_33
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1577
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d4dae974ab727370800000000000000
+      internalID: 8318847408057013458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_34
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1488
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbe65b5c327e0890800000000000000
+      internalID: -7489923526714528845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_35
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1464
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1910f77716442be0800000000000000
+      internalID: -1502999309024487140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_36
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 1448
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af360dcc143d0740800000000000000
+      internalID: 5119805649693589410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_37
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1223
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b348f1b5d6925d70800000000000000
+      internalID: 9030446047389303734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_38
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1227
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95320a03df4ca0e50800000000000000
+      internalID: 6776445181053903705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_39
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1229
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a9b1dfff197ff60800000000000000
+      internalID: 8068077786106665498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_40
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1223
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16cc3daae8477e9e0800000000000000
+      internalID: -1592175787151995807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_41
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1224
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e042cedd5ad64d0800000000000000
+      internalID: -3139670992639226270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_42
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1219
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd3217e8a1a5a370800000000000000
+      internalID: 8333244432322280915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_43
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1224
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52d9d9f637392460800000000000000
+      internalID: 7217360587097494107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_44
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1214
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6444d04dd225adc20800000000000000
+      internalID: 3231986039376397382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_45
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1215
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa5ff2ccc74dddb0800000000000000
+      internalID: -4765573885917701470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_46
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1209
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e0342e80d0d0570800000000000000
+      internalID: 8434412008941751840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_47
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1214
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5727a03448bb810800000000000000
+      internalID: 1782163501028111800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_48
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1207
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e82c0b822e2f8b60800000000000000
+      internalID: 7750464209624508648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_49
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 1200
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c644e84ca3f66990800000000000000
+      internalID: -7392953816999246144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_50
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1213
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba959d3a62aa9d70800000000000000
+      internalID: 9050724978337880767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_51
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1207
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ab61aa65e9d4ad0800000000000000
+      internalID: -2716340905176548735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_52
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1193
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 080210ed1a4071720800000000000000
+      internalID: 2816725185204396160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_53
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1183
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00cd09d061dc9790800000000000000
+      internalID: -7521907063726948342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beralux_54
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 634
+        width: 260
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5457e1fe1711d6c0800000000000000
+      internalID: -4120486762392365987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Beralux_0: 1217228025145263891
+      Beralux_1: 2089907226617192946
+      Beralux_10: 3828313043297216893
+      Beralux_11: 5348584157497598705
+      Beralux_12: -8287414056251999403
+      Beralux_13: -7541577274066759462
+      Beralux_14: -6753470059612044156
+      Beralux_15: 8516821082127193880
+      Beralux_16: 6133084195393888843
+      Beralux_17: 1232635671937638137
+      Beralux_18: 4391242321479465317
+      Beralux_19: -4910574056422953794
+      Beralux_2: 6294512392552713331
+      Beralux_20: -8619570608328528670
+      Beralux_21: -4679901709944062269
+      Beralux_22: -5124581013453354783
+      Beralux_23: -7346024535225635272
+      Beralux_24: 146135334356405043
+      Beralux_25: 2320197994750149520
+      Beralux_26: -6997083738129593597
+      Beralux_27: -386555256916502240
+      Beralux_28: 8152872704512240163
+      Beralux_29: -6213103728634971939
+      Beralux_3: -6117269586578141922
+      Beralux_30: 8640520577532193083
+      Beralux_31: 302403995274365476
+      Beralux_32: 4114598212908659715
+      Beralux_33: 8318847408057013458
+      Beralux_34: -7489923526714528845
+      Beralux_35: -1502999309024487140
+      Beralux_36: 5119805649693589410
+      Beralux_37: 9030446047389303734
+      Beralux_38: 6776445181053903705
+      Beralux_39: 8068077786106665498
+      Beralux_4: -7806061594798363749
+      Beralux_40: -1592175787151995807
+      Beralux_41: -3139670992639226270
+      Beralux_42: 8333244432322280915
+      Beralux_43: 7217360587097494107
+      Beralux_44: 3231986039376397382
+      Beralux_45: -4765573885917701470
+      Beralux_46: 8434412008941751840
+      Beralux_47: 1782163501028111800
+      Beralux_48: 7750464209624508648
+      Beralux_49: -7392953816999246144
+      Beralux_5: -5558412847272381827
+      Beralux_50: 9050724978337880767
+      Beralux_51: -2716340905176548735
+      Beralux_52: 2816725185204396160
+      Beralux_53: -7521907063726948342
+      Beralux_54: -4120486762392365987
+      Beralux_6: -2871511195376967651
+      Beralux_7: 1862962398681717690
+      Beralux_8: -471618788714692938
+      Beralux_9: -351927337161402107
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

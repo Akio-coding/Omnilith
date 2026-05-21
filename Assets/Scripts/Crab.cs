@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -226,6 +227,7 @@ public class Crab : MonoBehaviour
         hidingTimer = hidingDuration;
         isCarried = false;
         isThrown = false;
+        anim.SetTrigger("VulnerableStance");
 
         rb.velocity = Vector2.zero;
 
@@ -355,8 +357,9 @@ public class Crab : MonoBehaviour
 
     private void DiePermanently()
     {
+        anim.SetTrigger("Die");
         // Optionnel : Jouer un effet de particule de destruction ou un son ici
-        Destroy(gameObject);
+        Destroy(gameObject, 1f);
     }
 
 

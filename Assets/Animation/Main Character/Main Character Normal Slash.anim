@@ -21,16 +21,12 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 6934013284892070054, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
-    - time: 0.1
-      value: {fileID: -5639509438907974925, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
-    - time: 0.18333334
       value: {fileID: 452926297546027425, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
-    - time: 0.33333334
+    - time: 0.1
       value: {fileID: 6238536850125145498, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
-    - time: 0.5
+    - time: 0.21666667
       value: {fileID: -7543445572115272496, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
-    - time: 0.6166667
+    - time: 0.31666666
       value: {fileID: 3650157944247549718, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
     attribute: m_Sprite
     path: 
@@ -54,8 +50,6 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 6934013284892070054, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
-    - {fileID: -5639509438907974925, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
     - {fileID: 452926297546027425, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
     - {fileID: 6238536850125145498, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
     - {fileID: -7543445572115272496, guid: 297af083f980eef4cbee27e5be2fef95, type: 3}
@@ -65,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6333333
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -92,21 +86,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.33333334
+  - time: 0.1
     functionName: EnableHitbox
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.56666666
+  - time: 0.25
     functionName: DisableHitbox
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.6166667
+  - time: 0.31666666
     functionName: FinishAttack
     data: 
     objectReferenceParameter: {fileID: 0}
