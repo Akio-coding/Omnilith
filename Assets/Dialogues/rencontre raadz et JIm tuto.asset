@@ -15,43 +15,42 @@ MonoBehaviour:
   unlocksMonkey: 0
   lines:
   - speakerName: Lore
-    texte: 'Jim regarde la statue pensant qu''elle fait partie du paysage.
+    texte: 'Jim regardait la statue pensant qu''elle faisait partie du paysage.
 
 '
     speakerHead: {fileID: 0}
   - speakerName: Lore
-    texte: "R\xE4\u2019adz Lakar commence \xE0 parler."
+    texte: "Soudain, les l\xE8vres de pierres se mirent \xE0 bouger ...."
     speakerHead: {fileID: 0}
   - speakerName: "R\xE4\u2019adz"
     texte: "Qui va l\xE0 ? "
     speakerHead: {fileID: -2159018269469501678, guid: 25a9e84ea5c041842b82aee686cbc203, type: 3}
   - speakerName: Jim
-    texte: La pierre, elle parle ?
+    texte: Tu .. tu parles ?
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: "bien sur ! tu ne sais pas \xE0 qui tu parle ?\nJe suis..."
+    texte: "Bien sur ! Tu ne sais pas \xE0 qui tu parle ?\nJe suis ..."
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: attend , je suis qui ?
+    texte: Attends ... qui suis-je ?
     speakerHead: {fileID: 6881888109790457052, guid: 4ce7bb136125a304abe233eec8068689, type: 3}
   - speakerName: 'Jim '
-    texte: "qu'est ce qu'une tete de pierre fait ici ?\net comment tu es arriv\xE9
-      l\xE0?"
+    texte: "Qu'est ce que tu fais l\xE0 ?\nComment une statue peut-elle parler ?"
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: "Je ne sais plus ! \nUn peu pars si, un peu pars l\xE0 ! \nJe suis partout
+    texte: "Je ne sais pas ! \nUn peu pars si, un peu pars l\xE0 ! \nJe suis partout
       \xE0 la fois. Quoi ? "
     speakerHead: {fileID: 1966867039414469558, guid: a2724a2797943f044a8327630031c364, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "Aides-moi \xE0 retrouver ma noblesse d\u2019autrefois, en r\xE9cup\xE9rant
-      les partie de mon corps dispers\xE9es a travers le monde ..."
+    texte: "Toi,! Aides-moi \xE0 retrouver ma noblesse d\u2019autrefois ! Aides-moi
+      \xE0 r\xE9cup\xE9rer les parties de mon corps ..."
     speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "Et je t\u2019aiderai \xE0 mon tour."
+    texte: "... et je t'aiderais \xE0 mon tour ! J'exaucerai ton voeu le plus cher."
     speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
   - speakerName: Jim
-    texte: "Un v\u0153u ! Je veux un v\u0153u !!"
+    texte: Mon voeu le plus cher ? ... C'est d'accord.
     speakerHead: {fileID: 8264814884637985734, guid: 5da1be964c5197d4494d5d1f3452810a, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "March\xE9 conclu.\r\n"
+    texte: "March\xE9 conclu alors ...\r\n"
     speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}

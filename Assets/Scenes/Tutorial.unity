@@ -576,6 +576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!212 &21861999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2918,6 +2920,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!212 &94146345
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7458,7 +7462,7 @@ Transform:
   m_GameObject: {fileID: 261009553}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -195.05832, y: -7.4738007, z: -16.746735}
+  m_LocalPosition: {x: -86.91082, y: 10.443092, z: -16.746735}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7663,6 +7667,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!212 &271470649
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9817,7 +9823,7 @@ Transform:
   m_GameObject: {fileID: 343109652}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -191.175, y: -68.573, z: -18.533709}
+  m_LocalPosition: {x: -83.271645, y: -50.65577, z: -18.533709}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24737,11 +24743,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6855922155757072960, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -191.7
+      value: -83.796646
       objectReference: {fileID: 0}
     - target: {fileID: 6855922155757072960, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -69.2
+      value: -51.28277
       objectReference: {fileID: 0}
     - target: {fileID: 6855922155757072960, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24847,7 +24853,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2159018269469501678, guid: 25a9e84ea5c041842b82aee686cbc203, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -38014,6 +38020,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!212 &1280428945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49549,6 +49557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!212 &1614254746
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50800,6 +50810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!212 &1684935050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -56897,6 +56909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!212 &1933170575
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60287,7 +60301,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 3cfe4ba70c5a64a869af65245c952b72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
