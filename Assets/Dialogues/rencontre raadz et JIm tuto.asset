@@ -54,3 +54,15 @@ MonoBehaviour:
   - speakerName: "R\xE4'adz"
     texte: "March\xE9 conclu alors ...\r\n"
     speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
+  - speakerName: "R\xE4'adz"
+    texte: "Dans ton \xE9tat actuel il te sera impossible de r\xE9cup\xE9rer toutes
+      les partie de mon corp \r\n"
+    speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
+  - speakerName: Jim
+    texte: 'QUOI?
+
+'
+    speakerHead: {fileID: 8264814884637985734, guid: 5da1be964c5197d4494d5d1f3452810a, type: 3}
+  - speakerName: Jim
+    texte: 'Tu es faible, alors laisse le bon Raadz t''apprendre des sort '
+    speakerHead: {fileID: 8264814884637985734, guid: 5da1be964c5197d4494d5d1f3452810a, type: 3}
