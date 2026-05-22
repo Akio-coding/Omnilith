@@ -111,7 +111,7 @@ public class Crab : MonoBehaviour
 
     private void UpdateAnimations()
     {
-        if(anim != null)
+        if(anim == null)
         {
             return;
         }
@@ -128,7 +128,7 @@ public class Crab : MonoBehaviour
             return;
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(currentPatrolTargert.position.x, transform.position.y), patrolSpeed * Time.deltaTime);
+        rb.velocity = new Vector2(patrolSpeed * facingDirection, rb.velocity.y);
 
         if (Mathf.Abs(transform.position.x - currentPatrolTargert.position.x) < 0.1f)
         {
@@ -140,7 +140,7 @@ public class Crab : MonoBehaviour
     {
         currentState = State.Pause;
         pauseTimer = pauseDuration;
-        rb.velocity = Vector2.zero;
+        rb.velocity = new Vector2(0, rb.velocity.y);
     }
 
     private void PauseBehavior()
@@ -164,7 +164,7 @@ public class Crab : MonoBehaviour
 
         if (IsObstacleAhead())
         {
-            rb.velocity = Vector2.zero;
+            rb.velocity = new Vector2(0, rb.velocity.y);
             currentState = State.Pause;
             pauseTimer = 1f;
             return;
@@ -172,8 +172,7 @@ public class Crab : MonoBehaviour
 
         UpdateFacingDirection(playerTransform.position);
 
-        Vector2 targetPos = new Vector2(playerTransform.position.x, transform.position.y);
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, chaseSpeed * Time.deltaTime);
+        rb.velocity = new Vector2(chaseSpeed * facingDirection, rb.velocity.y);
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
         if( distanceToPlayer > visionDistance * 1.5f)
@@ -229,9 +228,9 @@ public class Crab : MonoBehaviour
         isThrown = false;
         anim.SetTrigger("VulnerableStance");
 
-        rb.velocity = Vector2.zero;
+        rb.velocity = new Vector2(0, rb.velocity.y);
 
-        if(damageDealer != null)
+        if (damageDealer != null)
         {
             damageDealer.enabled = false;
         }
@@ -268,7 +267,7 @@ public class Crab : MonoBehaviour
             anim.SetTrigger("WakeUp");
         }
         // Il redevient un ennemi normal, le singe ne peut plus le porter
-        gameObject.layer = LayerMask.NameToLayer("Ennemy");
+        gameObject.layer = LayerMask.NameToLayer("Enemy");
 
         currentState = State.Patrol;
     }
@@ -282,8 +281,8 @@ public class Crab : MonoBehaviour
         {
             return;
         }
-        isCarried = false;
-        isThrown = true;
+        isCarried = true;
+        isThrown = false;
     }
 
     // Fonction à appeler depuis le script du Singe quand il lance le crabe
