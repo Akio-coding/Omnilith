@@ -35,6 +35,10 @@ public class Health : MonoBehaviour
     [Tooltip("Délai avant destruction (si activé)")]
     [SerializeField] private float destroyDelay = 2f;
 
+    // Option pour désactiver le trigger de mort automatique !
+    [Tooltip("Lancer le Trigger 'Die' automatiquement à 0 PV ? (Coché pour l'Oignon, Décoché pour le Crabe)")]
+    [SerializeField] private bool triggerDieOnDeath = true;
+
     [Header("Knockback Settings")]
     [Tooltip("La force du recul. X = projection horizontale, Y = petit saut en l'air")]
     [SerializeField] private Vector2 knockbackForce = new Vector2(5f, 2f);
@@ -151,6 +155,7 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("Die");
         }
+
         if (rb != null)
         {
             rb.velocity = Vector2.zero; // Stop 
@@ -247,7 +252,7 @@ public class Health : MonoBehaviour
         OnDeath?.Invoke();
 
         // 2. On lance l'animation (Onion Ko, Crab Hide, etc.)
-        if (anim != null && anim.runtimeAnimatorController != null)
+        if (triggerDieOnDeath && anim != null && anim.runtimeAnimatorController != null)
         {
             anim.SetTrigger("Die");
         }

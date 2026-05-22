@@ -4962,6 +4962,7 @@ GameObject:
   - component: {fileID: 1656095727441195190}
   - component: {fileID: 8788007160047755622}
   - component: {fileID: 5304794618607360540}
+  - component: {fileID: 3785389732962446658}
   - component: {fileID: 6050530289269191028}
   m_Layer: 8
   m_Name: "Alicanto Dor\xE9 2.0"
@@ -5121,11 +5122,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1.5}
+  m_Offset: {x: 0, y: 0.40186596}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5135,7 +5136,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4, y: 2}
+  m_Size: {x: 4, y: 1.8744946}
   m_EdgeRadius: 0
 --- !u!114 &8788007160047755622
 MonoBehaviour:
@@ -5155,10 +5156,12 @@ MonoBehaviour:
   flashCount: 2
   flashing: {r: 0, g: 0, b: 0, a: 0}
   deathDelay: 2
-  componentsToDisable: []
+  componentsToDisable:
+  - {fileID: 5304794618607360540}
   disablePhysicsOnDeath: 1
   destroyOnDeath: 1
   destroyDelay: 2
+  triggerDieOnDeath: 1
   knockbackForce: {x: 5, y: 2}
   knockbackDuration: 0.2
 --- !u!114 &5304794618607360540
@@ -5173,13 +5176,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04673e4ac104f9d40ad8500671bcd81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   diveSpeed: 8
   flySpeed: 2
   visionRadius: 7
   loseInterestRadius: 12
   divingDelay: 1
   anim: {fileID: 4251774190778522958}
+--- !u!114 &3785389732962446658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3982590749970269504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814b9196637aeb74f873a429de4d7f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!114 &6050530289269191028
 MonoBehaviour:
   m_ObjectHideFlags: 0
