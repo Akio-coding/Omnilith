@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 2
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!1 &4690201549601823935
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!1 &6179069300394547311
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +515,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  animator: {fileID: 0}
+  RunCooldown: 0.3
 --- !u!114 &737616324659422719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,6 +537,10 @@ MonoBehaviour:
   deathDelay: 2
   componentsToDisable:
   - {fileID: 6174064716110364408}
+  disablePhysicsOnDeath: 1
+  destroyOnDeath: 1
+  destroyDelay: 2
+  triggerDieOnDeath: 1
   knockbackForce: {x: 5, y: 2}
   knockbackDuration: 0.2
 --- !u!114 &265115510380834709
@@ -548,6 +558,7 @@ MonoBehaviour:
   SlashCollider: {fileID: 4208217957558843879}
   StabCollider: {fileID: 5594709679832346194}
   UpAttackCollider: {fileID: 270028452129645243}
+  DownAttackCollider: {fileID: 0}
   maxHitInCombo: 3
   comboTolerance: 0.5
   attackStepForce: 2
@@ -670,7 +681,7 @@ Transform:
   m_GameObject: {fileID: 7735187302544872166}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.86, y: 0.83, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -683,7 +694,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7735187302544872166}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -710,7 +721,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.55215716, y: -0.8454257}
+  m_Offset: {x: 0.27, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -735,6 +746,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!1 &7882518697775628315
 GameObject:
   m_ObjectHideFlags: 0
