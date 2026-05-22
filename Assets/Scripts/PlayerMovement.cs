@@ -101,6 +101,9 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("IsOnGround", isOnGround);
         }
+
+        float CharacterVerticalVelocity = Mathf.Abs(rb.velocity.y);
+        animator.SetFloat("VerticalSpeed", CharacterVerticalVelocity);
     }
     void VerifyIfOnGround()
     {
@@ -122,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isOnGround && !isDashing)
         {
+            animator.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 

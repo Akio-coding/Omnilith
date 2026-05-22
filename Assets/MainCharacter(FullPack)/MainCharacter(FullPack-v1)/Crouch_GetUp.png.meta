@@ -118,12 +118,12 @@ TextureImporter:
       name: Crouch_GetUp_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 31
-        width: 42
-        height: 37
+        x: 0
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -140,12 +140,12 @@ TextureImporter:
       name: Crouch_GetUp_1
       rect:
         serializedVersion: 2
-        x: 262
-        y: 31
-        width: 42
-        height: 38
+        x: 192
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -162,12 +162,12 @@ TextureImporter:
       name: Crouch_GetUp_2
       rect:
         serializedVersion: 2
-        x: 456
-        y: 31
-        width: 47
-        height: 45
+        x: 384
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: Crouch_GetUp_3
       rect:
         serializedVersion: 2
-        x: 652
-        y: 31
-        width: 45
-        height: 54
+        x: 576
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,12 +206,12 @@ TextureImporter:
       name: Crouch_GetUp_4
       rect:
         serializedVersion: 2
-        x: 844
-        y: 31
-        width: 45
-        height: 59
+        x: 768
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -228,12 +228,12 @@ TextureImporter:
       name: Crouch_GetUp_5
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 31
-        width: 45
-        height: 60
+        x: 960
+        y: 0
+        width: 192
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -250,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9ee4e78d784bd0748863d5e35b50ca3a
     internalID: 0
     vertices: []
     indices: 
