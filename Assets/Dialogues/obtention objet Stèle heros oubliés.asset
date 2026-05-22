@@ -15,10 +15,11 @@ MonoBehaviour:
   unlocksMonkey: 0
   lines:
   - speakerName: Jim
-    texte: "Ils ont l\u2019air\u2026 nombreux."
+    texte: Il y a beaucoup de morts ...
     speakerHead: {fileID: 1080211091511509889, guid: 62da37894dbe462489488d84056ae9f2, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: "Le nombre de mort \xE9t\xE9 le probl\xE8me. Les cons\xE9quences, si."
+    texte: "Le probl\xE8me n'est pas tant le nombre de morts que les cons\xE9quences
+      qu'elles ont eu ..."
     speakerHead: {fileID: 4428417288148582820, guid: bf8c482aab3be104fb3ed776dd2ed478, type: 3}
   - speakerName: Jim
     texte: ...
