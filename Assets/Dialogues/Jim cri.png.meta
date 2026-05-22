@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jim cri_0: 8264814884637985734
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

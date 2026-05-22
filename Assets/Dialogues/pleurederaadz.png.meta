@@ -157,7 +157,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      raadz pleure_0: -6897691245788020651
+      raadz pleure_1: 6881888109790457052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,28 +15,26 @@ MonoBehaviour:
   unlocksMonkey: 0
   lines:
   - speakerName: 
-    texte: Vous avez obtenu le "Cristal de Beralux"
+    texte: Vous avez obtenu le "Cristal de Biralux".
     speakerHead: {fileID: 0}
   - speakerName: Jim
-    texte: 'Un cristal ?
-
-'
+    texte: "Quel \xE9trange cristal !\n"
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: "Le cristal de Biralux r\xE9compense ceux qui \u0153uvrent pour le bien
-      commun par une richesse infinie."
+    texte: "Le Cristal de Biralux r\xE9compense ceux qui \u0153uvrent pour le bien,
+      en leur offrant une richesse infinie."
     speakerHead: {fileID: -2159018269469501678, guid: 25a9e84ea5c041842b82aee686cbc203, type: 3}
   - speakerName: Jim
-    texte: "Hum\u2026\n\xC0 quoi \xE7a sert ?"
+    texte: "Hum... \nComment \xE7a ?"
     speakerHead: {fileID: 1080211091511509889, guid: 62da37894dbe462489488d84056ae9f2, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: "Le cristal drainait la valeur autour de lui : plus il donnait, plus il
-      appauvrissait le monde.\nBiralux l\u2019a compris trop tard et a tent\xE9 de
-      le d\xE9truire, mais il a \xE9t\xE9 assassin\xE9 avant."
+    texte: "Le cristal drainait la valeur autour des choses autour lui : plus il
+      donnait, plus il appauvrissait le monde.\r\nBiralux l\u2019a compris trop tard
+      et a tent\xE9 de le d\xE9truire mais, il a \xE9t\xE9 assassin\xE9 avant."
     speakerHead: {fileID: -2159018269469501678, guid: 25a9e84ea5c041842b82aee686cbc203, type: 3}
   - speakerName: Jim
-    texte: "On dirait qu\u2019il brille moins\u2026"
+    texte: "Il brille plut\xF4t faiblement \u2026\r\n"
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: "R\xE4\u2019adz"
-    texte: "Parce qu\u2019il a d\xE9j\xE0 pris ce qu\u2019il voulait."
+    texte: "C'est parce qu\u2019il a d\xE9j\xE0 pris ce qu\u2019il voulait."
     speakerHead: {fileID: -2159018269469501678, guid: 25a9e84ea5c041842b82aee686cbc203, type: 3}

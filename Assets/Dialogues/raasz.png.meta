@@ -157,7 +157,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      raasz_0: -2159018269469501678
+      raasz_1: -2473965909627216055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

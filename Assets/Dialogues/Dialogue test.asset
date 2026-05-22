@@ -15,41 +15,46 @@ MonoBehaviour:
   unlocksMonkey: 1
   lines:
   - speakerName: "R\xE4'adz"
-    texte: "Mais non! \n\n"
+    texte: "Mais non ! \n\n"
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: Jim
-    texte: Quoi?
+    texte: Quoi ?
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
-  - speakerName: Jim
-    texte: 'Mais nnnnnoooooonnnnnnn
+  - speakerName: "R\xE4'adz"
+    texte: 'Mais non !
 
-      Mais nnnnnooooonnnnn!'
+      Mais noooooon !'
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "Regarde moi \xE7a ! \nC'est mon meilleur pote !\n"
+    texte: "Regardes moi \xE7a ! \nC'est mon meilleur pote !\n"
     speakerHead: {fileID: 4428417288148582820, guid: bf8c482aab3be104fb3ed776dd2ed478, type: 3}
   - speakerName: Jim
-    texte: 'Ce Singe?
+    texte: 'Ce singe ? Ton meilleur pote ?
 
 '
     speakerHead: {fileID: 1080211091511509889, guid: 62da37894dbe462489488d84056ae9f2, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "D\xE9j\xE0, ce n'est pas un singe, mais un mandrill. \nEt de deux, il
-      fait les meilleures tartes aux mots interdits."
+    texte: 'Tout d''abord, ce n''est n''importe quel singe !
+
+      Ensuite, il fait
+      les meilleures tartes aux mot interdit.'
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "RESPECT MON MEILLEUR POTE !\nMon ge\xF4lier !"
+    texte: "RESPECTES MON MEILLEUR POTE !\nMon ge\xF4lier !"
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: Jim
-    texte: "Comment \xE7a, ton ge\xF4lier?\nC'est a lui la banane ? "
+    texte: "Comment \xE7a, ton ge\xF4lier ?\nCette banane lui appartient ? "
     speakerHead: {fileID: 8264814884637985734, guid: 5da1be964c5197d4494d5d1f3452810a, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "NE DIS PLUS JAMAIS JAMAIS \nB . A . N . A . N . E"
+    texte: 'Ne dis pas le mot interdit
+
+      B . A . N . A . N . E !'
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: "R\xE4'adz"
-    texte: "Bon, petit Ranza, tu viens avec R\xE4'adz r\xE9cup\xE9rer les parties
-      de mon corps ?"
+    texte: "Mon bon petit Ranza, tu viens avec R\xE4'adz recup\xE9rer les parties
+      de son corps ? "
     speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
   - speakerName: Jim
-    texte: "Bah c'est super une t\xEAte d\xE9pressif et un singe. "
+    texte: "Super ... une t\xEAte d\xE9pressive et un singe ! \nDans quelle gal\xE8re
+      je me suis encore fourr\xE9 ?"
     speakerHead: {fileID: -7141094417442364729, guid: 99522c038b9ee414694e4cc599ef3010, type: 3}

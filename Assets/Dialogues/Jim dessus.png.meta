@@ -157,7 +157,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jim dessus_0: -2372645675524135458
+      Jim dessus_1: -7141094417442364729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
