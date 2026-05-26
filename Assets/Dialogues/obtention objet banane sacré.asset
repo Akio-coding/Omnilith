@@ -24,7 +24,7 @@ MonoBehaviour:
     texte: "C'est le Fruit B\xE9ni, source de force pour le gardien de cette grotte."
     speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
   - speakerName: Jim
-    texte: "Il \xE9tait uniquement l\xE0 pour la prot\xE9ger ?"
+    texte: "C'est pour \xE7a qu'il la prot\xE8geait ?"
     speakerHead: {fileID: -4254905870569599130, guid: 77faf8507d837a94c90fb11421b3af29, type: 3}
   - speakerName: "R\xE4\u2019adz"
     texte: "On prot\xE8ge toujours ce que l'on ne peut pas remplacer."

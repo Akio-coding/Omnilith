@@ -101,10 +101,25 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("IsOnGround", isOnGround);
         }
+
+        float CharacterVerticalVelocity = Mathf.Abs(rb.velocity.y);
+        animator.SetFloat("VerticalSpeed", CharacterVerticalVelocity);
     }
     void VerifyIfOnGround()
     {
+        // On mémorise l'état précédent
+        bool wasOnGround = isOnGround;
+
         isOnGround = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+
+        // Si on atterrit en pleine attaque, on annule l'attaque !
+        if (!wasOnGround && isOnGround)
+        {
+            if (combat != null && combat.IsAttacking)
+            {
+                combat.ResetCombatState();
+            }
+        }
     }
 
     public bool GetIsOnGround()
@@ -122,6 +137,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isOnGround && !isDashing)
         {
+            animator.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
