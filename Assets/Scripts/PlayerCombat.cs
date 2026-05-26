@@ -268,7 +268,7 @@ public class PlayerCombat : MonoBehaviour
     }
 
     // Remet tout à zéro si on est interrompu
-    private void ResetCombatState()
+    public void ResetCombatState()
     {
         IsAttacking = false;
         isAttackingUp = false;

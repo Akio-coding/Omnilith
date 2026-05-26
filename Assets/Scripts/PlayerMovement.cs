@@ -107,7 +107,19 @@ public class PlayerMovement : MonoBehaviour
     }
     void VerifyIfOnGround()
     {
+        // On mémorise l'état précédent
+        bool wasOnGround = isOnGround;
+
         isOnGround = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+
+        // Si on atterrit en pleine attaque, on annule l'attaque !
+        if (!wasOnGround && isOnGround)
+        {
+            if (combat != null && combat.IsAttacking)
+            {
+                combat.ResetCombatState();
+            }
+        }
     }
 
     public bool GetIsOnGround()
