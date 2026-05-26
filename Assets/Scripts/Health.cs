@@ -66,6 +66,11 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damageAmount, Transform damageSource = null)
     {
+        if (CompareTag("Player") && anim != null)
+        {
+            anim.SetTrigger("TakeDamage");
+        }
+
         // If we are invincible or dead, ignore 
         if (isInvincible || CurrentHealth <= 0) 
         {

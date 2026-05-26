@@ -327,7 +327,7 @@ public class Crab : MonoBehaviour
         if (currentState == State.Hiding)
         {
             // 2. LE CRABE EST LANCÉ ET TOUCHE UN ENNEMI
-            if (isThrown && collision.gameObject.CompareTag("Ennemy"))
+            if (isThrown && collision.gameObject.CompareTag("Enemy"))
             {
                 Health enemyHealth = collision.gameObject.GetComponent<Health>();
 
