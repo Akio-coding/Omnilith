@@ -97,10 +97,12 @@ public class Crab : MonoBehaviour
                 PatrolBehavior();
                 CheckForPlayer();
                 break;
+
             case State.Pause:
                 PauseBehavior();
                 CheckForPlayer();
                 break;
+
             case State.Chase:
                 ChaseBehavior();
                 break;
