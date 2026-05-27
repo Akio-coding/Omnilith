@@ -6,9 +6,9 @@ public class MenuManager : MonoBehaviour
     public static MenuManager Instance;
 
     [Header("UI Elements")]
-    [SerializeField] private GameObject menuPanel;
-    [SerializeField] private Button healButton;
-    [SerializeField] private Button leaveButton;
+    [SerializeField] public GameObject menuPanel;
+    [SerializeField] public Button healButton;
+    [SerializeField] public Button leaveButton;
 
     private void Awake()
     {
