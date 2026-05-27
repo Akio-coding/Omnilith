@@ -37,7 +37,7 @@ public class Lever : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Attack") || collision.CompareTag("Throwable"))
+        if (collision.CompareTag("Attack") || collision.contactCaptureLayers.value == 11)
         {
             IsActivated = true;
             Debug.Log("Levier activé");
