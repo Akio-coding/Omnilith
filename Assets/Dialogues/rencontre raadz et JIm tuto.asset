@@ -63,9 +63,6 @@ MonoBehaviour:
 
 '
     speakerHead: {fileID: 8264814884637985734, guid: 5da1be964c5197d4494d5d1f3452810a, type: 3}
-  - speakerName: Jim
-    texte: 'Tu es faible, alors laisse le bon Raadz t''apprendre des sort '
-    speakerHead: {fileID: 8264814884637985734, guid: 5da1be964c5197d4494d5d1f3452810a, type: 3}
-  - speakerName: 
-    texte: "Vous avez obtenu un sort \nClic Droit pour l'utiliser \n"
-    speakerHead: {fileID: 0}
+  - speakerName: "R\xE4'adz"
+    texte: Tu es faible, alors laisse le bon Raadz t'aider a te renforcer
+    speakerHead: {fileID: 4893617752468652791, guid: 7e24a2ff843b00f48aba10cc21dc89f4, type: 3}
