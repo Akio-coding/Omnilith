@@ -104,10 +104,20 @@ public class FollowingMonkey : MonoBehaviour
         }
 
         HandleInteraction();
+
         if (isChasingPlayer) 
         {
             ChasePlayerForPickUp();
         }
+
+        // Si l'objet porté est le joueur, le singe s'arrête d'essayer de le suivre !
+        else if (carriedObject == playerTransform.gameObject)
+        {
+            StopMoving();
+            CheckGroundStatus();
+            // On ne lit ni RecordHistory() ni MoveMonkey(), il attend sagement tes ordres.
+        }
+
         else
         {
             RecordHistory();
