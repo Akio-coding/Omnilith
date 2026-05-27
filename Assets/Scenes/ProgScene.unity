@@ -6150,6 +6150,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 737616324659422719, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
+      propertyPath: componentsToDisable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 737616324659422719, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
+      propertyPath: 'componentsToDisable.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8495743846513914585}
     - target: {fileID: 6179069300394547311, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6280,6 +6288,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6855922155757072960, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
   m_PrefabInstance: {fileID: 6903045701374707611}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8495743846513914585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 265115510380834709, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
+  m_PrefabInstance: {fileID: 6903045701374707611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759df8e30440ca345ac9893439a0a566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8865495676305659557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7880953260131328171, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
