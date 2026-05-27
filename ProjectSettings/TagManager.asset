@@ -9,6 +9,11 @@ TagManager:
   - Attack
   - Porte
   - Lever
+  - Vines
+  - platform
+  - enemys
+  - Hitbox
+  - Throwable
   layers:
   - Default
   - TransparentFX
