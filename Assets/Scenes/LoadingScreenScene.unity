@@ -229,7 +229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20, y: 240}
+  m_AnchoredPosition: {x: 20, y: -10}
   m_SizeDelta: {x: -320, y: -920.6223}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584264002
@@ -252,17 +252,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tout commence dans un affrontement qui fend les cieux : un grand sorcier
-    et un monstre s\u2019affrontent au-dessus d\u2019une ville.\r\nD\u2019autres
-    mages et monstres se joignent \xE0 la bataille.\r\nLe ciel se brise et se recr\xE9e
-    \xE0 chaque attaque, d\xE9vastant la ville et tuant des dizaines d\u2019habitants.\r\nLe
-    sorcier, apr\xE8s avoir vaincu la cr\xE9ature, observe la ville mais ne fait
-    rien.\r\nIl subit alors une mal\xE9diction.\r\nCertains sorciers meurent lorsque
-    le mal\xE9fice les touche, d\u2019autres perdent des parties de leur corps.\r\nLe
-    grand sorcier, R\xE4'adz Lakar, se divise : son corps et son esprit se s\xE9parent,
-    laissant sa t\xEAte tomber.\r\nJim, jeune aventurier, cherche une relique capable
-    de r\xE9aliser son r\xEAve.\r\nIl apprend que les reliques du sorcier permettent
-    d\u2019exaucer un v\u0153u.\r\nIl entreprend alors son voyage."
+  m_text: "Il y a fort longtemps, au dessus de ces terres, un combat entre des mages
+    et des b\xEAtes eu lieu. Un sorcier surpuissant triompha d'une cr\xE9ature venue
+    d'ailleurs. Mais avant m\xEAme d'avoir pu c\xE9l\xE9brer sa victoire, il disparut.
+    Des ann\xE9es plus tard, au c\u0153ur des ruines de la bataille, un aventurier
+    d\xE9couvrit de myst\xE9rieux souterrains."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -297,7 +291,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 8
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
