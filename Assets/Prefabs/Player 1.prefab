@@ -559,7 +559,7 @@ MonoBehaviour:
   SlashCollider: {fileID: 4208217957558843879}
   StabCollider: {fileID: 5594709679832346194}
   UpAttackCollider: {fileID: 270028452129645243}
-  DownAttackCollider: {fileID: 0}
+  DownAttackCollider: {fileID: 1542605345345977225}
   maxHitInCombo: 3
   comboTolerance: 0.5
   attackStepForce: 2
