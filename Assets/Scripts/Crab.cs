@@ -62,7 +62,7 @@ public class Crab : MonoBehaviour
         if (health != null)
         {
             health.OnDeath += EnterHidingState;
-            health.OnDamageTaken += PlayDamageAnimation;
+            //health.OnDamageTaken += PlayDamageAnimation;
         }
     }
 
@@ -71,17 +71,17 @@ public class Crab : MonoBehaviour
         if (health != null)
         {
             health.OnDeath -= EnterHidingState;
-            health.OnDamageTaken -= PlayDamageAnimation;
+            //health.OnDamageTaken -= PlayDamageAnimation;
         }
     }
 
-    private void PlayDamageAnimation()
-    {
-        if (anim != null && currentState != State.Hiding)
-        {
-            anim.SetTrigger("Damage");
-        }
-    }
+    //private void PlayDamageAnimation()
+    //{
+    //    if (anim != null && currentState != State.Hiding)
+    //    {
+    //        anim.SetTrigger("Damage");
+    //    }
+    //}
 
     private void Update()
     {

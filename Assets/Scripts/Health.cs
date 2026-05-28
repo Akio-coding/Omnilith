@@ -71,7 +71,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damageAmount, Transform damageSource = null)
     {
-        if (CompareTag("Player") && anim != null)
+        if (anim != null)
         {
             anim.SetTrigger("TakeDamage");
             
@@ -85,8 +85,6 @@ public class Health : MonoBehaviour
 
         // We apply damages
         CurrentHealth -= damageAmount;
-
-        anim.SetTrigger("TakeDamage");
 
         // Notify everyone (UI, Audio, etc.)
         OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
@@ -256,7 +254,6 @@ public class Health : MonoBehaviour
         }
         
         isInvincible = false;
-        
     }
 
     void die() 
