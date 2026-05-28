@@ -64,7 +64,7 @@ public class DialogueTrigger : MonoBehaviour
     private void Update()
     {
         // If the player is in the zone and interact with E
-        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !DialogueManager.Instance.dialoguePanel.activeInHierarchy && !wasDialogueOpenLastFrame) 
+        if (playerInRange && Input.GetButtonDown("Interact") && !DialogueManager.Instance.dialoguePanel.activeInHierarchy && !wasDialogueOpenLastFrame) 
         {
             DialogueManager.Instance.StartDialogue(dialogue);
 

@@ -149,7 +149,6 @@ public class FollowingMonkey : MonoBehaviour
     {
         isTeleporting = true;
 
-        // Optionnel : Petit effet de disparition (on peut aussi déclencher une animation ici)
         if (sr != null)
         {
             sr.enabled = false;
@@ -187,7 +186,7 @@ public class FollowingMonkey : MonoBehaviour
             playerWasGrounded = true;
         }
 
-        // NOUVEAU : On enregistre seulement si on a bougé de 0.1 unité OU si on a sauté
+        // On enregistre seulement si on a bougé de 0.1 unité OU si on a sauté
         float distanceSinceLastPoint = Vector3.Distance(playerTransform.position, lastRecordedPos);
 
         if (distanceSinceLastPoint > 0.1f || playerJumpedThisFrame)
@@ -281,7 +280,7 @@ public class FollowingMonkey : MonoBehaviour
     private void HandleInteraction()
     {
         // Si on appuie sur 'R'
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetButtonDown("Mate"))
         {
             if (carriedObject == null)
             {
@@ -399,8 +398,8 @@ public class FollowingMonkey : MonoBehaviour
 
         else
         {
-            // Type de lancer : Vers le haut si on maintient 'Z' ou 'UpArrow'
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            // Lancer vers le haut 
+            if (Input.GetAxisRaw("Vertical") > 0.1f)
             {
                 finalForce = new Vector2(highThrowForce.x * lookDir, highThrowForce.y);
             }

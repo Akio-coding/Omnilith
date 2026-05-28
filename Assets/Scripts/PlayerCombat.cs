@@ -31,6 +31,7 @@ public class PlayerCombat : MonoBehaviour
     // -- General --
     private Animator anim;
     private PlayerMovement movement;
+    private AudioSource SFX;
 
     void Start()
     {
