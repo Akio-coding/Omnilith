@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class Gargoyle : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class Gargoyle : MonoBehaviour
 
     [Header("Delay")]
     [SerializeField] private float divingDelay = 2f;
+    // Temps maximum accordé au plongeon avant d'abandonner
+    [SerializeField] private float maxDiveDuration = 2f;
     private float delayTimer;
+    private float diveTimer; // Le chronomètre du plongeon
 
     [Header("Animations")]
     private Transform playerTransform;
@@ -80,6 +84,10 @@ public class Gargoyle : MonoBehaviour
                 {
                     // On enregistre la position actuelle du joueur pour plonger vers ce point
                     diveTarget = playerTransform.position;
+
+                    // On arme le chronomètre de sécurité juste avant de plonger !
+                    diveTimer = maxDiveDuration;
+
                     currentState = State.Diving;
                 }
                 break;
@@ -90,13 +98,15 @@ public class Gargoyle : MonoBehaviour
                     // Lance l'animation de dive
                     anim.SetBool("isDiving", true);
                 }
-                
 
                 // Plongeon rapide vers la cible
                 transform.position = Vector3.MoveTowards(transform.position, diveTarget, diveSpeed * Time.deltaTime);
 
-                // Si la gargouille est arrivée au point d'impact
-                if(Vector3.Distance(transform.position, diveTarget) < 0.1f)
+                // On fait tourner le chronomètre pendant qu'il vole
+                diveTimer -= Time.deltaTime;
+
+                // Si la gargouille est arrivée au point d'impact ou si il est bloqué trop longtemps
+                if (Vector3.Distance(transform.position, diveTarget) < 0.1f || diveTimer <= 0f)
                 {
                     currentState = State.Follow;
                 }

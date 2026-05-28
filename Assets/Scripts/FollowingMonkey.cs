@@ -187,7 +187,7 @@ public class FollowingMonkey : MonoBehaviour
             playerWasGrounded = true;
         }
 
-        // NOUVEAU : On enregistre seulement si on a bougé de 0.1 unité OU si on a sauté
+        // On enregistre seulement si on a bougé de 0.1 unité OU si on a sauté
         float distanceSinceLastPoint = Vector3.Distance(playerTransform.position, lastRecordedPos);
 
         if (distanceSinceLastPoint > 0.1f || playerJumpedThisFrame)
