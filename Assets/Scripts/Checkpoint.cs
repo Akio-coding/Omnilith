@@ -17,7 +17,7 @@ public class Checkpoint : MonoBehaviour
 
     private void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E)) 
+        if (playerInRange && Input.GetButtonDown("Interact")) 
         {
             // Si le joueur touche le checkpoint et qu'il n'est pas déjà le point actif
             if (!isActivated)

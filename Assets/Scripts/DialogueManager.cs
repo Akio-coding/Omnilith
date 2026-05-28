@@ -38,7 +38,7 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         // si le dialogue est ouvert et qu'on appuie sur 'e' 
-        if (dialoguePanel.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
+        if (dialoguePanel.activeInHierarchy && Input.GetButtonDown("Interact"))
         {
             DisplayNextLine();
         }
