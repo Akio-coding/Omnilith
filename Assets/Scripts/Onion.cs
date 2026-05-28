@@ -56,28 +56,7 @@ public class Onion : MonoBehaviour
         {
             playerTransform = player.transform;
         }
-
-        // On s'abonne à l'événement de dégâts pour jouer l'animation
-        //if (health != null)
-        //{
-        //    health.OnDamageTaken += PlayDamageAnimation;
-        //}
     }
-
-    // Se désabonner quand l'ennemi meurt pour éviter les fuites de mémoire
-    //void OnDestroy()
-    //{
-    //    if (health != null)
-    //    {
-    //        health.OnDamageTaken -= PlayDamageAnimation;
-    //    }
-    //}
-
-    // Fonction appelée automatiquement par Health.cs
-    //private void PlayDamageAnimation()
-    //{
-    //    if (anim != null) anim.SetTrigger("Damage");
-    //}
 
     void Update()
     {
@@ -137,7 +116,7 @@ public class Onion : MonoBehaviour
         anim.SetBool("isCharging", currentState == State.Charging);
 
         // NOTE : Warning et Recovering mettront automatiquement ces deux booléens sur 'false',
-        // l'Animator passera donc naturellement sur "Onion Idle" grâce à tes transitions !
+        // l'Animator passera donc naturellement sur "Onion Idle"
     }
 
     // ----- COMPORTEMENTS -----

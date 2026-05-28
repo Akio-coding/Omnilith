@@ -248,7 +248,6 @@ public class Health : MonoBehaviour
         }
         
         isInvincible = false;
-        
     }
 
     void die() 
