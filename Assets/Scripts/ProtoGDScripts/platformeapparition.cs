@@ -7,6 +7,10 @@ public class platformeapparition : MonoBehaviour
     public Vector3 mouvement;
     public float mouvementSpeed = 2f;
     public bool apparait;
+    public AudioSource audioSource;
+    public AudioSource audioSource2;
+    public AudioClip leverSFX;
+    public AudioClip doorSFX;
 
     private Vector3 PositionFinal;
     void Start()
@@ -45,6 +49,8 @@ public class platformeapparition : MonoBehaviour
                 Door.transform.gameObject.SetActive(true);
                 //set sa collision a true
                 Door.gameObject.GetComponent<Collider2D>().gameObject.SetActive(true);
+                audioSource.PlayOneShot(leverSFX);
+                audioSource2.PlayOneShot(doorSFX);
             }
             Debug.Log("Levier activé");
 

@@ -30,6 +30,10 @@ public class Gargoyle : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private Animator anim;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip alicantoSFX;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -97,6 +101,8 @@ public class Gargoyle : MonoBehaviour
                 {
                     // Lance l'animation de dive
                     anim.SetBool("isDiving", true);
+                    audioSource.PlayOneShot(alicantoSFX);
+
                 }
 
                 // Plongeon rapide vers la cible

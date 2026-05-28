@@ -64,6 +64,11 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public float RunCooldown = 0.3f;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip jumpSFX;
+    public AudioClip dashSFX;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -163,6 +168,7 @@ public class PlayerMovement : MonoBehaviour
         // change collider size
         dashCollider.size = dashColliderSize;
         dashCollider.offset = dashColliderOffset;
+        audioSource.PlayOneShot(dashSFX);
     }
     
     void Dash()

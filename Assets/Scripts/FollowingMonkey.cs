@@ -65,6 +65,12 @@ public class FollowingMonkey : MonoBehaviour
     private bool isTeleporting = false;
     private Vector3 lastRecordedPos;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip throwSFX;
+    public AudioClip pickUpSFX;
+    public AudioClip monkeySFX;
+
     private void OnEnable()
     {
         DialogueManager.OnMonkeyUnlocked += UnlockMonkey;
@@ -320,6 +326,8 @@ public class FollowingMonkey : MonoBehaviour
             // On lance l'animation
             animator.SetTrigger("Punch");
 
+            audioSource.PlayOneShot(pickUpSFX);
+
             carriedObject = hit.gameObject;
             // On désactive la physique de l'objet pendant qu'on le porte
             carriedObject.GetComponent<Rigidbody2D>().isKinematic = true;
@@ -347,6 +355,8 @@ public class FollowingMonkey : MonoBehaviour
         {
             // On lance l'animation
             animator.SetTrigger("Punch");
+
+            audioSource.PlayOneShot(pickUpSFX);
 
             carriedObject = playerTransform.gameObject;
 
@@ -380,6 +390,8 @@ public class FollowingMonkey : MonoBehaviour
     {
         // On lance l'animation
         animator.SetTrigger("Punch");
+        audioSource.PlayOneShot(throwSFX);
+        audioSource.PlayOneShot(monkeySFX);
 
         // On détache l'objet
         Rigidbody2D objRb = carriedObject.GetComponent<Rigidbody2D>();
@@ -402,10 +414,12 @@ public class FollowingMonkey : MonoBehaviour
             if (Input.GetAxisRaw("Vertical") > 0.1f)
             {
                 finalForce = new Vector2(highThrowForce.x * lookDir, highThrowForce.y);
+                
             }
             else // Lancer ras du sol par défaut
             {
                 finalForce = new Vector2(lowThrowForce.x * lookDir, lowThrowForce.y);
+       
             }
         }
         

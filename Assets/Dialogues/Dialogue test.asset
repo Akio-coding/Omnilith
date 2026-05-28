@@ -37,7 +37,7 @@ MonoBehaviour:
     texte: 'Tout d''abord, ce n''est n''importe quel singe !
 
       Ensuite, il fait
-      les meilleures tartes aux mot interdit.'
+      les meilleures tartes au mot interdit.'
     speakerHead: {fileID: 5137430236869304561, guid: 2dfce1bc76c6843458ad3d80cab4adf6, type: 3}
   - speakerName: "R\xE4'adz"
     texte: "RESPECTES MON MEILLEUR POTE !\nMon ge\xF4lier !"
