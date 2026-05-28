@@ -6922,6 +6922,91 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
+--- !u!1001 &256101585
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1837127566147829065, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837127566147829065, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719689521338423058, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984424520953816458, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_Name
+      value: 'Dilogue Test coeur '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -51.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694013179624415046, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083909326486579069, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_text
+      value: 'Espace pour sauter '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083909326486579069, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: m_fontSize
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244692661135099823, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244692661135099823, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
+      propertyPath: destroyDialogueAfterUtilisation
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d869a24ebd7e0048808dd5b607bace1, type: 3}
 --- !u!1 &257257490
 GameObject:
   m_ObjectHideFlags: 0
@@ -7191,7 +7276,7 @@ Transform:
   m_GameObject: {fileID: 261009553}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.508915, y: 7.398079, z: -16.746735}
+  m_LocalPosition: {x: 6.26582, y: 6.665859, z: -16.746735}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9550,7 +9635,7 @@ Transform:
   m_GameObject: {fileID: 343109652}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.535, y: -53.673, z: -18.533709}
+  m_LocalPosition: {x: 9.904999, y: -54.433002, z: -18.533709}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24134,11 +24219,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6855922155757072960, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.01
+      value: 9.38
       objectReference: {fileID: 0}
     - target: {fileID: 6855922155757072960, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -54.3
+      value: -55.06
       objectReference: {fileID: 0}
     - target: {fileID: 6855922155757072960, guid: 1eb5caf9b84156240bc4523e20971fad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64264,6 +64349,7 @@ SceneRoots:
   - {fileID: 1494466375}
   - {fileID: 2111711135}
   - {fileID: 834128131}
+  - {fileID: 256101585}
   - {fileID: 148286227}
   - {fileID: 612902048}
   - {fileID: 1919910324}
