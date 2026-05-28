@@ -29,7 +29,6 @@ public class DamageDealer : MonoBehaviour
         if (targetHealth != null)
         {
             targetHealth.TakeDamage(damageAmount, transform);
-            Debug.Log("you took damages");
         }
 
         if (collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
@@ -53,7 +52,6 @@ public class DamageDealer : MonoBehaviour
         if (targetHealth != null)
         {
             targetHealth.TakeDamage(damageAmount, transform);
-            Debug.Log("damages collision");
         }
 
         if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
