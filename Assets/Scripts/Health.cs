@@ -56,6 +56,11 @@ public class Health : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip damageSFX;
+    public AudioClip DieSFX;
+
     void Awake()
     {
         CurrentHealth = _maxHealth;
@@ -69,6 +74,7 @@ public class Health : MonoBehaviour
         if (CompareTag("Player") && anim != null)
         {
             anim.SetTrigger("TakeDamage");
+            audioSource.PlayOneShot(damageSFX);
         }
 
         // If we are invincible or dead, ignore 
@@ -260,6 +266,7 @@ public class Health : MonoBehaviour
         if (triggerDieOnDeath && anim != null && anim.runtimeAnimatorController != null)
         {
             anim.SetTrigger("Die");
+            
         }
 
         // 3. On désactive la hitbox pour qu'il ne bloque plus le joueur
@@ -280,6 +287,7 @@ public class Health : MonoBehaviour
         if (destroyOnDeath)
         {
             Destroy(gameObject, destroyDelay);
+            audioSource.PlayOneShot(DieSFX);
         }
     }
 }

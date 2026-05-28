@@ -10,6 +10,10 @@ public class Lever : MonoBehaviour
     public bool IsActivated = false;
     public float HauteurCible = 5;
     public Vector3 OrginalDoorPosition;
+    public AudioSource audioSource;
+    public AudioSource audioSource2;
+    public AudioClip leverSFX;
+    public AudioClip doorSFX;
 
     void Start()
     {
@@ -31,6 +35,7 @@ public class Lever : MonoBehaviour
         while (Door.transform.position.y < OrginalDoorPosition.y + HauteurCible)
         {
             Door.transform.Translate(0.01f * Time.deltaTime * Vector3.up);
+            audioSource.PlayOneShot(doorSFX);
             yield return null;
         }
     }
@@ -41,7 +46,7 @@ public class Lever : MonoBehaviour
         {
             IsActivated = true;
             Debug.Log("Levier activé");
-            
+            audioSource2.PlayOneShot(leverSFX);
         }
     }
 

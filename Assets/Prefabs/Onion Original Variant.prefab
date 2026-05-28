@@ -523,8 +523,17 @@ MonoBehaviour:
   playerCollider: {fileID: 0}
   _maxHealth: 3
   invincibilityDuration: 0
-  flashCount: 2
+  flashCount: 0
   flashing: {r: 0, g: 0, b: 0, a: 0}
   deathDelay: 0
   componentsToDisable:
   - {fileID: 588128580074004270}
+  disablePhysicsOnDeath: 1
+  destroyOnDeath: 1
+  destroyDelay: 2
+  triggerDieOnDeath: 1
+  knockbackForce: {x: 5, y: 2}
+  knockbackDuration: 0.2
+  audioSource: {fileID: 0}
+  damageSFX: {fileID: 8300000, guid: 27660c740bdbe444b8d8bed00fa534a0, type: 3}
+  DieSFX: {fileID: 0}

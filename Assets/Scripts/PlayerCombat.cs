@@ -31,7 +31,13 @@ public class PlayerCombat : MonoBehaviour
     // -- General --
     private Animator anim;
     private PlayerMovement movement;
-    private AudioSource SFX;
+    
+
+    [Header("Audio")]
+    // -- Audio --
+    public AudioSource audioSource;
+    public AudioClip Attack1;
+    public AudioClip Attack2;
 
     void Start()
     {
@@ -132,6 +138,7 @@ public class PlayerCombat : MonoBehaviour
         // Update Animator
         anim.SetTrigger("Attack");
         anim.SetInteger("ComboStep", comboCounter);
+        
     }
 
     private void StartUpAttack()
@@ -192,6 +199,7 @@ public class PlayerCombat : MonoBehaviour
                 if (StabCollider != null)
                 {
                     StabCollider.enabled = true;
+                    audioSource.PlayOneShot(Attack2);
                 }
             }
             else
@@ -199,6 +207,7 @@ public class PlayerCombat : MonoBehaviour
                 if (SlashCollider != null)
                 {
                     SlashCollider.enabled = true;
+                    audioSource.PlayOneShot(Attack1);
                 }
             }
         }

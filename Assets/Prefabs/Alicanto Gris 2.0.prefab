@@ -208,8 +208,15 @@ MonoBehaviour:
   flashing: {r: 0, g: 0, b: 0, a: 0}
   deathDelay: 0.5
   componentsToDisable: []
+  disablePhysicsOnDeath: 1
+  destroyOnDeath: 1
+  destroyDelay: 2
+  triggerDieOnDeath: 1
   knockbackForce: {x: 5, y: 2}
   knockbackDuration: 0.2
+  audioSource: {fileID: 0}
+  damageSFX: {fileID: 8300000, guid: 43ca5bf1d4437044ab98bace5be76130, type: 3}
+  DieSFX: {fileID: 8300000, guid: 43ca5bf1d4437044ab98bace5be76130, type: 3}
 --- !u!114 &4729004624481619579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04673e4ac104f9d40ad8500671bcd81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   diveSpeed: 7
   flySpeed: 2
   visionRadius: 6
