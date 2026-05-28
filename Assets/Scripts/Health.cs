@@ -74,7 +74,7 @@ public class Health : MonoBehaviour
         if (CompareTag("Player") && anim != null)
         {
             anim.SetTrigger("TakeDamage");
-            audioSource.PlayOneShot(damageSFX);
+            
         }
 
         // If we are invincible or dead, ignore 
@@ -91,6 +91,7 @@ public class Health : MonoBehaviour
         // Notify everyone (UI, Audio, etc.)
         OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
         OnDamageTaken?.Invoke();
+        audioSource.PlayOneShot(damageSFX);
 
         if (CurrentHealth <= 0)
         {
@@ -165,6 +166,7 @@ public class Health : MonoBehaviour
         if (anim != null && anim.runtimeAnimatorController != null)
         {
             anim.SetTrigger("Die");
+            audioSource.PlayOneShot(DieSFX);
         }
 
         if (rb != null)
@@ -287,7 +289,7 @@ public class Health : MonoBehaviour
         if (destroyOnDeath)
         {
             Destroy(gameObject, destroyDelay);
-            audioSource.PlayOneShot(DieSFX);
+            
         }
     }
 }

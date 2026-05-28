@@ -153,10 +153,12 @@ public class PlayerCombat : MonoBehaviour
         if (!movement.GetIsOnGround())
         {
             anim.SetTrigger("AirAttackUp");
+            audioSource.PlayOneShot(Attack1);
         }
         else
         {
             anim.SetTrigger("AttackUp");
+            audioSource.PlayOneShot(Attack1);
         }
     }
 
@@ -168,6 +170,7 @@ public class PlayerCombat : MonoBehaviour
         isAttackingDown = true;
 
         anim.SetTrigger("AttackDown");
+        audioSource.PlayOneShot(Attack1);
     }
 
     // --- FUNCTIONS CALLED BY THE ANIMATOR ---

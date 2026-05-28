@@ -858,6 +858,7 @@ GameObject:
   - component: {fileID: 3926959914938952791}
   - component: {fileID: 3926959914938952744}
   - component: {fileID: 3119000646290524899}
+  - component: {fileID: 4675498870220610600}
   m_Layer: 0
   m_Name: Onion Original
   m_TagString: Untagged
@@ -956,7 +957,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 2.5
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1032,6 +1033,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4675498870220610600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573767809378602386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f932aafeb595241984ab8e82b61888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCollider: {fileID: 0}
+  _maxHealth: 3
+  invincibilityDuration: 0
+  flashCount: 0
+  flashing: {r: 0, g: 0, b: 0, a: 0}
+  deathDelay: 0
+  componentsToDisable:
+  - {fileID: 0}
+  disablePhysicsOnDeath: 1
+  destroyOnDeath: 1
+  destroyDelay: 2
+  triggerDieOnDeath: 1
+  knockbackForce: {x: 5, y: 2}
+  knockbackDuration: 0.2
+  audioSource: {fileID: 3119000646290524899}
+  damageSFX: {fileID: 8300000, guid: 27660c740bdbe444b8d8bed00fa534a0, type: 3}
+  DieSFX: {fileID: 8300000, guid: 27660c740bdbe444b8d8bed00fa534a0, type: 3}
 --- !u!1 &3769184627872859264
 GameObject:
   m_ObjectHideFlags: 0

@@ -180,8 +180,9 @@ MonoBehaviour:
   HauteurCible: 5
   OrginalDoorPosition: {x: 0, y: 0, z: 0}
   audioSource: {fileID: 0}
+  audioSource2: {fileID: 0}
   leverSFX: {fileID: 8300000, guid: 38935a3611af9b34ca00251bd4e8e30b, type: 3}
-  doorSFX: {fileID: 8300000, guid: b7a63d6d4ebe5be429b4303b6629b4da, type: 3}
+  doorSFX: {fileID: 8300000, guid: 8528a8b4c46680b4ab805d3f3e5bcb24, type: 3}
 --- !u!1 &4784776245403372855
 GameObject:
   m_ObjectHideFlags: 0

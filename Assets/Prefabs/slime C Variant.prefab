@@ -249,12 +249,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCollider: {fileID: 0}
-  _maxHealth: 6
+  _maxHealth: 2
   invincibilityDuration: 0
   flashCount: 5
   flashing: {r: 0, g: 0, b: 0, a: 0}
   deathDelay: 1
   componentsToDisable: []
+  disablePhysicsOnDeath: 1
+  destroyOnDeath: 1
+  destroyDelay: 2
+  triggerDieOnDeath: 1
+  knockbackForce: {x: 5, y: 2}
+  knockbackDuration: 0.2
+  audioSource: {fileID: 7894970082556780673}
+  damageSFX: {fileID: 8300000, guid: abc300889a903bc49b04dba6aed76880, type: 3}
+  DieSFX: {fileID: 8300000, guid: abc300889a903bc49b04dba6aed76880, type: 3}
 --- !u!114 &941734202351060022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  bounceOnHit: 0
+  bounceForce: 15
 --- !u!61 &1397106592486220122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -314,3 +325,8 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 9.17273, y: 9.485341}
   m_EdgeRadius: 0
+--- !u!82 &7894970082556780673 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6620319477553303903, guid: dd266aac77b3ac641b88004d8fd070fd, type: 3}
+  m_PrefabInstance: {fileID: 3922784846938124766}
+  m_PrefabAsset: {fileID: 0}
