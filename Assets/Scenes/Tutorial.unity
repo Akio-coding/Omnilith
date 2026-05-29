@@ -2270,6 +2270,10 @@ PrefabInstance:
       value: 0.5686275
       objectReference: {fileID: 0}
     - target: {fileID: 662854208873184354, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
+      propertyPath: doorSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: b7a63d6d4ebe5be429b4303b6629b4da, type: 3}
+    - target: {fileID: 662854208873184354, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 3620197}
@@ -6783,6 +6787,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.5704085
       objectReference: {fileID: 0}
+    - target: {fileID: 662854208873184354, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
+      propertyPath: doorSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: b7a63d6d4ebe5be429b4303b6629b4da, type: 3}
     - target: {fileID: 662854208873184354, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
       propertyPath: audioSource
       value: 
@@ -25823,6 +25831,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.5704085
       objectReference: {fileID: 0}
+    - target: {fileID: 662854208873184354, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
+      propertyPath: doorSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: b7a63d6d4ebe5be429b4303b6629b4da, type: 3}
     - target: {fileID: 662854208873184354, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
       propertyPath: audioSource
       value: 
@@ -62794,6 +62806,10 @@ PrefabInstance:
       value: 0.5704085
       objectReference: {fileID: 0}
     - target: {fileID: 662854208873184354, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
+      propertyPath: doorSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: b7a63d6d4ebe5be429b4303b6629b4da, type: 3}
+    - target: {fileID: 662854208873184354, guid: 91edb2b2f3213064a97ca77173da158b, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 3620197}
@@ -64642,6 +64658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: audioSourceSFX
       objectReference: {fileID: 0}
+    - target: {fileID: 5833331217792939745, guid: 55f3f88b8a8eecd4ebbfce739bb47a65, type: 3}
+      propertyPath: m_Volume
+      value: 0.574
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -64655,6 +64675,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 542049715}
     m_Modifications:
+    - target: {fileID: 1726672115071899215, guid: 14f3182d2ace0b24f97c342118d08649, type: 3}
+      propertyPath: m_Volume
+      value: 0.601
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726672115071899215, guid: 14f3182d2ace0b24f97c342118d08649, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 0.5919518
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726672115071899215, guid: 14f3182d2ace0b24f97c342118d08649, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].time
+      value: 0.9966736
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726672115071899215, guid: 14f3182d2ace0b24f97c342118d08649, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0.0821228
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726672115071899215, guid: 14f3182d2ace0b24f97c342118d08649, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].value
+      value: 0.0644314
+      objectReference: {fileID: 0}
     - target: {fileID: 2435495243928062319, guid: 14f3182d2ace0b24f97c342118d08649, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.058064
